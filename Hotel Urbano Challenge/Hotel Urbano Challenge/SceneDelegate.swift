@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(windowScene: windowScene)
         
-        SearchHotelWireframe().present(in: self.window!)
+        HotelListWireframe().present(in: self.window!)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

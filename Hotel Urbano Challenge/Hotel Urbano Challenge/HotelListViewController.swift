@@ -1,5 +1,5 @@
 //
-//  SearchHotelViewController.swift
+//  HotelListViewController.swift
 //  Hotel Urbano Challenge
 //
 //  Created by Fellipe Calleia on 23/06/20.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-final class SearchHotelViewController: UIViewController {
+final class HotelListViewController: UIViewController {
     
-    var presenter: SearchHotelPresenterProtocol? = nil
+    var presenter: HotelListPresenterProtocol? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,4 +19,4 @@ final class SearchHotelViewController: UIViewController {
     }
 }
 
-extension SearchHotelViewController: SearchHotelView {}
+extension HotelListViewController: HotelListView {}

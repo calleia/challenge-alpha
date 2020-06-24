@@ -1,11 +1,13 @@
 //
-//  SearchHotelPresenterProtocol.swift
+//  HotelListWireframeProtocol.swift
 //  Hotel Urbano Challenge
 //
 //  Created by Fellipe Calleia on 23/06/20.
 //  Copyright © 2020 Fellipe Calleia. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-protocol SearchHotelPresenterProtocol {}
+protocol HotelListWireframeProtocol {
+    func present(in window: UIWindow)
+}

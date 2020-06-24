@@ -1,5 +1,5 @@
 //
-//  SearchHotelView.swift
+//  HotelListView.swift
 //  Hotel Urbano Challenge
 //
 //  Created by Fellipe Calleia on 23/06/20.
@@ -8,4 +8,4 @@
 
 import Foundation
 
-protocol SearchHotelView: AnyObject {}
+protocol HotelListView: AnyObject {}

@@ -1,5 +1,5 @@
 //
-//  SearchHotelWireframe.swift
+//  HotelListWireframe.swift
 //  Hotel Urbano Challenge
 //
 //  Created by Fellipe Calleia on 23/06/20.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-final class SearchHotelWireframe: SearchHotelWireframeProtocol {
+final class HotelListWireframe: HotelListWireframeProtocol {
     func present(in window: UIWindow) {
-        let searchHotelViewController = SearchHotelViewControllerFactory.make(wireframe: self)
-        let navigationController = UINavigationController(rootViewController: searchHotelViewController)
+        let hotelListViewController = HotelListViewControllerFactory.make(wireframe: self)
+        let navigationController = UINavigationController(rootViewController: hotelListViewController)
         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
