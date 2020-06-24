@@ -21,11 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(windowScene: windowScene)
         
-        let searchHotelViewController = SearchHotelViewController()
-        let navigationController = UINavigationController(rootViewController: searchHotelViewController)
-        
-        self.window?.rootViewController = navigationController
-        self.window?.makeKeyAndVisible()
+        SearchHotelWireframe().present(in: self.window!)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
