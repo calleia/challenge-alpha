@@ -11,8 +11,8 @@
 		FB035F1324A17B5800CF0DC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB035F1224A17B5800CF0DC0 /* SceneDelegate.swift */; };
 		FB035F1A24A17B5900CF0DC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB035F1924A17B5900CF0DC0 /* Assets.xcassets */; };
 		FB035F1D24A17B5900CF0DC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB035F1B24A17B5900CF0DC0 /* LaunchScreen.storyboard */; };
-		FB035F2824A17B5900CF0DC0 /* Hotel_Urbano_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB035F2724A17B5900CF0DC0 /* Hotel_Urbano_ChallengeTests.swift */; };
-		FB035F3324A17B5A00CF0DC0 /* Hotel_Urbano_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB035F3224A17B5A00CF0DC0 /* Hotel_Urbano_ChallengeUITests.swift */; };
+		FB035F2824A17B5900CF0DC0 /* HotelUrbanoChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB035F2724A17B5900CF0DC0 /* HotelUrbanoChallengeTests.swift */; };
+		FB035F3324A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB035F3224A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests.swift */; };
 		FBA4684424A2BEC10075AD5A /* HotelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4684224A2BEC10075AD5A /* HotelListViewController.swift */; };
 		FBA4684524A2BEC10075AD5A /* HotelListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBA4684324A2BEC10075AD5A /* HotelListViewController.xib */; };
 		FBA4684924A2CD3C0075AD5A /* HotelListWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4684824A2CD3C0075AD5A /* HotelListWireframeProtocol.swift */; };
@@ -42,17 +42,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FB035F0D24A17B5700CF0DC0 /* Hotel Urbano Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hotel Urbano Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB035F0D24A17B5700CF0DC0 /* HotelUrbanoChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelUrbanoChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB035F1024A17B5800CF0DC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB035F1224A17B5800CF0DC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FB035F1924A17B5900CF0DC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB035F1C24A17B5900CF0DC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB035F1E24A17B5900CF0DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB035F2324A17B5900CF0DC0 /* Hotel Urbano ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hotel Urbano ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB035F2724A17B5900CF0DC0 /* Hotel_Urbano_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotel_Urbano_ChallengeTests.swift; sourceTree = "<group>"; };
+		FB035F2324A17B5900CF0DC0 /* HotelUrbanoChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotelUrbanoChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB035F2724A17B5900CF0DC0 /* HotelUrbanoChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelUrbanoChallengeTests.swift; sourceTree = "<group>"; };
 		FB035F2924A17B5900CF0DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB035F2E24A17B5A00CF0DC0 /* Hotel Urbano ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hotel Urbano ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB035F3224A17B5A00CF0DC0 /* Hotel_Urbano_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotel_Urbano_ChallengeUITests.swift; sourceTree = "<group>"; };
+		FB035F2E24A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotelUrbanoChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB035F3224A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelUrbanoChallengeUITests.swift; sourceTree = "<group>"; };
 		FB035F3424A17B5A00CF0DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBA4684224A2BEC10075AD5A /* HotelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListViewController.swift; sourceTree = "<group>"; };
 		FBA4684324A2BEC10075AD5A /* HotelListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelListViewController.xib; sourceTree = "<group>"; };
@@ -93,9 +93,9 @@
 		FB035F0424A17B5700CF0DC0 = {
 			isa = PBXGroup;
 			children = (
-				FB035F0F24A17B5700CF0DC0 /* Hotel Urbano Challenge */,
-				FB035F2624A17B5900CF0DC0 /* Hotel Urbano ChallengeTests */,
-				FB035F3124A17B5A00CF0DC0 /* Hotel Urbano ChallengeUITests */,
+				FB035F0F24A17B5700CF0DC0 /* HotelUrbanoChallenge */,
+				FB035F2624A17B5900CF0DC0 /* HotelUrbanoChallengeTests */,
+				FB035F3124A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests */,
 				FB035F0E24A17B5700CF0DC0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,14 +103,14 @@
 		FB035F0E24A17B5700CF0DC0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FB035F0D24A17B5700CF0DC0 /* Hotel Urbano Challenge.app */,
-				FB035F2324A17B5900CF0DC0 /* Hotel Urbano ChallengeTests.xctest */,
-				FB035F2E24A17B5A00CF0DC0 /* Hotel Urbano ChallengeUITests.xctest */,
+				FB035F0D24A17B5700CF0DC0 /* HotelUrbanoChallenge.app */,
+				FB035F2324A17B5900CF0DC0 /* HotelUrbanoChallengeTests.xctest */,
+				FB035F2E24A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FB035F0F24A17B5700CF0DC0 /* Hotel Urbano Challenge */ = {
+		FB035F0F24A17B5700CF0DC0 /* HotelUrbanoChallenge */ = {
 			isa = PBXGroup;
 			children = (
 				FB331B4D24A40BE4004FB2CB /* Modules */,
@@ -120,25 +120,25 @@
 				FB035F1B24A17B5900CF0DC0 /* LaunchScreen.storyboard */,
 				FB035F1E24A17B5900CF0DC0 /* Info.plist */,
 			);
-			path = "Hotel Urbano Challenge";
+			path = HotelUrbanoChallenge;
 			sourceTree = "<group>";
 		};
-		FB035F2624A17B5900CF0DC0 /* Hotel Urbano ChallengeTests */ = {
+		FB035F2624A17B5900CF0DC0 /* HotelUrbanoChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				FB035F2724A17B5900CF0DC0 /* Hotel_Urbano_ChallengeTests.swift */,
+				FB035F2724A17B5900CF0DC0 /* HotelUrbanoChallengeTests.swift */,
 				FB035F2924A17B5900CF0DC0 /* Info.plist */,
 			);
-			path = "Hotel Urbano ChallengeTests";
+			path = HotelUrbanoChallengeTests;
 			sourceTree = "<group>";
 		};
-		FB035F3124A17B5A00CF0DC0 /* Hotel Urbano ChallengeUITests */ = {
+		FB035F3124A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				FB035F3224A17B5A00CF0DC0 /* Hotel_Urbano_ChallengeUITests.swift */,
+				FB035F3224A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests.swift */,
 				FB035F3424A17B5A00CF0DC0 /* Info.plist */,
 			);
-			path = "Hotel Urbano ChallengeUITests";
+			path = HotelUrbanoChallengeUITests;
 			sourceTree = "<group>";
 		};
 		FB331B4D24A40BE4004FB2CB /* Modules */ = {
@@ -192,9 +192,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FB035F0C24A17B5700CF0DC0 /* Hotel Urbano Challenge */ = {
+		FB035F0C24A17B5700CF0DC0 /* HotelUrbanoChallenge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB035F3724A17B5A00CF0DC0 /* Build configuration list for PBXNativeTarget "Hotel Urbano Challenge" */;
+			buildConfigurationList = FB035F3724A17B5A00CF0DC0 /* Build configuration list for PBXNativeTarget "HotelUrbanoChallenge" */;
 			buildPhases = (
 				FB035F0924A17B5700CF0DC0 /* Sources */,
 				FB035F0A24A17B5700CF0DC0 /* Frameworks */,
@@ -204,14 +204,14 @@
 			);
 			dependencies = (
 			);
-			name = "Hotel Urbano Challenge";
+			name = HotelUrbanoChallenge;
 			productName = "Hotel Urbano Challenge";
-			productReference = FB035F0D24A17B5700CF0DC0 /* Hotel Urbano Challenge.app */;
+			productReference = FB035F0D24A17B5700CF0DC0 /* HotelUrbanoChallenge.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FB035F2224A17B5900CF0DC0 /* Hotel Urbano ChallengeTests */ = {
+		FB035F2224A17B5900CF0DC0 /* HotelUrbanoChallengeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB035F3A24A17B5A00CF0DC0 /* Build configuration list for PBXNativeTarget "Hotel Urbano ChallengeTests" */;
+			buildConfigurationList = FB035F3A24A17B5A00CF0DC0 /* Build configuration list for PBXNativeTarget "HotelUrbanoChallengeTests" */;
 			buildPhases = (
 				FB035F1F24A17B5900CF0DC0 /* Sources */,
 				FB035F2024A17B5900CF0DC0 /* Frameworks */,
@@ -222,14 +222,14 @@
 			dependencies = (
 				FB035F2524A17B5900CF0DC0 /* PBXTargetDependency */,
 			);
-			name = "Hotel Urbano ChallengeTests";
+			name = HotelUrbanoChallengeTests;
 			productName = "Hotel Urbano ChallengeTests";
-			productReference = FB035F2324A17B5900CF0DC0 /* Hotel Urbano ChallengeTests.xctest */;
+			productReference = FB035F2324A17B5900CF0DC0 /* HotelUrbanoChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FB035F2D24A17B5A00CF0DC0 /* Hotel Urbano ChallengeUITests */ = {
+		FB035F2D24A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB035F3D24A17B5A00CF0DC0 /* Build configuration list for PBXNativeTarget "Hotel Urbano ChallengeUITests" */;
+			buildConfigurationList = FB035F3D24A17B5A00CF0DC0 /* Build configuration list for PBXNativeTarget "HotelUrbanoChallengeUITests" */;
 			buildPhases = (
 				FB035F2A24A17B5A00CF0DC0 /* Sources */,
 				FB035F2B24A17B5A00CF0DC0 /* Frameworks */,
@@ -240,9 +240,9 @@
 			dependencies = (
 				FB035F3024A17B5A00CF0DC0 /* PBXTargetDependency */,
 			);
-			name = "Hotel Urbano ChallengeUITests";
+			name = HotelUrbanoChallengeUITests;
 			productName = "Hotel Urbano ChallengeUITests";
-			productReference = FB035F2E24A17B5A00CF0DC0 /* Hotel Urbano ChallengeUITests.xctest */;
+			productReference = FB035F2E24A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -268,7 +268,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FB035F0824A17B5700CF0DC0 /* Build configuration list for PBXProject "Hotel Urbano Challenge" */;
+			buildConfigurationList = FB035F0824A17B5700CF0DC0 /* Build configuration list for PBXProject "HotelUrbanoChallenge" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -281,9 +281,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FB035F0C24A17B5700CF0DC0 /* Hotel Urbano Challenge */,
-				FB035F2224A17B5900CF0DC0 /* Hotel Urbano ChallengeTests */,
-				FB035F2D24A17B5A00CF0DC0 /* Hotel Urbano ChallengeUITests */,
+				FB035F0C24A17B5700CF0DC0 /* HotelUrbanoChallenge */,
+				FB035F2224A17B5900CF0DC0 /* HotelUrbanoChallengeTests */,
+				FB035F2D24A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -337,7 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB035F2824A17B5900CF0DC0 /* Hotel_Urbano_ChallengeTests.swift in Sources */,
+				FB035F2824A17B5900CF0DC0 /* HotelUrbanoChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB035F3324A17B5A00CF0DC0 /* Hotel_Urbano_ChallengeUITests.swift in Sources */,
+				FB035F3324A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,12 +354,12 @@
 /* Begin PBXTargetDependency section */
 		FB035F2524A17B5900CF0DC0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FB035F0C24A17B5700CF0DC0 /* Hotel Urbano Challenge */;
+			target = FB035F0C24A17B5700CF0DC0 /* HotelUrbanoChallenge */;
 			targetProxy = FB035F2424A17B5900CF0DC0 /* PBXContainerItemProxy */;
 		};
 		FB035F3024A17B5A00CF0DC0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FB035F0C24A17B5700CF0DC0 /* Hotel Urbano Challenge */;
+			target = FB035F0C24A17B5700CF0DC0 /* HotelUrbanoChallenge */;
 			targetProxy = FB035F2F24A17B5A00CF0DC0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -496,12 +496,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8TUEXC7WY;
-				INFOPLIST_FILE = "Hotel Urbano Challenge/Info.plist";
+				INFOPLIST_FILE = HotelUrbanoChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.calleia.Hotel-Urbano-Challenge";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.calleia.HotelUrbanoChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -514,12 +514,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8TUEXC7WY;
-				INFOPLIST_FILE = "Hotel Urbano Challenge/Info.plist";
+				INFOPLIST_FILE = HotelUrbanoChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.calleia.Hotel-Urbano-Challenge";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.calleia.HotelUrbanoChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -533,18 +533,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8TUEXC7WY;
-				INFOPLIST_FILE = "Hotel Urbano ChallengeTests/Info.plist";
+				INFOPLIST_FILE = HotelUrbanoChallengeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.calleia.Hotel-Urbano-ChallengeTests";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.calleia.HotelUrbanoChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hotel Urbano Challenge.app/Hotel Urbano Challenge";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HotelUrbanoChallenge.app/HotelUrbanoChallenge";
 			};
 			name = Debug;
 		};
@@ -555,18 +555,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8TUEXC7WY;
-				INFOPLIST_FILE = "Hotel Urbano ChallengeTests/Info.plist";
+				INFOPLIST_FILE = HotelUrbanoChallengeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.calleia.Hotel-Urbano-ChallengeTests";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.calleia.HotelUrbanoChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hotel Urbano Challenge.app/Hotel Urbano Challenge";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HotelUrbanoChallenge.app/HotelUrbanoChallenge";
 			};
 			name = Release;
 		};
@@ -576,17 +576,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8TUEXC7WY;
-				INFOPLIST_FILE = "Hotel Urbano ChallengeUITests/Info.plist";
+				INFOPLIST_FILE = HotelUrbanoChallengeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.calleia.Hotel-Urbano-ChallengeUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.calleia.HotelUrbanoChallengeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Hotel Urbano Challenge";
+				TEST_TARGET_NAME = HotelUrbanoChallenge;
 			};
 			name = Debug;
 		};
@@ -596,24 +596,24 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8TUEXC7WY;
-				INFOPLIST_FILE = "Hotel Urbano ChallengeUITests/Info.plist";
+				INFOPLIST_FILE = HotelUrbanoChallengeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.calleia.Hotel-Urbano-ChallengeUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.calleia.HotelUrbanoChallengeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Hotel Urbano Challenge";
+				TEST_TARGET_NAME = HotelUrbanoChallenge;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FB035F0824A17B5700CF0DC0 /* Build configuration list for PBXProject "Hotel Urbano Challenge" */ = {
+		FB035F0824A17B5700CF0DC0 /* Build configuration list for PBXProject "HotelUrbanoChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB035F3524A17B5A00CF0DC0 /* Debug */,
@@ -622,7 +622,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB035F3724A17B5A00CF0DC0 /* Build configuration list for PBXNativeTarget "Hotel Urbano Challenge" */ = {
+		FB035F3724A17B5A00CF0DC0 /* Build configuration list for PBXNativeTarget "HotelUrbanoChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB035F3824A17B5A00CF0DC0 /* Debug */,
@@ -631,7 +631,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB035F3A24A17B5A00CF0DC0 /* Build configuration list for PBXNativeTarget "Hotel Urbano ChallengeTests" */ = {
+		FB035F3A24A17B5A00CF0DC0 /* Build configuration list for PBXNativeTarget "HotelUrbanoChallengeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB035F3B24A17B5A00CF0DC0 /* Debug */,
@@ -640,7 +640,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB035F3D24A17B5A00CF0DC0 /* Build configuration list for PBXNativeTarget "Hotel Urbano ChallengeUITests" */ = {
+		FB035F3D24A17B5A00CF0DC0 /* Build configuration list for PBXNativeTarget "HotelUrbanoChallengeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB035F3E24A17B5A00CF0DC0 /* Debug */,

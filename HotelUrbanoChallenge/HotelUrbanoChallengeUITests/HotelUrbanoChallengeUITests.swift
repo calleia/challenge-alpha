@@ -1,6 +1,6 @@
 //
-//  Hotel_Urbano_ChallengeUITests.swift
-//  Hotel Urbano ChallengeUITests
+//  HotelUrbanoChallengeUITests.swift
+//  HotelUrbanoChallengeUITests
 //
 //  Created by Fellipe Calleia on 22/06/20.
 //  Copyright © 2020 Fellipe Calleia. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class Hotel_Urbano_ChallengeUITests: XCTestCase {
+class HotelUrbanoChallengeUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

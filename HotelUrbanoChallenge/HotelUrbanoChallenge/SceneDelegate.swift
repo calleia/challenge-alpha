@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  Hotel Urbano Challenge
+//  HotelUrbanoChallenge
 //
 //  Created by Fellipe Calleia on 22/06/20.
 //  Copyright © 2020 Fellipe Calleia. All rights reserved.
