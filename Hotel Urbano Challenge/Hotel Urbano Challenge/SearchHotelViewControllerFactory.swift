@@ -12,7 +12,7 @@ final class SearchHotelViewControllerFactory {
     static func make(wireframe: SearchHotelWireframeProtocol) -> SearchHotelViewController {
         let viewController = SearchHotelViewController()
         
-        let presenter = SearchHotelPresenter(wireframe: wireframe)
+        let presenter = SearchHotelPresenterFactory.make(wireframe: wireframe)
         presenter.view = viewController
         
         viewController.presenter = presenter
