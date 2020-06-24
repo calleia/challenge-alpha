@@ -10,7 +10,7 @@ import UIKit
 
 final class SearchHotelWireframe: SearchHotelWireframeProtocol {
     func present(in window: UIWindow) {
-        let searchHotelViewController = SearchHotelViewController()
+        let searchHotelViewController = SearchHotelViewControllerFactory.make()
         let navigationController = UINavigationController(rootViewController: searchHotelViewController)
         
         window.rootViewController = navigationController
