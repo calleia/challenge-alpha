@@ -20,6 +20,7 @@
 		FBA4684D24A2DF3F0075AD5A /* SearchHotelViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4684C24A2DF3F0075AD5A /* SearchHotelViewControllerFactory.swift */; };
 		FBA4684F24A2E2600075AD5A /* SearchHotelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4684E24A2E2600075AD5A /* SearchHotelView.swift */; };
 		FBA4685124A2E3800075AD5A /* SearchHotelPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4685024A2E3800075AD5A /* SearchHotelPresenterProtocol.swift */; };
+		FBA4685324A2E4030075AD5A /* SearchHotelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4685224A2E4030075AD5A /* SearchHotelPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		FBA4684C24A2DF3F0075AD5A /* SearchHotelViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotelViewControllerFactory.swift; sourceTree = "<group>"; };
 		FBA4684E24A2E2600075AD5A /* SearchHotelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotelView.swift; sourceTree = "<group>"; };
 		FBA4685024A2E3800075AD5A /* SearchHotelPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotelPresenterProtocol.swift; sourceTree = "<group>"; };
+		FBA4685224A2E4030075AD5A /* SearchHotelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotelPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				FBA4684324A2BEC10075AD5A /* SearchHotelViewController.xib */,
 				FBA4684C24A2DF3F0075AD5A /* SearchHotelViewControllerFactory.swift */,
 				FBA4685024A2E3800075AD5A /* SearchHotelPresenterProtocol.swift */,
+				FBA4685224A2E4030075AD5A /* SearchHotelPresenter.swift */,
 				FBA4684824A2CD3C0075AD5A /* SearchHotelWireframeProtocol.swift */,
 				FBA4684A24A2CDF20075AD5A /* SearchHotelWireframe.swift */,
 				FB035F1924A17B5900CF0DC0 /* Assets.xcassets */,
@@ -278,6 +281,7 @@
 				FB035F1124A17B5800CF0DC0 /* AppDelegate.swift in Sources */,
 				FBA4684F24A2E2600075AD5A /* SearchHotelView.swift in Sources */,
 				FB035F1324A17B5800CF0DC0 /* SceneDelegate.swift in Sources */,
+				FBA4685324A2E4030075AD5A /* SearchHotelPresenter.swift in Sources */,
 				FBA4684424A2BEC10075AD5A /* SearchHotelViewController.swift in Sources */,
 				FBA4685124A2E3800075AD5A /* SearchHotelPresenterProtocol.swift in Sources */,
 				FBA4684B24A2CDF20075AD5A /* SearchHotelWireframe.swift in Sources */,

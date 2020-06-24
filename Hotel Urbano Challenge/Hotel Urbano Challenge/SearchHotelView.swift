@@ -8,4 +8,4 @@
 
 import Foundation
 
-protocol SearchHotelView {}
+protocol SearchHotelView: AnyObject {}

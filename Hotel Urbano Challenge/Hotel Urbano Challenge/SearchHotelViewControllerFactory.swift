@@ -9,8 +9,13 @@
 import Foundation
 
 final class SearchHotelViewControllerFactory {
-    static func make() -> SearchHotelViewController {
+    static func make(wireframe: SearchHotelWireframeProtocol) -> SearchHotelViewController {
         let viewController = SearchHotelViewController()
+        
+        let presenter = SearchHotelPresenter(wireframe: wireframe)
+        presenter.view = viewController
+        
+        viewController.presenter = presenter
         
         return viewController
     }
