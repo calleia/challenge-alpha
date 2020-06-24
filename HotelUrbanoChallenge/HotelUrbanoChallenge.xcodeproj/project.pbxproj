@@ -22,6 +22,7 @@
 		FBA4685124A2E3800075AD5A /* HotelListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4685024A2E3800075AD5A /* HotelListPresenterProtocol.swift */; };
 		FBA4685324A2E4030075AD5A /* HotelListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4685224A2E4030075AD5A /* HotelListPresenter.swift */; };
 		FBA4685524A2EAB10075AD5A /* HotelListPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4685424A2EAB10075AD5A /* HotelListPresenterFactory.swift */; };
+		FBBFF0B824A419A000432479 /* HotelListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFF0B724A419A000432479 /* HotelListPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		FBA4685024A2E3800075AD5A /* HotelListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListPresenterProtocol.swift; sourceTree = "<group>"; };
 		FBA4685224A2E4030075AD5A /* HotelListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListPresenter.swift; sourceTree = "<group>"; };
 		FBA4685424A2EAB10075AD5A /* HotelListPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListPresenterFactory.swift; sourceTree = "<group>"; };
+		FBBFF0B724A419A000432479 /* HotelListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		FB035F2624A17B5900CF0DC0 /* HotelUrbanoChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				FBBFF0B724A419A000432479 /* HotelListPresenterTests.swift */,
 				FB035F2724A17B5900CF0DC0 /* HotelUrbanoChallengeTests.swift */,
 				FB035F2924A17B5900CF0DC0 /* Info.plist */,
 			);
@@ -338,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB035F2824A17B5900CF0DC0 /* HotelUrbanoChallengeTests.swift in Sources */,
+				FBBFF0B824A419A000432479 /* HotelListPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
