@@ -28,3 +28,5 @@ final class SearchHotelViewController: UIViewController {
     */
 
 }
+
+extension SearchHotelViewController: SearchHotelView {}
