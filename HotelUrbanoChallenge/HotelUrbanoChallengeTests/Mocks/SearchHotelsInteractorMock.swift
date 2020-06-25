@@ -10,4 +10,23 @@ import Foundation
 
 @testable import HotelUrbanoChallenge
 
-final class SearchHotelsInteractorMock: SearchHotelsInteractorProtocol {}
+final class SearchHotelsInteractorMock: SearchHotelsInteractorProtocol {
+    
+    var error: HotelSearchError? = nil
+    var hotels = [String]()
+    
+    var callCount = 0
+    var lastLocation = ""
+    
+    func search(in location: String, completion: @escaping (Result<[String], HotelSearchError>) -> Void) {
+        self.callCount += 1
+        self.lastLocation = location
+        
+        if let error = self.error {
+            completion(.failure(error))
+        } else {
+            completion(.success(self.hotels))
+        }
+    }
+    
+}

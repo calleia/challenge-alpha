@@ -10,4 +10,31 @@ import Foundation
 
 @testable import HotelUrbanoChallenge
 
-final class HotelListViewMock: HotelListView {}
+final class HotelListViewMock: HotelListView {
+    
+    var showActivityIndicatorCallCount = 0
+    var hideActivityIndicatorCallCount = 0
+    var showHotelsCallCount = 0
+    var lastHotelList = [String]()
+    var showErrorCallCount = 0
+    var lastErrorMessage = ""
+    
+    func showActivityIndicator() {
+        self.showActivityIndicatorCallCount += 1
+    }
+    
+    func hideActivityIndicator() {
+        self.hideActivityIndicatorCallCount += 1
+    }
+    
+    func showHotels(_ hotels: [String]) {
+        self.lastHotelList = hotels
+        self.showHotelsCallCount += 1
+    }
+    
+    func showError(message: String) {
+        self.lastErrorMessage = message
+        self.showErrorCallCount += 1
+    }
+    
+}

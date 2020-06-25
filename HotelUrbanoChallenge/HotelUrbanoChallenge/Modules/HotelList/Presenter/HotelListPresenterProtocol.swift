@@ -8,4 +8,6 @@
 
 import Foundation
 
-protocol HotelListPresenterProtocol {}
+protocol HotelListPresenterProtocol {
+    func searchHotels(in location: String)
+}

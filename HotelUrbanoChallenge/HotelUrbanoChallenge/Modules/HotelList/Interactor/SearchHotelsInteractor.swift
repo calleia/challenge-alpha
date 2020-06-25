@@ -8,4 +8,8 @@
 
 import Foundation
 
-final class SearchHotelsInteractor: SearchHotelsInteractorProtocol {}
+final class SearchHotelsInteractor: SearchHotelsInteractorProtocol {
+    func search(in location: String, completion: @escaping (Result<[String], HotelSearchError>) -> Void) {
+        // TODO: call search hotel service
+    }
+}

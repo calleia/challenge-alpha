@@ -19,4 +19,20 @@ final class HotelListViewController: UIViewController {
     }
 }
 
-extension HotelListViewController: HotelListView {}
+extension HotelListViewController: HotelListView {
+    func showActivityIndicator() {
+        // TODO: show activity indicator view
+    }
+    
+    func hideActivityIndicator() {
+        // TODO: hide activity indicator view
+    }
+    
+    func showHotels(_ hotels: [String]) {
+        // TODO: show hotel list
+    }
+    
+    func showError(message: String) {
+        // TODO: show error view
+    }
+}

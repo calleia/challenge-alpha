@@ -12,29 +12,76 @@ import XCTest
 
 final class HotelListPresenterTests: XCTestCase {
     
+    private var hotelListViewMock: HotelListViewMock!
     private var hotelListWireframeMock: HotelListWireframeMock!
-    private var presenter: HotelListPresenterProtocol!
+    private var searchHotelsInteractorMock: SearchHotelsInteractorMock!
+    private var presenter: HotelListPresenter!
     
     override func setUpWithError() throws {
+        self.hotelListViewMock = HotelListViewMock()
         self.hotelListWireframeMock = HotelListWireframeMock()
-        self.presenter = HotelListPresenter(wireframe: self.hotelListWireframeMock)
+        self.searchHotelsInteractorMock = SearchHotelsInteractorMock()
+        self.presenter = HotelListPresenter(searchHotelsInteractor: self.searchHotelsInteractorMock,
+                                            wireframe: self.hotelListWireframeMock)
+        self.presenter.view = self.hotelListViewMock
     }
-
+    
     override func tearDownWithError() throws {
+        self.hotelListViewMock = nil
         self.hotelListWireframeMock = nil
+        self.searchHotelsInteractorMock = nil
         self.presenter = nil
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testInitialValues() throws {
+        XCTAssertEqual(self.searchHotelsInteractorMock.callCount, 0)
+        XCTAssertEqual(self.searchHotelsInteractorMock.lastLocation, "")
+        
+        XCTAssertEqual(self.hotelListViewMock.showActivityIndicatorCallCount, 0)
+        XCTAssertEqual(self.hotelListViewMock.hideActivityIndicatorCallCount, 0)
+        
+        XCTAssertEqual(self.hotelListViewMock.showHotelsCallCount, 0)
+        XCTAssertEqual(self.hotelListViewMock.lastHotelList, [])
+        
+        XCTAssertEqual(self.hotelListViewMock.showErrorCallCount, 0)
+        XCTAssertEqual(self.hotelListViewMock.lastErrorMessage, "")
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testSearchHotels() throws {
+        self.presenter.searchHotels(in: "Location Value")
+        
+        XCTAssertEqual(self.searchHotelsInteractorMock.callCount, 1)
+        XCTAssertEqual(self.searchHotelsInteractorMock.lastLocation, "Location Value")
+        
+        XCTAssertEqual(self.hotelListViewMock.showActivityIndicatorCallCount, 1)
+        XCTAssertEqual(self.hotelListViewMock.hideActivityIndicatorCallCount, 1)
     }
-
+    
+    func testShowHotels() throws {
+        let hotelListMock = ["First Hotel",
+                             "Second Hotel",
+                             "Third Hotel"]
+        self.searchHotelsInteractorMock.hotels = hotelListMock
+        
+        self.presenter.searchHotels(in: "Location Value")
+        
+        XCTAssertEqual(self.hotelListViewMock.showHotelsCallCount, 1)
+        XCTAssertEqual(self.hotelListViewMock.lastHotelList, hotelListMock)
+        
+        XCTAssertEqual(self.hotelListViewMock.showErrorCallCount, 0)
+        XCTAssertEqual(self.hotelListViewMock.lastErrorMessage, "")
+    }
+    
+    func testShowError() throws {
+        self.searchHotelsInteractorMock.error = .requestTimeout
+        
+        self.presenter.searchHotels(in: "Location Value")
+        
+        XCTAssertEqual(self.hotelListViewMock.showHotelsCallCount, 0)
+        XCTAssertEqual(self.hotelListViewMock.lastHotelList, [])
+        
+        XCTAssertEqual(self.hotelListViewMock.showErrorCallCount, 1)
+        XCTAssertEqual(self.hotelListViewMock.lastErrorMessage, "Request timeout, por favor tente novamente.")
+    }
+    
 }

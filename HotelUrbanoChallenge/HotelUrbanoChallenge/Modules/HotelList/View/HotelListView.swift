@@ -8,4 +8,9 @@
 
 import Foundation
 
-protocol HotelListView: AnyObject {}
+protocol HotelListView: AnyObject {
+    func showActivityIndicator()
+    func hideActivityIndicator()
+    func showHotels(_ hotels: [String])
+    func showError(message: String)
+}

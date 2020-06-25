@@ -8,4 +8,10 @@
 
 import Foundation
 
-protocol SearchHotelsInteractorProtocol {}
+enum HotelSearchError: Error {
+    case requestTimeout
+}
+
+protocol SearchHotelsInteractorProtocol {
+    func search(in location: String, completion: @escaping (Result<[String], HotelSearchError>) -> Void)
+}
