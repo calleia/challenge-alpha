@@ -29,6 +29,7 @@
 		FBBFF0C424A433F400432479 /* HotelListViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFF0C324A433F400432479 /* HotelListViewMock.swift */; };
 		FBD24E3424A56D8100CD143A /* SearchHotelsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD24E3324A56D8100CD143A /* SearchHotelsInteractorTests.swift */; };
 		FBD24E3924A56F3C00CD143A /* HotelSearchServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD24E3824A56F3C00CD143A /* HotelSearchServiceProtocol.swift */; };
+		FBD24E3B24A5708F00CD143A /* HotelSearchServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD24E3A24A5708F00CD143A /* HotelSearchServiceMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		FBBFF0C324A433F400432479 /* HotelListViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListViewMock.swift; sourceTree = "<group>"; };
 		FBD24E3324A56D8100CD143A /* SearchHotelsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotelsInteractorTests.swift; sourceTree = "<group>"; };
 		FBD24E3824A56F3C00CD143A /* HotelSearchServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelSearchServiceProtocol.swift; sourceTree = "<group>"; };
+		FBD24E3A24A5708F00CD143A /* HotelSearchServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelSearchServiceMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 			children = (
 				FBBFF0C324A433F400432479 /* HotelListViewMock.swift */,
 				FBBFF0BA24A41FBF00432479 /* HotelListWireframeMock.swift */,
+				FBD24E3A24A5708F00CD143A /* HotelSearchServiceMock.swift */,
 				FBBFF0BF24A4291F00432479 /* SearchHotelsInteractorMock.swift */,
 			);
 			path = Mocks;
@@ -385,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD24E3B24A5708F00CD143A /* HotelSearchServiceMock.swift in Sources */,
 				FBBFF0B824A419A000432479 /* HotelListPresenterTests.swift in Sources */,
 				FBBFF0C024A4291F00432479 /* SearchHotelsInteractorMock.swift in Sources */,
 				FBBFF0BB24A41FBF00432479 /* HotelListWireframeMock.swift in Sources */,
