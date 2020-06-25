@@ -28,6 +28,7 @@
 		FBBFF0C224A42B2300432479 /* SearchHotelsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFF0C124A42B2300432479 /* SearchHotelsInteractor.swift */; };
 		FBBFF0C424A433F400432479 /* HotelListViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFF0C324A433F400432479 /* HotelListViewMock.swift */; };
 		FBD24E3424A56D8100CD143A /* SearchHotelsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD24E3324A56D8100CD143A /* SearchHotelsInteractorTests.swift */; };
+		FBD24E3924A56F3C00CD143A /* HotelSearchServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD24E3824A56F3C00CD143A /* HotelSearchServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		FBBFF0C124A42B2300432479 /* SearchHotelsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotelsInteractor.swift; sourceTree = "<group>"; };
 		FBBFF0C324A433F400432479 /* HotelListViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListViewMock.swift; sourceTree = "<group>"; };
 		FBD24E3324A56D8100CD143A /* SearchHotelsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotelsInteractorTests.swift; sourceTree = "<group>"; };
+		FBD24E3824A56F3C00CD143A /* HotelSearchServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelSearchServiceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			children = (
 				FBBFF0BC24A4284500432479 /* Interactor */,
 				FB331B5224A40D1B004FB2CB /* Presenter */,
+				FBD24E3524A56E1000CD143A /* Service */,
 				FB331B5124A40D03004FB2CB /* View */,
 				FB331B5024A40CE7004FB2CB /* Wireframe */,
 			);
@@ -221,6 +224,14 @@
 				FBBFF0C124A42B2300432479 /* SearchHotelsInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FBD24E3524A56E1000CD143A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FBD24E3824A56F3C00CD143A /* HotelSearchServiceProtocol.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +374,7 @@
 				FBA4684424A2BEC10075AD5A /* HotelListViewController.swift in Sources */,
 				FBA4685124A2E3800075AD5A /* HotelListPresenterProtocol.swift in Sources */,
 				FBA4684B24A2CDF20075AD5A /* HotelListWireframe.swift in Sources */,
+				FBD24E3924A56F3C00CD143A /* HotelSearchServiceProtocol.swift in Sources */,
 				FBA4684924A2CD3C0075AD5A /* HotelListWireframeProtocol.swift in Sources */,
 				FBBFF0BE24A4286300432479 /* SearchHotelsInteractorProtocol.swift in Sources */,
 				FBBFF0C224A42B2300432479 /* SearchHotelsInteractor.swift in Sources */,
