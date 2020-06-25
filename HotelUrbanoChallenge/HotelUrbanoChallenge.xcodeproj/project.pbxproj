@@ -23,6 +23,7 @@
 		FBA4685524A2EAB10075AD5A /* HotelListPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4685424A2EAB10075AD5A /* HotelListPresenterFactory.swift */; };
 		FBBFF0B824A419A000432479 /* HotelListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFF0B724A419A000432479 /* HotelListPresenterTests.swift */; };
 		FBBFF0BB24A41FBF00432479 /* HotelListWireframeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFF0BA24A41FBF00432479 /* HotelListWireframeMock.swift */; };
+		FBBFF0BE24A4286300432479 /* SearchHotelsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFF0BD24A4286300432479 /* SearchHotelsInteractorProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		FBA4685424A2EAB10075AD5A /* HotelListPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListPresenterFactory.swift; sourceTree = "<group>"; };
 		FBBFF0B724A419A000432479 /* HotelListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListPresenterTests.swift; sourceTree = "<group>"; };
 		FBBFF0BA24A41FBF00432479 /* HotelListWireframeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListWireframeMock.swift; sourceTree = "<group>"; };
+		FBBFF0BD24A4286300432479 /* SearchHotelsInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotelsInteractorProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		FB331B4F24A40CB6004FB2CB /* HotelList */ = {
 			isa = PBXGroup;
 			children = (
+				FBBFF0BC24A4284500432479 /* Interactor */,
 				FB331B5224A40D1B004FB2CB /* Presenter */,
 				FB331B5124A40D03004FB2CB /* View */,
 				FB331B5024A40CE7004FB2CB /* Wireframe */,
@@ -198,6 +201,14 @@
 				FBBFF0BA24A41FBF00432479 /* HotelListWireframeMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		FBBFF0BC24A4284500432479 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FBBFF0BD24A4286300432479 /* SearchHotelsInteractorProtocol.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +352,7 @@
 				FBA4685124A2E3800075AD5A /* HotelListPresenterProtocol.swift in Sources */,
 				FBA4684B24A2CDF20075AD5A /* HotelListWireframe.swift in Sources */,
 				FBA4684924A2CD3C0075AD5A /* HotelListWireframeProtocol.swift in Sources */,
+				FBBFF0BE24A4286300432479 /* SearchHotelsInteractorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
