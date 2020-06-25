@@ -8,14 +8,21 @@
 
 import XCTest
 
-class HotelListPresenterTests: XCTestCase {
+@testable import HotelUrbanoChallenge
 
+final class HotelListPresenterTests: XCTestCase {
+    
+    private var hotelListWireframeMock: HotelListWireframeMock!
+    private var presenter: HotelListPresenterProtocol!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.hotelListWireframeMock = HotelListWireframeMock()
+        self.presenter = HotelListPresenter(wireframe: self.hotelListWireframeMock)
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        self.hotelListWireframeMock = nil
+        self.presenter = nil
     }
 
     func testExample() throws {
