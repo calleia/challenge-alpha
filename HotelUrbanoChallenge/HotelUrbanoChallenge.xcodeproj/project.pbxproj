@@ -26,6 +26,7 @@
 		FBBFF0BE24A4286300432479 /* SearchHotelsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFF0BD24A4286300432479 /* SearchHotelsInteractorProtocol.swift */; };
 		FBBFF0C024A4291F00432479 /* SearchHotelsInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFF0BF24A4291F00432479 /* SearchHotelsInteractorMock.swift */; };
 		FBBFF0C224A42B2300432479 /* SearchHotelsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFF0C124A42B2300432479 /* SearchHotelsInteractor.swift */; };
+		FBBFF0C424A433F400432479 /* HotelListViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFF0C324A433F400432479 /* HotelListViewMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		FBBFF0BD24A4286300432479 /* SearchHotelsInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotelsInteractorProtocol.swift; sourceTree = "<group>"; };
 		FBBFF0BF24A4291F00432479 /* SearchHotelsInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotelsInteractorMock.swift; sourceTree = "<group>"; };
 		FBBFF0C124A42B2300432479 /* SearchHotelsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotelsInteractor.swift; sourceTree = "<group>"; };
+		FBBFF0C324A433F400432479 /* HotelListViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListViewMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 		FBBFF0B924A41FAB00432479 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				FBBFF0C324A433F400432479 /* HotelListViewMock.swift */,
 				FBBFF0BA24A41FBF00432479 /* HotelListWireframeMock.swift */,
 				FBBFF0BF24A4291F00432479 /* SearchHotelsInteractorMock.swift */,
 			);
@@ -370,6 +373,7 @@
 				FBBFF0B824A419A000432479 /* HotelListPresenterTests.swift in Sources */,
 				FBBFF0C024A4291F00432479 /* SearchHotelsInteractorMock.swift in Sources */,
 				FBBFF0BB24A41FBF00432479 /* HotelListWireframeMock.swift in Sources */,
+				FBBFF0C424A433F400432479 /* HotelListViewMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
