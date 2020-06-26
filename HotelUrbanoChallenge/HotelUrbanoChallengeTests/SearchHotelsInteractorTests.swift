@@ -8,26 +8,93 @@
 
 import XCTest
 
-class SearchHotelsInteractorTests: XCTestCase {
+@testable import HotelUrbanoChallenge
 
+final class SearchHotelsInteractorTests: XCTestCase {
+    
+    private var hotelSearchServiceMock: HotelSearchServiceMock!
+    private var interactor: SearchHotelsInteractor!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.hotelSearchServiceMock = HotelSearchServiceMock()
+        self.interactor = SearchHotelsInteractor(service: self.hotelSearchServiceMock)
     }
-
+    
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        self.hotelSearchServiceMock = nil
+        self.interactor = nil
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testInitialValues() throws {
+        XCTAssertEqual(self.hotelSearchServiceMock.callCount, 0)
+        XCTAssertEqual(self.hotelSearchServiceMock.lastLocation, "")
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testServiceCall() throws {
+        self.interactor.search(in: "Location Value") { _ in }
+        
+        XCTAssertEqual(self.hotelSearchServiceMock.callCount, 1)
+        XCTAssertEqual(self.hotelSearchServiceMock.lastLocation, "Location Value")
+    }
+    
+    func testServiceFindHotels() throws {
+        let hotelListMock = ["First Hotel",
+                             "Second Hotel",
+                             "Third Hotel"]
+        self.hotelSearchServiceMock.hotels = hotelListMock
+        
+        let expectation = self.expectation(description: "Service find hotels")
+        
+        self.interactor.search(in: "Location Value") { result in
+            switch result {
+            case .success(let hotels):
+                XCTAssertEqual(hotels, hotelListMock)
+            case .failure(_):
+                XCTFail()
+            }
+            
+            expectation.fulfill()
         }
+        
+        waitForExpectations(timeout: 5, handler: nil)
     }
-
+    
+    func testServiceCouldNotFindHotels() throws {
+        self.hotelSearchServiceMock.hotels = []
+        
+        let expectation = self.expectation(description: "Service find hotels")
+        
+        self.interactor.search(in: "Location Value") { result in
+            switch result {
+            case .success(let hotels):
+                XCTAssertEqual(hotels, [])
+            case .failure(_):
+                XCTFail()
+            }
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func testServiceError() throws {
+        self.hotelSearchServiceMock.error = .requestTimeout
+        
+        let expectation = self.expectation(description: "Service find hotels")
+        
+        self.interactor.search(in: "Location Value") { result in
+            switch result {
+            case .success(_):
+                XCTFail()
+            case .failure(let error):
+                XCTAssertEqual(error, .requestTimeout)
+            }
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
 }

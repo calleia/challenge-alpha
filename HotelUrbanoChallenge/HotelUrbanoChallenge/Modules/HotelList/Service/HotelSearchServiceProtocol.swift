@@ -8,4 +8,6 @@
 
 import Foundation
 
-protocol HotelSearchServiceProtocol {}
+protocol HotelSearchServiceProtocol {
+    func search(in location: String, completion: @escaping (Result<[String], HotelSearchError>) -> Void)
+}
