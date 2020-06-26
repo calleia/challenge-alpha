@@ -31,6 +31,7 @@
 		FBD24E3924A56F3C00CD143A /* HotelSearchServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD24E3824A56F3C00CD143A /* HotelSearchServiceProtocol.swift */; };
 		FBD24E3B24A5708F00CD143A /* HotelSearchServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD24E3A24A5708F00CD143A /* HotelSearchServiceMock.swift */; };
 		FBD24E3D24A5712B00CD143A /* HotelSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD24E3C24A5712B00CD143A /* HotelSearchService.swift */; };
+		FBD24E3F24A5799100CD143A /* SearchHotelsInteractorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD24E3E24A5799100CD143A /* SearchHotelsInteractorFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		FBD24E3824A56F3C00CD143A /* HotelSearchServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelSearchServiceProtocol.swift; sourceTree = "<group>"; };
 		FBD24E3A24A5708F00CD143A /* HotelSearchServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelSearchServiceMock.swift; sourceTree = "<group>"; };
 		FBD24E3C24A5712B00CD143A /* HotelSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelSearchService.swift; sourceTree = "<group>"; };
+		FBD24E3E24A5799100CD143A /* SearchHotelsInteractorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotelsInteractorFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 			children = (
 				FBBFF0BD24A4286300432479 /* SearchHotelsInteractorProtocol.swift */,
 				FBBFF0C124A42B2300432479 /* SearchHotelsInteractor.swift */,
+				FBD24E3E24A5799100CD143A /* SearchHotelsInteractorFactory.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				FBA4684B24A2CDF20075AD5A /* HotelListWireframe.swift in Sources */,
 				FBD24E3924A56F3C00CD143A /* HotelSearchServiceProtocol.swift in Sources */,
 				FBA4684924A2CD3C0075AD5A /* HotelListWireframeProtocol.swift in Sources */,
+				FBD24E3F24A5799100CD143A /* SearchHotelsInteractorFactory.swift in Sources */,
 				FBBFF0BE24A4286300432479 /* SearchHotelsInteractorProtocol.swift in Sources */,
 				FBD24E3D24A5712B00CD143A /* HotelSearchService.swift in Sources */,
 				FBBFF0C224A42B2300432479 /* SearchHotelsInteractor.swift in Sources */,

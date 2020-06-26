@@ -10,8 +10,7 @@ import Foundation
 
 final class HotelListPresenterFactory {
     static func make(wireframe: HotelListWireframeProtocol) -> HotelListPresenter {
-        let hotelSearchService = HotelSearchService()
-        let searchHotelsInteractor = SearchHotelsInteractor(service: hotelSearchService)
+        let searchHotelsInteractor = SearchHotelsInteractorFactory.make()
         let presenter = HotelListPresenter(searchHotelsInteractor: searchHotelsInteractor, wireframe: wireframe)
         
         return presenter
