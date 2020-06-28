@@ -14,6 +14,7 @@
 		FB035F3324A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB035F3224A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests.swift */; };
 		FB68776124A8EC00002294EF /* HotelSearchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68776024A8EC00002294EF /* HotelSearchServiceTests.swift */; };
 		FB68776724A8F078002294EF /* HttpClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68776624A8F078002294EF /* HttpClientMock.swift */; };
+		FB68776A24A91A9B002294EF /* hotel.json in Resources */ = {isa = PBXBuildFile; fileRef = FB68776924A91A9B002294EF /* hotel.json */; };
 		FBA4684424A2BEC10075AD5A /* HotelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4684224A2BEC10075AD5A /* HotelListViewController.swift */; };
 		FBA4684524A2BEC10075AD5A /* HotelListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBA4684324A2BEC10075AD5A /* HotelListViewController.xib */; };
 		FBA4684924A2CD3C0075AD5A /* HotelListWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4684824A2CD3C0075AD5A /* HotelListWireframeProtocol.swift */; };
@@ -69,6 +70,7 @@
 		FB035F3424A17B5A00CF0DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB68776024A8EC00002294EF /* HotelSearchServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelSearchServiceTests.swift; sourceTree = "<group>"; };
 		FB68776624A8F078002294EF /* HttpClientMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientMock.swift; sourceTree = "<group>"; };
+		FB68776924A91A9B002294EF /* hotel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = hotel.json; path = ../../../../examples/hotel.json; sourceTree = "<group>"; };
 		FBA4684224A2BEC10075AD5A /* HotelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListViewController.swift; sourceTree = "<group>"; };
 		FBA4684324A2BEC10075AD5A /* HotelListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelListViewController.xib; sourceTree = "<group>"; };
 		FBA4684824A2CD3C0075AD5A /* HotelListWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListWireframeProtocol.swift; sourceTree = "<group>"; };
@@ -223,6 +225,14 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		FB68776824A91A62002294EF /* json */ = {
+			isa = PBXGroup;
+			children = (
+				FB68776924A91A9B002294EF /* hotel.json */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
 		FBAFCA2224A5993C009EB562 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +253,7 @@
 		FBBFF0B924A41FAB00432479 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				FB68776824A91A62002294EF /* json */,
 				FBBFF0C324A433F400432479 /* HotelListViewMock.swift */,
 				FBBFF0BA24A41FBF00432479 /* HotelListWireframeMock.swift */,
 				FBD24E3A24A5708F00CD143A /* HotelSearchServiceMock.swift */,
@@ -385,6 +396,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB68776A24A91A9B002294EF /* hotel.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
