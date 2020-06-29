@@ -15,6 +15,7 @@
 		FB68776124A8EC00002294EF /* HotelSearchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68776024A8EC00002294EF /* HotelSearchServiceTests.swift */; };
 		FB68776724A8F078002294EF /* HttpClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68776624A8F078002294EF /* HttpClientMock.swift */; };
 		FB68776A24A91A9B002294EF /* hotel.json in Resources */ = {isa = PBXBuildFile; fileRef = FB68776924A91A9B002294EF /* hotel.json */; };
+		FB68776D24A96FEE002294EF /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68776C24A96FEE002294EF /* Response.swift */; };
 		FBA4684424A2BEC10075AD5A /* HotelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4684224A2BEC10075AD5A /* HotelListViewController.swift */; };
 		FBA4684524A2BEC10075AD5A /* HotelListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBA4684324A2BEC10075AD5A /* HotelListViewController.xib */; };
 		FBA4684924A2CD3C0075AD5A /* HotelListWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4684824A2CD3C0075AD5A /* HotelListWireframeProtocol.swift */; };
@@ -71,6 +72,7 @@
 		FB68776024A8EC00002294EF /* HotelSearchServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelSearchServiceTests.swift; sourceTree = "<group>"; };
 		FB68776624A8F078002294EF /* HttpClientMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientMock.swift; sourceTree = "<group>"; };
 		FB68776924A91A9B002294EF /* hotel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = hotel.json; path = ../../../../examples/hotel.json; sourceTree = "<group>"; };
+		FB68776C24A96FEE002294EF /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		FBA4684224A2BEC10075AD5A /* HotelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListViewController.swift; sourceTree = "<group>"; };
 		FBA4684324A2BEC10075AD5A /* HotelListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelListViewController.xib; sourceTree = "<group>"; };
 		FBA4684824A2CD3C0075AD5A /* HotelListWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListWireframeProtocol.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		FB331B4F24A40CB6004FB2CB /* HotelList */ = {
 			isa = PBXGroup;
 			children = (
+				FB68776B24A96FD9002294EF /* Entity */,
 				FBBFF0BC24A4284500432479 /* Interactor */,
 				FB331B5224A40D1B004FB2CB /* Presenter */,
 				FBD24E3524A56E1000CD143A /* Service */,
@@ -231,6 +234,14 @@
 				FB68776924A91A9B002294EF /* hotel.json */,
 			);
 			path = json;
+			sourceTree = "<group>";
+		};
+		FB68776B24A96FD9002294EF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FB68776C24A96FEE002294EF /* Response.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		FBAFCA2224A5993C009EB562 /* Shared */ = {
@@ -418,6 +429,7 @@
 				FB035F1124A17B5800CF0DC0 /* AppDelegate.swift in Sources */,
 				FBA4685524A2EAB10075AD5A /* HotelListPresenterFactory.swift in Sources */,
 				FBA4684F24A2E2600075AD5A /* HotelListView.swift in Sources */,
+				FB68776D24A96FEE002294EF /* Response.swift in Sources */,
 				FBAFCA2524A5996D009EB562 /* HttpClientProtocol.swift in Sources */,
 				FB035F1324A17B5800CF0DC0 /* SceneDelegate.swift in Sources */,
 				FBA4685324A2E4030075AD5A /* HotelListPresenter.swift in Sources */,
