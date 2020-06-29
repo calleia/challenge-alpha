@@ -8,8 +8,8 @@
 
 import Foundation
 
-final class HttpClient {
-    static func request(url: URL, completion: @escaping (Result<String, HttpRequestError>) -> Void) {
+final class HttpClient: HttpClientProtocol {
+    func request(url: URL, completion: @escaping (Result<Data, HttpRequestError>) -> Void) {
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
                 completion(.failure(.client(error.localizedDescription)))
@@ -26,12 +26,12 @@ final class HttpClient {
                 return
             }
             
-            guard let data = data, let payload = String(data: data, encoding: .utf8) else {
+            guard let data = data else {
                 completion(.failure(.noData))
                 return
             }
             
-            completion(.success(payload))
+            completion(.success(data))
         }
         
         task.resume()

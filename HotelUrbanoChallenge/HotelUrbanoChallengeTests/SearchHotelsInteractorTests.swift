@@ -30,7 +30,7 @@ final class SearchHotelsInteractorTests: XCTestCase {
         XCTAssertEqual(self.hotelSearchServiceMock.lastLocation, "")
     }
     
-    func testServiceCall() throws {
+    func testServiceRequest() throws {
         self.interactor.search(in: "Location Value") { _ in }
         
         XCTAssertEqual(self.hotelSearchServiceMock.callCount, 1)
@@ -38,17 +38,15 @@ final class SearchHotelsInteractorTests: XCTestCase {
     }
     
     func testServiceFindHotels() throws {
-        let hotelListMock = ["First Hotel",
-                             "Second Hotel",
-                             "Third Hotel"]
-        self.hotelSearchServiceMock.hotels = hotelListMock
+        let hotel = Hotel(id: "Hotel ID", name: "Hotel Name")
+        self.hotelSearchServiceMock.response = Response(results: [hotel])
         
-        let expectation = self.expectation(description: "Service find hotels")
+        let expectation = self.expectation(description: "Service request")
         
         self.interactor.search(in: "Location Value") { result in
             switch result {
             case .success(let hotels):
-                XCTAssertEqual(hotels, hotelListMock)
+                XCTAssertEqual(hotels, [hotel])
             case .failure(_):
                 XCTFail()
             }
@@ -60,9 +58,9 @@ final class SearchHotelsInteractorTests: XCTestCase {
     }
     
     func testServiceCouldNotFindHotels() throws {
-        self.hotelSearchServiceMock.hotels = []
+        self.hotelSearchServiceMock.response = Response(results: [])
         
-        let expectation = self.expectation(description: "Service find hotels")
+        let expectation = self.expectation(description: "Service request")
         
         self.interactor.search(in: "Location Value") { result in
             switch result {
@@ -78,17 +76,93 @@ final class SearchHotelsInteractorTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testServiceError() throws {
-        self.hotelSearchServiceMock.error = .requestTimeout
+    func testServiceResponseParseError() throws {
+        self.hotelSearchServiceMock.error = .couldNotParseResponse
         
-        let expectation = self.expectation(description: "Service find hotels")
+        let expectation = self.expectation(description: "Service request")
         
         self.interactor.search(in: "Location Value") { result in
             switch result {
             case .success(_):
                 XCTFail()
             case .failure(let error):
-                XCTAssertEqual(error, .requestTimeout)
+                XCTAssertEqual(error, .invalidServiceResponse)
+            }
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func testServiceConnectionError() throws {
+        self.hotelSearchServiceMock.error = .connection("Falha na conexão")
+        
+        let expectation = self.expectation(description: "Service request")
+        
+        self.interactor.search(in: "Location Value") { result in
+            switch result {
+            case .success(_):
+                XCTFail()
+            case .failure(let error):
+                XCTAssertEqual(error, .connection("Falha na conexão"))
+            }
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func testServiceInternalError() throws {
+        self.hotelSearchServiceMock.error = .server(500)
+        
+        let expectation = self.expectation(description: "Service request")
+        
+        self.interactor.search(in: "Location Value") { result in
+            switch result {
+            case .success(_):
+                XCTFail()
+            case .failure(let error):
+                XCTAssertEqual(error, .service(500))
+            }
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func testNoServiceResponse() throws {
+        self.hotelSearchServiceMock.error = .noResponse
+        
+        let expectation = self.expectation(description: "Service request")
+        
+        self.interactor.search(in: "Location Value") { result in
+            switch result {
+            case .success(_):
+                XCTFail()
+            case .failure(let error):
+                XCTAssertEqual(error, .invalidServiceResponse)
+            }
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func testEmptyServiceResponse() throws {
+        self.hotelSearchServiceMock.error = .emptyResponse
+        
+        let expectation = self.expectation(description: "Service request")
+        
+        self.interactor.search(in: "Location Value") { result in
+            switch result {
+            case .success(_):
+                XCTFail()
+            case .failure(let error):
+                XCTAssertEqual(error, .invalidServiceResponse)
             }
             
             expectation.fulfill()

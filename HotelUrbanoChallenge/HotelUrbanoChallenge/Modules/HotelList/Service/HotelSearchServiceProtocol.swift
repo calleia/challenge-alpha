@@ -8,6 +8,14 @@
 
 import Foundation
 
+enum HotelServiceError: Error, Equatable {
+    case couldNotParseResponse
+    case connection(_ description: String)
+    case server(_ statusCode: Int)
+    case noResponse
+    case emptyResponse
+}
+
 protocol HotelSearchServiceProtocol {
-    func search(in location: String, completion: @escaping (Result<[String], HotelSearchError>) -> Void)
+    func search(in location: String, completion: @escaping (Result<Response, HotelServiceError>) -> Void)
 }

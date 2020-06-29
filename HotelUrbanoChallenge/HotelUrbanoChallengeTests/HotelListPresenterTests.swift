@@ -58,22 +58,20 @@ final class HotelListPresenterTests: XCTestCase {
     }
     
     func testShowHotels() throws {
-        let hotelListMock = ["First Hotel",
-                             "Second Hotel",
-                             "Third Hotel"]
-        self.searchHotelsInteractorMock.hotels = hotelListMock
+        let hotel = Hotel(id: "Hotel ID", name: "Hotel Name")
+        self.searchHotelsInteractorMock.hotels = [hotel]
         
         self.presenter.searchHotels(in: "Location Value")
         
         XCTAssertEqual(self.hotelListViewMock.showHotelsCallCount, 1)
-        XCTAssertEqual(self.hotelListViewMock.lastHotelList, hotelListMock)
+        XCTAssertEqual(self.hotelListViewMock.lastHotelList, [hotel.name])
         
         XCTAssertEqual(self.hotelListViewMock.showErrorCallCount, 0)
         XCTAssertEqual(self.hotelListViewMock.lastErrorMessage, "")
     }
     
-    func testShowError() throws {
-        self.searchHotelsInteractorMock.error = .requestTimeout
+    func testShowResponseError() throws {
+        self.searchHotelsInteractorMock.error = .invalidServiceResponse
         
         self.presenter.searchHotels(in: "Location Value")
         
@@ -81,7 +79,31 @@ final class HotelListPresenterTests: XCTestCase {
         XCTAssertEqual(self.hotelListViewMock.lastHotelList, [])
         
         XCTAssertEqual(self.hotelListViewMock.showErrorCallCount, 1)
-        XCTAssertEqual(self.hotelListViewMock.lastErrorMessage, "Request timeout, por favor tente novamente.")
+        XCTAssertEqual(self.hotelListViewMock.lastErrorMessage, "O serviço retornou dados inválidos, por favor tente novamente.")
+    }
+    
+    func testShowConnectionError() throws {
+        self.searchHotelsInteractorMock.error = .connection("Falha na conexão")
+        
+        self.presenter.searchHotels(in: "Location Value")
+        
+        XCTAssertEqual(self.hotelListViewMock.showHotelsCallCount, 0)
+        XCTAssertEqual(self.hotelListViewMock.lastHotelList, [])
+        
+        XCTAssertEqual(self.hotelListViewMock.showErrorCallCount, 1)
+        XCTAssertEqual(self.hotelListViewMock.lastErrorMessage, "Falha na conexão com o serviço, por favor tente novamente.")
+    }
+    
+    func testShowServiceError() throws {
+        self.searchHotelsInteractorMock.error = .service(500)
+        
+        self.presenter.searchHotels(in: "Location Value")
+        
+        XCTAssertEqual(self.hotelListViewMock.showHotelsCallCount, 0)
+        XCTAssertEqual(self.hotelListViewMock.lastHotelList, [])
+        
+        XCTAssertEqual(self.hotelListViewMock.showErrorCallCount, 1)
+        XCTAssertEqual(self.hotelListViewMock.lastErrorMessage, "Ocorreu uma falha no servidor (código: 500). Por favor tente novamente.")
     }
     
 }

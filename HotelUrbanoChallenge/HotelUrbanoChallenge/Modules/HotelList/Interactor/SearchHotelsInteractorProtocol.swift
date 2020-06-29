@@ -8,10 +8,12 @@
 
 import Foundation
 
-enum HotelSearchError: Error {
-    case requestTimeout
+enum HotelSearchError: Error, Equatable {
+    case invalidServiceResponse
+    case connection(_ description: String)
+    case service(_ statusCode: Int)
 }
 
 protocol SearchHotelsInteractorProtocol {
-    func search(in location: String, completion: @escaping (Result<[String], HotelSearchError>) -> Void)
+    func search(in location: String, completion: @escaping (Result<[Hotel], HotelSearchError>) -> Void)
 }

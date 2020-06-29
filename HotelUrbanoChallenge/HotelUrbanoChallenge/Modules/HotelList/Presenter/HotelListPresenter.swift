@@ -27,7 +27,12 @@ final class HotelListPresenter: HotelListPresenterProtocol {
         self.searchHotelsInteractor.search(in: location) { result in
             switch result {
             case .success(let hotels):
-                self.view?.showHotels(hotels)
+                // TODO: show the required hotel data
+                let hotelNames = hotels.map { hotel in
+                    hotel.name
+                }
+                
+                self.view?.showHotels(hotelNames)
             case .failure(let error):
                 let message = self.makeErrorMessage(for: error)
                 self.view?.showError(message: message)
@@ -41,8 +46,12 @@ final class HotelListPresenter: HotelListPresenterProtocol {
 extension HotelListPresenter {
     private func makeErrorMessage(for error: HotelSearchError) -> String {
         switch error {
-        case .requestTimeout:
-            return "Request timeout, por favor tente novamente."
+        case .invalidServiceResponse:
+            return "O serviço retornou dados inválidos, por favor tente novamente."
+        case .connection(_):
+            return "Falha na conexão com o serviço, por favor tente novamente."
+        case .service(let statusCode):
+            return "Ocorreu uma falha no servidor (código: \(statusCode)). Por favor tente novamente."
         }
     }
 }

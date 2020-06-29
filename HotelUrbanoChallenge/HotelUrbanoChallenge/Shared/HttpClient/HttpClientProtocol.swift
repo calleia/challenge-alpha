@@ -16,5 +16,5 @@ enum HttpRequestError: Error {
 }
 
 protocol HttpClientProtocol {
-    static func request(url: URL, completion: @escaping (Result<String, HttpRequestError>) -> Void)
+    func request(url: URL, completion: @escaping (Result<Data, HttpRequestError>) -> Void)
 }

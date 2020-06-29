@@ -12,20 +12,20 @@ import Foundation
 
 final class HotelSearchServiceMock: HotelSearchServiceProtocol {
     
-    var error: HotelSearchError? = nil
-    var hotels = [String]()
+    var error: HotelServiceError? = nil
+    var response = Response(results: [])
     
     var callCount = 0
     var lastLocation = ""
     
-    func search(in location: String, completion: @escaping (Result<[String], HotelSearchError>) -> Void) {
+    func search(in location: String, completion: @escaping (Result<Response, HotelServiceError>) -> Void) {
         self.lastLocation = location
         self.callCount += 1
         
         if let error = self.error {
             completion(.failure(error))
         } else {
-            completion(.success(self.hotels))
+            completion(.success(self.response))
         }
     }
 }

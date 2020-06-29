@@ -13,12 +13,12 @@ import Foundation
 final class SearchHotelsInteractorMock: SearchHotelsInteractorProtocol {
     
     var error: HotelSearchError? = nil
-    var hotels = [String]()
+    var hotels = [Hotel]()
     
     var callCount = 0
     var lastLocation = ""
     
-    func search(in location: String, completion: @escaping (Result<[String], HotelSearchError>) -> Void) {
+    func search(in location: String, completion: @escaping (Result<[Hotel], HotelSearchError>) -> Void) {
         self.callCount += 1
         self.lastLocation = location
         

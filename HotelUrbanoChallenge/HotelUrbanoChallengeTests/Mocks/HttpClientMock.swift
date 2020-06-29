@@ -11,6 +11,21 @@ import Foundation
 @testable import HotelUrbanoChallenge
 
 final class HttpClientMock: HttpClientProtocol {
-    static func request(url: URL, completion: @escaping (Result<String, HttpRequestError>) -> Void) {
+    
+    var error: HttpRequestError? = nil
+    var payload = Data()
+    
+    var callCount = 0
+    var lastUrl: URL? = nil
+    
+    func request(url: URL, completion: @escaping (Result<Data, HttpRequestError>) -> Void) {
+        self.lastUrl = url
+        self.callCount += 1
+        
+        if let error = self.error {
+            completion(.failure(error))
+        } else {
+            completion(.success(self.payload))
+        }
     }
 }

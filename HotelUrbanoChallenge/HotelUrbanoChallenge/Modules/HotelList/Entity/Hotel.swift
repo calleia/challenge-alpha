@@ -8,4 +8,7 @@
 
 import Foundation
 
-struct Hotel {}
+struct Hotel: Decodable, Equatable {
+    let id: String
+    let name: String
+}

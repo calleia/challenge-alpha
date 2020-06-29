@@ -10,7 +10,8 @@ import Foundation
 
 final class SearchHotelsInteractorFactory {
     static func make() -> SearchHotelsInteractor {
-        let hotelSearchService = HotelSearchService()
+        let httpClient = HttpClient()
+        let hotelSearchService = HotelSearchService(httpClient: httpClient)
         let interactor = SearchHotelsInteractor(service: hotelSearchService)
         
         return interactor
