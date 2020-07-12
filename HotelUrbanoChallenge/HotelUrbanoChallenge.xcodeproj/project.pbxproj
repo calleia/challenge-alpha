@@ -47,6 +47,7 @@
 		FBE0C04E24BB96F100BA1471 /* SuggestionsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C04D24BB96F100BA1471 /* SuggestionsPresenterProtocol.swift */; };
 		FBE0C05024BB977600BA1471 /* SuggestionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C04F24BB977600BA1471 /* SuggestionsPresenter.swift */; };
 		FBE0C05224BB97D000BA1471 /* SuggestionsPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C05124BB97D000BA1471 /* SuggestionsPresenterFactory.swift */; };
+		FBE0C05524BB9F8600BA1471 /* SuggestionsServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C05424BB9F8600BA1471 /* SuggestionsServiceResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		FBE0C04D24BB96F100BA1471 /* SuggestionsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsPresenterProtocol.swift; sourceTree = "<group>"; };
 		FBE0C04F24BB977600BA1471 /* SuggestionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsPresenter.swift; sourceTree = "<group>"; };
 		FBE0C05124BB97D000BA1471 /* SuggestionsPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsPresenterFactory.swift; sourceTree = "<group>"; };
+		FBE0C05424BB9F8600BA1471 /* SuggestionsServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsServiceResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +319,7 @@
 		FBE0C03F24BB926F00BA1471 /* Suggestions */ = {
 			isa = PBXGroup;
 			children = (
+				FBE0C05324BB9F6D00BA1471 /* Entity */,
 				FBE0C04C24BB96C600BA1471 /* Presenter */,
 				FBE0C04024BB928100BA1471 /* View */,
 			);
@@ -342,6 +345,14 @@
 				FBE0C05124BB97D000BA1471 /* SuggestionsPresenterFactory.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FBE0C05324BB9F6D00BA1471 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FBE0C05424BB9F8600BA1471 /* SuggestionsServiceResponse.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,6 +511,7 @@
 				FBD24E3F24A5799100CD143A /* SearchHotelsInteractorFactory.swift in Sources */,
 				FBBFF0BE24A4286300432479 /* SearchHotelsInteractorProtocol.swift in Sources */,
 				FBD24E3D24A5712B00CD143A /* HotelSearchService.swift in Sources */,
+				FBE0C05524BB9F8600BA1471 /* SuggestionsServiceResponse.swift in Sources */,
 				FBAFCA2724A59A00009EB562 /* HttpClient.swift in Sources */,
 				FBBFF0C224A42B2300432479 /* SearchHotelsInteractor.swift in Sources */,
 				FBE0C04324BB92A500BA1471 /* SuggestionsViewController.swift in Sources */,
