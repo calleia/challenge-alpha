@@ -45,6 +45,7 @@
 		FBE0C04624BB94CA00BA1471 /* SuggestionsViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C04524BB94CA00BA1471 /* SuggestionsViewControllerFactory.swift */; };
 		FBE0C04B24BB963700BA1471 /* SuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C04A24BB963700BA1471 /* SuggestionsView.swift */; };
 		FBE0C04E24BB96F100BA1471 /* SuggestionsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C04D24BB96F100BA1471 /* SuggestionsPresenterProtocol.swift */; };
+		FBE0C05024BB977600BA1471 /* SuggestionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C04F24BB977600BA1471 /* SuggestionsPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		FBE0C04524BB94CA00BA1471 /* SuggestionsViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewControllerFactory.swift; sourceTree = "<group>"; };
 		FBE0C04A24BB963700BA1471 /* SuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsView.swift; sourceTree = "<group>"; };
 		FBE0C04D24BB96F100BA1471 /* SuggestionsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsPresenterProtocol.swift; sourceTree = "<group>"; };
+		FBE0C04F24BB977600BA1471 /* SuggestionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				FBE0C04D24BB96F100BA1471 /* SuggestionsPresenterProtocol.swift */,
+				FBE0C04F24BB977600BA1471 /* SuggestionsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				FBA4684F24A2E2600075AD5A /* HotelListView.swift in Sources */,
 				FBE0C04624BB94CA00BA1471 /* SuggestionsViewControllerFactory.swift in Sources */,
 				FB68776D24A96FEE002294EF /* Response.swift in Sources */,
+				FBE0C05024BB977600BA1471 /* SuggestionsPresenter.swift in Sources */,
 				FBE0C04B24BB963700BA1471 /* SuggestionsView.swift in Sources */,
 				FBAFCA2524A5996D009EB562 /* HttpClientProtocol.swift in Sources */,
 				FB035F1324A17B5800CF0DC0 /* SceneDelegate.swift in Sources */,
