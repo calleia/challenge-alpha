@@ -40,6 +40,8 @@
 		FBD24E3B24A5708F00CD143A /* HotelSearchServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD24E3A24A5708F00CD143A /* HotelSearchServiceMock.swift */; };
 		FBD24E3D24A5712B00CD143A /* HotelSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD24E3C24A5712B00CD143A /* HotelSearchService.swift */; };
 		FBD24E3F24A5799100CD143A /* SearchHotelsInteractorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD24E3E24A5799100CD143A /* SearchHotelsInteractorFactory.swift */; };
+		FBE0C04324BB92A500BA1471 /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C04124BB92A500BA1471 /* SuggestionsViewController.swift */; };
+		FBE0C04424BB92A500BA1471 /* SuggestionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBE0C04224BB92A500BA1471 /* SuggestionsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,8 @@
 		FBD24E3A24A5708F00CD143A /* HotelSearchServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelSearchServiceMock.swift; sourceTree = "<group>"; };
 		FBD24E3C24A5712B00CD143A /* HotelSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelSearchService.swift; sourceTree = "<group>"; };
 		FBD24E3E24A5799100CD143A /* SearchHotelsInteractorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotelsInteractorFactory.swift; sourceTree = "<group>"; };
+		FBE0C04124BB92A500BA1471 /* SuggestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewController.swift; sourceTree = "<group>"; };
+		FBE0C04224BB92A500BA1471 /* SuggestionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				FB331B4F24A40CB6004FB2CB /* HotelList */,
+				FBE0C03F24BB926F00BA1471 /* Suggestions */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -299,6 +304,23 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		FBE0C03F24BB926F00BA1471 /* Suggestions */ = {
+			isa = PBXGroup;
+			children = (
+				FBE0C04024BB928100BA1471 /* View */,
+			);
+			path = Suggestions;
+			sourceTree = "<group>";
+		};
+		FBE0C04024BB928100BA1471 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FBE0C04124BB92A500BA1471 /* SuggestionsViewController.swift */,
+				FBE0C04224BB92A500BA1471 /* SuggestionsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -403,6 +425,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBE0C04424BB92A500BA1471 /* SuggestionsViewController.xib in Resources */,
 				FB035F1D24A17B5900CF0DC0 /* LaunchScreen.storyboard in Resources */,
 				FB035F1A24A17B5900CF0DC0 /* Assets.xcassets in Resources */,
 				FBA4684524A2BEC10075AD5A /* HotelListViewController.xib in Resources */,
@@ -451,6 +474,7 @@
 				FBD24E3D24A5712B00CD143A /* HotelSearchService.swift in Sources */,
 				FBAFCA2724A59A00009EB562 /* HttpClient.swift in Sources */,
 				FBBFF0C224A42B2300432479 /* SearchHotelsInteractor.swift in Sources */,
+				FBE0C04324BB92A500BA1471 /* SuggestionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

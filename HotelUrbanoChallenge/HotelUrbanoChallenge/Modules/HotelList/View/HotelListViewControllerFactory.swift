@@ -27,7 +27,8 @@ extension HotelListViewControllerFactory {
     }
     
     private static func setupSearchController(_ viewController: HotelListViewController) {
-        let searchController = UISearchController(searchResultsController: nil)
+        let suggestionsViewController = SuggestionsViewController()
+        let searchController = UISearchController(searchResultsController: suggestionsViewController)
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.autocapitalizationType = .none
         searchController.delegate = viewController
