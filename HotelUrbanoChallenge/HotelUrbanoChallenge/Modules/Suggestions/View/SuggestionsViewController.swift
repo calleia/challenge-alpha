@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SuggestionsViewController: UITableViewController {
+final class SuggestionsViewController: UITableViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,3 +43,5 @@ class SuggestionsViewController: UITableViewController {
     */
     
 }
+
+extension SuggestionsViewController: SuggestionsView {}

@@ -43,6 +43,7 @@
 		FBE0C04324BB92A500BA1471 /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C04124BB92A500BA1471 /* SuggestionsViewController.swift */; };
 		FBE0C04424BB92A500BA1471 /* SuggestionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBE0C04224BB92A500BA1471 /* SuggestionsViewController.xib */; };
 		FBE0C04624BB94CA00BA1471 /* SuggestionsViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C04524BB94CA00BA1471 /* SuggestionsViewControllerFactory.swift */; };
+		FBE0C04B24BB963700BA1471 /* SuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C04A24BB963700BA1471 /* SuggestionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		FBE0C04124BB92A500BA1471 /* SuggestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewController.swift; sourceTree = "<group>"; };
 		FBE0C04224BB92A500BA1471 /* SuggestionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionsViewController.xib; sourceTree = "<group>"; };
 		FBE0C04524BB94CA00BA1471 /* SuggestionsViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewControllerFactory.swift; sourceTree = "<group>"; };
+		FBE0C04A24BB963700BA1471 /* SuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +319,7 @@
 		FBE0C04024BB928100BA1471 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FBE0C04A24BB963700BA1471 /* SuggestionsView.swift */,
 				FBE0C04124BB92A500BA1471 /* SuggestionsViewController.swift */,
 				FBE0C04224BB92A500BA1471 /* SuggestionsViewController.xib */,
 				FBE0C04524BB94CA00BA1471 /* SuggestionsViewControllerFactory.swift */,
@@ -464,6 +467,7 @@
 				FBA4684F24A2E2600075AD5A /* HotelListView.swift in Sources */,
 				FBE0C04624BB94CA00BA1471 /* SuggestionsViewControllerFactory.swift in Sources */,
 				FB68776D24A96FEE002294EF /* Response.swift in Sources */,
+				FBE0C04B24BB963700BA1471 /* SuggestionsView.swift in Sources */,
 				FBAFCA2524A5996D009EB562 /* HttpClientProtocol.swift in Sources */,
 				FB035F1324A17B5800CF0DC0 /* SceneDelegate.swift in Sources */,
 				FBA4685324A2E4030075AD5A /* HotelListPresenter.swift in Sources */,
