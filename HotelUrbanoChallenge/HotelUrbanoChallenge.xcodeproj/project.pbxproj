@@ -42,6 +42,7 @@
 		FBD24E3F24A5799100CD143A /* SearchHotelsInteractorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD24E3E24A5799100CD143A /* SearchHotelsInteractorFactory.swift */; };
 		FBE0C04324BB92A500BA1471 /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C04124BB92A500BA1471 /* SuggestionsViewController.swift */; };
 		FBE0C04424BB92A500BA1471 /* SuggestionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBE0C04224BB92A500BA1471 /* SuggestionsViewController.xib */; };
+		FBE0C04624BB94CA00BA1471 /* SuggestionsViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C04524BB94CA00BA1471 /* SuggestionsViewControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		FBD24E3E24A5799100CD143A /* SearchHotelsInteractorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHotelsInteractorFactory.swift; sourceTree = "<group>"; };
 		FBE0C04124BB92A500BA1471 /* SuggestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewController.swift; sourceTree = "<group>"; };
 		FBE0C04224BB92A500BA1471 /* SuggestionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionsViewController.xib; sourceTree = "<group>"; };
+		FBE0C04524BB94CA00BA1471 /* SuggestionsViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewControllerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +319,7 @@
 			children = (
 				FBE0C04124BB92A500BA1471 /* SuggestionsViewController.swift */,
 				FBE0C04224BB92A500BA1471 /* SuggestionsViewController.xib */,
+				FBE0C04524BB94CA00BA1471 /* SuggestionsViewControllerFactory.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				FB035F1124A17B5800CF0DC0 /* AppDelegate.swift in Sources */,
 				FBA4685524A2EAB10075AD5A /* HotelListPresenterFactory.swift in Sources */,
 				FBA4684F24A2E2600075AD5A /* HotelListView.swift in Sources */,
+				FBE0C04624BB94CA00BA1471 /* SuggestionsViewControllerFactory.swift in Sources */,
 				FB68776D24A96FEE002294EF /* Response.swift in Sources */,
 				FBAFCA2524A5996D009EB562 /* HttpClientProtocol.swift in Sources */,
 				FB035F1324A17B5800CF0DC0 /* SceneDelegate.swift in Sources */,
