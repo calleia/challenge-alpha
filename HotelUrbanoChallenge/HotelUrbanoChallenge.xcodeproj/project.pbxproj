@@ -46,6 +46,7 @@
 		FBE0C04B24BB963700BA1471 /* SuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C04A24BB963700BA1471 /* SuggestionsView.swift */; };
 		FBE0C04E24BB96F100BA1471 /* SuggestionsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C04D24BB96F100BA1471 /* SuggestionsPresenterProtocol.swift */; };
 		FBE0C05024BB977600BA1471 /* SuggestionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C04F24BB977600BA1471 /* SuggestionsPresenter.swift */; };
+		FBE0C05224BB97D000BA1471 /* SuggestionsPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C05124BB97D000BA1471 /* SuggestionsPresenterFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		FBE0C04A24BB963700BA1471 /* SuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsView.swift; sourceTree = "<group>"; };
 		FBE0C04D24BB96F100BA1471 /* SuggestionsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsPresenterProtocol.swift; sourceTree = "<group>"; };
 		FBE0C04F24BB977600BA1471 /* SuggestionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsPresenter.swift; sourceTree = "<group>"; };
+		FBE0C05124BB97D000BA1471 /* SuggestionsPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsPresenterFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +339,7 @@
 			children = (
 				FBE0C04D24BB96F100BA1471 /* SuggestionsPresenterProtocol.swift */,
 				FBE0C04F24BB977600BA1471 /* SuggestionsPresenter.swift */,
+				FBE0C05124BB97D000BA1471 /* SuggestionsPresenterFactory.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				FBA4685524A2EAB10075AD5A /* HotelListPresenterFactory.swift in Sources */,
 				FBA4684F24A2E2600075AD5A /* HotelListView.swift in Sources */,
 				FBE0C04624BB94CA00BA1471 /* SuggestionsViewControllerFactory.swift in Sources */,
+				FBE0C05224BB97D000BA1471 /* SuggestionsPresenterFactory.swift in Sources */,
 				FB68776D24A96FEE002294EF /* Response.swift in Sources */,
 				FBE0C05024BB977600BA1471 /* SuggestionsPresenter.swift in Sources */,
 				FBE0C04B24BB963700BA1471 /* SuggestionsView.swift in Sources */,

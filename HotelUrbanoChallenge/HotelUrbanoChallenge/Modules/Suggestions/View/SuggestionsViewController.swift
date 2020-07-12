@@ -9,7 +9,9 @@
 import UIKit
 
 final class SuggestionsViewController: UITableViewController {
-        
+    
+    var presenter: SuggestionsPresenterProtocol? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

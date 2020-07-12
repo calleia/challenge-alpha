@@ -11,7 +11,17 @@ import Foundation
 final class SuggestionsViewControllerFactory {
     static func make() -> SuggestionsViewController {
         let viewController = SuggestionsViewController()
+        self.setupPresenter(viewController)
         
         return viewController
+    }
+}
+
+extension SuggestionsViewControllerFactory {
+    private static func setupPresenter(_ viewController: SuggestionsViewController) {
+        let presenter = SuggestionsPresenterFactory.make()
+        presenter.view = viewController
+        
+        viewController.presenter = presenter
     }
 }

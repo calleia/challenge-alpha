@@ -8,4 +8,4 @@
 
 import Foundation
 
-protocol SuggestionsView {}
+protocol SuggestionsView: AnyObject {}
