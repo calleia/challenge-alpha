@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Suggestion {
+struct Suggestion: Equatable {
     let value: String
     let country: String
     let state: String

@@ -8,4 +8,12 @@
 
 import Foundation
 
-protocol GetSuggestionsInteractorProtocol {}
+enum GetSuggestionsError: Error, Equatable {
+    case invalidServiceResponse
+    case connection(_ description: String)
+    case service(_ statusCode: Int)
+}
+
+protocol GetSuggestionsInteractorProtocol {
+    func suggestions(for location: String, completion: @escaping (Result<[Suggestion], GetSuggestionsError>) -> Void)
+}
