@@ -8,4 +8,6 @@
 
 import Foundation
 
-struct SuggestionsServiceResponse {}
+struct SuggestionsServiceResponse: Decodable {
+    let suggestions: [Suggestion]
+}

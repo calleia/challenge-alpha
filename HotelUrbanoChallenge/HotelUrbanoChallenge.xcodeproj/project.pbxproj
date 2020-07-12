@@ -50,6 +50,9 @@
 		FBE0C05524BB9F8600BA1471 /* SuggestionsServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C05424BB9F8600BA1471 /* SuggestionsServiceResponse.swift */; };
 		FBE0C05824BBA00400BA1471 /* SuggestionsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C05724BBA00400BA1471 /* SuggestionsServiceProtocol.swift */; };
 		FBE0C05E24BBA5CD00BA1471 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C05D24BBA5CD00BA1471 /* Suggestion.swift */; };
+		FBE0C06024BBA67800BA1471 /* SuggestionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C05F24BBA67800BA1471 /* SuggestionsService.swift */; };
+		FBE0C06224BBA6A200BA1471 /* SuggestionsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C06124BBA6A200BA1471 /* SuggestionsServiceTests.swift */; };
+		FBE0C06424BBA86700BA1471 /* suggestion.json in Resources */ = {isa = PBXBuildFile; fileRef = FBE0C06324BBA86700BA1471 /* suggestion.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +122,9 @@
 		FBE0C05424BB9F8600BA1471 /* SuggestionsServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsServiceResponse.swift; sourceTree = "<group>"; };
 		FBE0C05724BBA00400BA1471 /* SuggestionsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsServiceProtocol.swift; sourceTree = "<group>"; };
 		FBE0C05D24BBA5CD00BA1471 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
+		FBE0C05F24BBA67800BA1471 /* SuggestionsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsService.swift; sourceTree = "<group>"; };
+		FBE0C06124BBA6A200BA1471 /* SuggestionsServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsServiceTests.swift; sourceTree = "<group>"; };
+		FBE0C06324BBA86700BA1471 /* suggestion.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = suggestion.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +193,7 @@
 				FB68776024A8EC00002294EF /* HotelSearchServiceTests.swift */,
 				FBD24E3324A56D8100CD143A /* SearchHotelsInteractorTests.swift */,
 				FBBFF0B724A419A000432479 /* HotelListPresenterTests.swift */,
+				FBE0C06124BBA6A200BA1471 /* SuggestionsServiceTests.swift */,
 				FB035F2924A17B5900CF0DC0 /* Info.plist */,
 			);
 			path = HotelUrbanoChallengeTests;
@@ -257,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				FB68776924A91A9B002294EF /* hotel.json */,
+				FBE0C06324BBA86700BA1471 /* suggestion.json */,
 			);
 			path = json;
 			sourceTree = "<group>";
@@ -365,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				FBE0C05724BBA00400BA1471 /* SuggestionsServiceProtocol.swift */,
+				FBE0C05F24BBA67800BA1471 /* SuggestionsService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -485,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB68776A24A91A9B002294EF /* hotel.json in Resources */,
+				FBE0C06424BBA86700BA1471 /* suggestion.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +541,7 @@
 				FBAFCA2724A59A00009EB562 /* HttpClient.swift in Sources */,
 				FBBFF0C224A42B2300432479 /* SearchHotelsInteractor.swift in Sources */,
 				FBE0C04324BB92A500BA1471 /* SuggestionsViewController.swift in Sources */,
+				FBE0C06024BBA67800BA1471 /* SuggestionsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +557,7 @@
 				FBBFF0BB24A41FBF00432479 /* HotelListWireframeMock.swift in Sources */,
 				FBD24E3424A56D8100CD143A /* SearchHotelsInteractorTests.swift in Sources */,
 				FBBFF0C424A433F400432479 /* HotelListViewMock.swift in Sources */,
+				FBE0C06224BBA6A200BA1471 /* SuggestionsServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

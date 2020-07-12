@@ -8,4 +8,14 @@
 
 import Foundation
 
-protocol SuggestionsServiceProtocol {}
+enum SuggestionsServiceError: Error, Equatable {
+    case couldNotParseResponse
+    case connection(_ description: String)
+    case server(_ statusCode: Int)
+    case noResponse
+    case emptyResponse
+}
+
+protocol SuggestionsServiceProtocol {
+    func fetch(_ location: String, completion: @escaping (Result<SuggestionsServiceResponse, SuggestionsServiceError>) -> Void)
+}
