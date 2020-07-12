@@ -48,6 +48,7 @@
 		FBE0C05024BB977600BA1471 /* SuggestionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C04F24BB977600BA1471 /* SuggestionsPresenter.swift */; };
 		FBE0C05224BB97D000BA1471 /* SuggestionsPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C05124BB97D000BA1471 /* SuggestionsPresenterFactory.swift */; };
 		FBE0C05524BB9F8600BA1471 /* SuggestionsServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C05424BB9F8600BA1471 /* SuggestionsServiceResponse.swift */; };
+		FBE0C05824BBA00400BA1471 /* SuggestionsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C05724BBA00400BA1471 /* SuggestionsServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		FBE0C04F24BB977600BA1471 /* SuggestionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsPresenter.swift; sourceTree = "<group>"; };
 		FBE0C05124BB97D000BA1471 /* SuggestionsPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsPresenterFactory.swift; sourceTree = "<group>"; };
 		FBE0C05424BB9F8600BA1471 /* SuggestionsServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsServiceResponse.swift; sourceTree = "<group>"; };
+		FBE0C05724BBA00400BA1471 /* SuggestionsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsServiceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +323,7 @@
 			children = (
 				FBE0C05324BB9F6D00BA1471 /* Entity */,
 				FBE0C04C24BB96C600BA1471 /* Presenter */,
+				FBE0C05624BB9FD400BA1471 /* Service */,
 				FBE0C04024BB928100BA1471 /* View */,
 			);
 			path = Suggestions;
@@ -353,6 +356,14 @@
 				FBE0C05424BB9F8600BA1471 /* SuggestionsServiceResponse.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		FBE0C05624BB9FD400BA1471 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FBE0C05724BBA00400BA1471 /* SuggestionsServiceProtocol.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,6 +501,7 @@
 			files = (
 				FBA4684D24A2DF3F0075AD5A /* HotelListViewControllerFactory.swift in Sources */,
 				FB68777124A98C29002294EF /* HotelSearchServiceFactory.swift in Sources */,
+				FBE0C05824BBA00400BA1471 /* SuggestionsServiceProtocol.swift in Sources */,
 				FBE0C04E24BB96F100BA1471 /* SuggestionsPresenterProtocol.swift in Sources */,
 				FB035F1124A17B5800CF0DC0 /* AppDelegate.swift in Sources */,
 				FBA4685524A2EAB10075AD5A /* HotelListPresenterFactory.swift in Sources */,
