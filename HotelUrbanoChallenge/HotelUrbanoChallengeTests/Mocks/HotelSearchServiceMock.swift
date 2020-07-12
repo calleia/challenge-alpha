@@ -13,12 +13,12 @@ import Foundation
 final class HotelSearchServiceMock: HotelSearchServiceProtocol {
     
     var error: HotelServiceError? = nil
-    var response = Response(results: [])
+    var response = HotelServiceResponse(results: [])
     
     var callCount = 0
     var lastLocation = ""
     
-    func search(in location: String, completion: @escaping (Result<Response, HotelServiceError>) -> Void) {
+    func search(in location: String, completion: @escaping (Result<HotelServiceResponse, HotelServiceError>) -> Void) {
         self.lastLocation = location
         self.callCount += 1
         

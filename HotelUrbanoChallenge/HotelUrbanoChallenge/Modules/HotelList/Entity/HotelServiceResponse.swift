@@ -1,5 +1,5 @@
 //
-//  Response.swift
+//  HotelServiceResponse.swift
 //  HotelUrbanoChallenge
 //
 //  Created by Fellipe Calleia on 28/06/20.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Response: Decodable {
+struct HotelServiceResponse: Decodable {
     let results: [Hotel]
 }

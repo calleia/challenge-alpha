@@ -17,5 +17,5 @@ enum HotelServiceError: Error, Equatable {
 }
 
 protocol HotelSearchServiceProtocol {
-    func search(in location: String, completion: @escaping (Result<Response, HotelServiceError>) -> Void)
+    func search(in location: String, completion: @escaping (Result<HotelServiceResponse, HotelServiceError>) -> Void)
 }

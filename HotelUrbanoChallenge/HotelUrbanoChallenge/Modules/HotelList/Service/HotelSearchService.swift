@@ -15,14 +15,14 @@ final class HotelSearchService: HotelSearchServiceProtocol {
         self.httpClient = httpClient
     }
     
-    func search(in location: String, completion: @escaping (Result<Response, HotelServiceError>) -> Void) {
+    func search(in location: String, completion: @escaping (Result<HotelServiceResponse, HotelServiceError>) -> Void) {
         let query = self.cleanString(location)
         let url = self.makeUrl(with: query)
         
         self.httpClient.request(url: url) { result in
             switch result {
             case .success(let data):
-                guard let response: Response = try? JSONDecoder().decode(Response.self, from: data) else {
+                guard let response: HotelServiceResponse = try? JSONDecoder().decode(HotelServiceResponse.self, from: data) else {
                     completion(.failure(.couldNotParseResponse))
                     return
                 }
