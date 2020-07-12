@@ -57,6 +57,7 @@
 		FBE0C06924BBACCB00BA1471 /* GetSuggestionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C06824BBACCB00BA1471 /* GetSuggestionsInteractor.swift */; };
 		FBE0C06B24BBACFA00BA1471 /* GetSuggestionsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C06A24BBACFA00BA1471 /* GetSuggestionsInteractorTests.swift */; };
 		FBE0C06D24BBADA200BA1471 /* SuggestionsServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C06C24BBADA200BA1471 /* SuggestionsServiceMock.swift */; };
+		FBE0C06F24BBC1CA00BA1471 /* GetSuggestionsInteractorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C06E24BBC1CA00BA1471 /* GetSuggestionsInteractorFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 		FBE0C06824BBACCB00BA1471 /* GetSuggestionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSuggestionsInteractor.swift; sourceTree = "<group>"; };
 		FBE0C06A24BBACFA00BA1471 /* GetSuggestionsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSuggestionsInteractorTests.swift; sourceTree = "<group>"; };
 		FBE0C06C24BBADA200BA1471 /* SuggestionsServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsServiceMock.swift; sourceTree = "<group>"; };
+		FBE0C06E24BBC1CA00BA1471 /* GetSuggestionsInteractorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSuggestionsInteractorFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -394,6 +396,7 @@
 			children = (
 				FBE0C06624BBAC6C00BA1471 /* GetSuggestionsInteractorProtocol.swift */,
 				FBE0C06824BBACCB00BA1471 /* GetSuggestionsInteractor.swift */,
+				FBE0C06E24BBC1CA00BA1471 /* GetSuggestionsInteractorFactory.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				FBE0C05224BB97D000BA1471 /* SuggestionsPresenterFactory.swift in Sources */,
 				FB68776D24A96FEE002294EF /* HotelServiceResponse.swift in Sources */,
 				FBE0C05024BB977600BA1471 /* SuggestionsPresenter.swift in Sources */,
+				FBE0C06F24BBC1CA00BA1471 /* GetSuggestionsInteractorFactory.swift in Sources */,
 				FBE0C04B24BB963700BA1471 /* SuggestionsView.swift in Sources */,
 				FBAFCA2524A5996D009EB562 /* HttpClientProtocol.swift in Sources */,
 				FB035F1324A17B5800CF0DC0 /* SceneDelegate.swift in Sources */,
