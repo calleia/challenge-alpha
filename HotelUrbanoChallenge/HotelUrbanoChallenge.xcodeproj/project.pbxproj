@@ -49,6 +49,7 @@
 		FBE0C05224BB97D000BA1471 /* SuggestionsPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C05124BB97D000BA1471 /* SuggestionsPresenterFactory.swift */; };
 		FBE0C05524BB9F8600BA1471 /* SuggestionsServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C05424BB9F8600BA1471 /* SuggestionsServiceResponse.swift */; };
 		FBE0C05824BBA00400BA1471 /* SuggestionsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C05724BBA00400BA1471 /* SuggestionsServiceProtocol.swift */; };
+		FBE0C05E24BBA5CD00BA1471 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C05D24BBA5CD00BA1471 /* Suggestion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		FBE0C05124BB97D000BA1471 /* SuggestionsPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsPresenterFactory.swift; sourceTree = "<group>"; };
 		FBE0C05424BB9F8600BA1471 /* SuggestionsServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsServiceResponse.swift; sourceTree = "<group>"; };
 		FBE0C05724BBA00400BA1471 /* SuggestionsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsServiceProtocol.swift; sourceTree = "<group>"; };
+		FBE0C05D24BBA5CD00BA1471 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -354,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				FBE0C05424BB9F8600BA1471 /* SuggestionsServiceResponse.swift */,
+				FBE0C05D24BBA5CD00BA1471 /* Suggestion.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBA4684D24A2DF3F0075AD5A /* HotelListViewControllerFactory.swift in Sources */,
+				FBE0C05E24BBA5CD00BA1471 /* Suggestion.swift in Sources */,
 				FB68777124A98C29002294EF /* HotelSearchServiceFactory.swift in Sources */,
 				FBE0C05824BBA00400BA1471 /* SuggestionsServiceProtocol.swift in Sources */,
 				FBE0C04E24BB96F100BA1471 /* SuggestionsPresenterProtocol.swift in Sources */,
