@@ -15,13 +15,16 @@ final class HotelListPresenterTests: XCTestCase {
     private var hotelListViewMock: HotelListViewMock!
     private var hotelListWireframeMock: HotelListWireframeMock!
     private var searchHotelsInteractorMock: SearchHotelsInteractorMock!
+    private var getSuggestionsInteractorMock: GetSuggestionsInteractorMock!
     private var presenter: HotelListPresenter!
     
     override func setUpWithError() throws {
         self.hotelListViewMock = HotelListViewMock()
         self.hotelListWireframeMock = HotelListWireframeMock()
         self.searchHotelsInteractorMock = SearchHotelsInteractorMock()
+        self.getSuggestionsInteractorMock = GetSuggestionsInteractorMock()
         self.presenter = HotelListPresenter(searchHotelsInteractor: self.searchHotelsInteractorMock,
+                                            getSuggestionsInteractor: self.getSuggestionsInteractorMock,
                                             wireframe: self.hotelListWireframeMock)
         self.presenter.view = self.hotelListViewMock
     }
@@ -30,6 +33,7 @@ final class HotelListPresenterTests: XCTestCase {
         self.hotelListViewMock = nil
         self.hotelListWireframeMock = nil
         self.searchHotelsInteractorMock = nil
+        self.getSuggestionsInteractorMock = nil
         self.presenter = nil
     }
     
@@ -45,6 +49,9 @@ final class HotelListPresenterTests: XCTestCase {
         
         XCTAssertEqual(self.hotelListViewMock.showErrorCallCount, 0)
         XCTAssertEqual(self.hotelListViewMock.lastErrorMessage, "")
+        
+        XCTAssertEqual(self.getSuggestionsInteractorMock.callCount, 0)
+        XCTAssertEqual(self.getSuggestionsInteractorMock.lastLocation, "")
     }
     
     func testSearchHotels() throws {
@@ -104,6 +111,32 @@ final class HotelListPresenterTests: XCTestCase {
         
         XCTAssertEqual(self.hotelListViewMock.showErrorCallCount, 1)
         XCTAssertEqual(self.hotelListViewMock.lastErrorMessage, "Ocorreu uma falha no servidor (código: 500). Por favor tente novamente.")
+    }
+    
+    func testRequestSuggestions() throws {
+        self.presenter.getSuggestions(for: "Location Value")
+        
+        XCTAssertEqual(self.getSuggestionsInteractorMock.callCount, 1)
+        XCTAssertEqual(self.getSuggestionsInteractorMock.lastLocation, "Location Value")
+    }
+    
+    func testShowSuggestions() throws {
+        let suggestionMock = Suggestion(value: "Suggestion Value", country: "", state: "", city: "", filter: "")
+        self.getSuggestionsInteractorMock.suggestions = [suggestionMock]
+        
+        self.presenter.getSuggestions(for: "Location Value")
+        
+        XCTAssertEqual(self.hotelListViewMock.showSuggestionsCallCount, 1)
+        XCTAssertEqual(self.hotelListViewMock.lastSuggestions, ["Suggestion Value"])
+    }
+    
+    func testSuggestionsServiceError() throws {
+        self.getSuggestionsInteractorMock.error = .invalidServiceResponse
+        
+        self.presenter.getSuggestions(for: "Location Value")
+        
+        XCTAssertEqual(self.hotelListViewMock.showSuggestionsCallCount, 0)
+        XCTAssertEqual(self.hotelListViewMock.lastSuggestions, [])
     }
     
 }

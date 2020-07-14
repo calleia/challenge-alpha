@@ -11,13 +11,16 @@ import Foundation
 final class HotelListPresenter: HotelListPresenterProtocol {
     
     private var searchHotelsInteractor: SearchHotelsInteractorProtocol
+    private var getSuggestionsInteractor: GetSuggestionsInteractorProtocol
     private var wireframe: HotelListWireframeProtocol
     
     weak var view: HotelListView? = nil
     
     init(searchHotelsInteractor: SearchHotelsInteractorProtocol,
+         getSuggestionsInteractor: GetSuggestionsInteractorProtocol,
          wireframe: HotelListWireframeProtocol) {
         self.searchHotelsInteractor = searchHotelsInteractor
+        self.getSuggestionsInteractor = getSuggestionsInteractor
         self.wireframe = wireframe
     }
     
@@ -39,6 +42,21 @@ final class HotelListPresenter: HotelListPresenterProtocol {
             }
             
             self.view?.hideActivityIndicator()
+        }
+    }
+    
+    func getSuggestions(for location: String) {
+        self.getSuggestionsInteractor.suggestions(for: location) { result in
+            switch result {
+            case .success(let suggestions):
+                let suggestionValues = suggestions.map { suggestion in
+                    suggestion.value
+                }
+                
+                self.view?.showSuggestions(suggestions: suggestionValues)
+            case .failure(_):
+                break
+            }
         }
     }
 }

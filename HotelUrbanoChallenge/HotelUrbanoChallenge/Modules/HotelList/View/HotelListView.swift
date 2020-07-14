@@ -13,4 +13,5 @@ protocol HotelListView: AnyObject {
     func hideActivityIndicator()
     func showHotels(_ hotels: [String])
     func showError(message: String)
+    func showSuggestions(suggestions: [String])
 }

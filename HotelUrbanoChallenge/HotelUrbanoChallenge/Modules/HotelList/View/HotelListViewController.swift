@@ -11,6 +11,7 @@ import UIKit
 final class HotelListViewController: UIViewController {
     
     var searchController: UISearchController!
+    var suggestionsViewController: SuggestionsViewController!
     
     var presenter: HotelListPresenterProtocol? = nil
     
@@ -37,11 +38,17 @@ extension HotelListViewController: HotelListView {
     func showError(message: String) {
         // TODO: show error view
     }
+    
+    func showSuggestions(suggestions: [String]) {
+        self.suggestionsViewController.suggestions = suggestions
+        self.suggestionsViewController.tableView.reloadData()
+    }
 }
 
 extension HotelListViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        // TODO: filter results
+        let searchBar = searchController.searchBar
+        self.presenter?.getSuggestions(for: searchBar.text!)
     }
 }
 

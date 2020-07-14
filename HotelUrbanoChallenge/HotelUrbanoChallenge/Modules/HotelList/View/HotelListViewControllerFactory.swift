@@ -35,6 +35,7 @@ extension HotelListViewControllerFactory {
         searchController.searchResultsUpdater = viewController
         searchController.searchBar.delegate = viewController
         viewController.searchController = searchController
+        viewController.suggestionsViewController = suggestionsViewController
         
         // Hide main view controller when showing search results
         viewController.definesPresentationContext = true

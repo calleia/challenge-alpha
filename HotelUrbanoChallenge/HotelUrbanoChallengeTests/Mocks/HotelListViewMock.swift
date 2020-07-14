@@ -14,10 +14,15 @@ final class HotelListViewMock: HotelListView {
     
     var showActivityIndicatorCallCount = 0
     var hideActivityIndicatorCallCount = 0
+    
     var showHotelsCallCount = 0
     var lastHotelList = [String]()
+    
     var showErrorCallCount = 0
     var lastErrorMessage = ""
+    
+    var showSuggestionsCallCount = 0
+    var lastSuggestions = [String]()
     
     func showActivityIndicator() {
         self.showActivityIndicatorCallCount += 1
@@ -35,6 +40,11 @@ final class HotelListViewMock: HotelListView {
     func showError(message: String) {
         self.lastErrorMessage = message
         self.showErrorCallCount += 1
+    }
+    
+    func showSuggestions(suggestions: [String]) {
+        self.lastSuggestions = suggestions
+        self.showSuggestionsCallCount += 1
     }
     
 }
