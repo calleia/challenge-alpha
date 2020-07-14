@@ -17,6 +17,11 @@ final class GetSuggestionsInteractor: GetSuggestionsInteractorProtocol {
     }
     
     func suggestions(for location: String, completion: @escaping (Result<[Suggestion], GetSuggestionsError>) -> Void) {
+        guard !location.isEmpty else {
+            completion(.success([]))
+            return
+        }
+        
         self.service.fetch(location) { result in
             switch result {
             case .success(let response):
