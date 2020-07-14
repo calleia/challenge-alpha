@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HotelListViewController" customModule="HotelUrbanoChallenge" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="VDE-cm-OZP" id="H78-vv-tir"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,7 +17,29 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VDE-cm-OZP">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JMH-vP-2fw">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="aOb-ff-Z4d"/>
+                        <outlet property="delegate" destination="-1" id="sJ3-Vd-Erg"/>
+                    </connections>
+                </collectionView>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="VDE-cm-OZP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Qqd-ab-uzu"/>
+                <constraint firstItem="VDE-cm-OZP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jKj-em-b0u"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VDE-cm-OZP" secondAttribute="trailing" id="mig-dV-JDV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VDE-cm-OZP" secondAttribute="bottom" id="sSE-KE-EsX"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="145"/>
         </view>
