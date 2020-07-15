@@ -59,6 +59,7 @@ extension HotelSearchService {
         urlComponents.path = "/search/api"
         urlComponents.queryItems = [
             URLQueryItem(name: "q", value: query),
+            URLQueryItem(name: "filters", value: "is_hotel|1"),
             URLQueryItem(name: "page", value: "1")
         ]
         

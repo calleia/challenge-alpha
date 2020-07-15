@@ -38,19 +38,19 @@ final class HotelSearchServiceTests: XCTestCase {
     
     func testQueryGeneration() throws {
         self.service.search(in: "Location Value") { _ in }
-        XCTAssertEqual(self.httpClientMock.lastUrl?.absoluteString, "https://www.hurb.com/search/api?q=location%20value&page=1")
+        XCTAssertEqual(self.httpClientMock.lastUrl?.absoluteString, "https://www.hurb.com/search/api?q=location%20value&filters=is_hotel%7C1&page=1")
         
         self.service.search(in: "  Location Value  ") { _ in }
-        XCTAssertEqual(self.httpClientMock.lastUrl?.absoluteString, "https://www.hurb.com/search/api?q=location%20value&page=1")
+        XCTAssertEqual(self.httpClientMock.lastUrl?.absoluteString, "https://www.hurb.com/search/api?q=location%20value&filters=is_hotel%7C1&page=1")
         
         self.service.search(in: "Invalid&Characters") { _ in }
-        XCTAssertEqual(self.httpClientMock.lastUrl?.absoluteString, "https://www.hurb.com/search/api?q=invalid%26characters&page=1")
+        XCTAssertEqual(self.httpClientMock.lastUrl?.absoluteString, "https://www.hurb.com/search/api?q=invalid%26characters&filters=is_hotel%7C1&page=1")
         
         self.service.search(in: "Invalid|Characters") { _ in }
-        XCTAssertEqual(self.httpClientMock.lastUrl?.absoluteString, "https://www.hurb.com/search/api?q=invalid%7Ccharacters&page=1")
+        XCTAssertEqual(self.httpClientMock.lastUrl?.absoluteString, "https://www.hurb.com/search/api?q=invalid%7Ccharacters&filters=is_hotel%7C1&page=1")
         
         self.service.search(in: "Invalid=Characters") { _ in }
-        XCTAssertEqual(self.httpClientMock.lastUrl?.absoluteString, "https://www.hurb.com/search/api?q=invalid%3Dcharacters&page=1")
+        XCTAssertEqual(self.httpClientMock.lastUrl?.absoluteString, "https://www.hurb.com/search/api?q=invalid%3Dcharacters&filters=is_hotel%7C1&page=1")
     }
     
     func testParseResponse() throws {
