@@ -30,12 +30,7 @@ final class HotelListPresenter: HotelListPresenterProtocol {
         self.searchHotelsInteractor.search(in: location) { result in
             switch result {
             case .success(let hotels):
-                // TODO: show the required hotel data
-                let hotelNames = hotels.map { hotel in
-                    hotel.name
-                }
-                
-                self.view?.showHotels(hotelNames)
+                self.view?.showHotels(hotels)
             case .failure(let error):
                 let message = self.makeErrorMessage(for: error)
                 self.view?.showError(message: message)

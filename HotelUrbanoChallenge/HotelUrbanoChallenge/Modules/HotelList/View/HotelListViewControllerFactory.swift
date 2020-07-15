@@ -13,6 +13,7 @@ final class HotelListViewControllerFactory {
         let viewController = HotelListViewController()
         self.setupPresenter(viewController, wireframe: wireframe)
         self.setupSearchController(viewController)
+        self.setupHttpClient(viewController)
         
         return viewController
     }
@@ -47,5 +48,10 @@ extension HotelListViewControllerFactory {
         
         // Always show search bar.
         viewController.navigationItem.hidesSearchBarWhenScrolling = false
+    }
+    
+    private static func setupHttpClient(_ viewController: HotelListViewController) {
+        let httpClient = HttpClient()
+        viewController.httpClient = httpClient
     }
 }

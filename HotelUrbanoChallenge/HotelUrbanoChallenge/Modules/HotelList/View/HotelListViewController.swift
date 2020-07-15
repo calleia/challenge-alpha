@@ -12,12 +12,13 @@ final class HotelListViewController: UIViewController {
     
     var searchController: UISearchController!
     var suggestionsViewController: SuggestionsViewController!
+    var httpClient: HttpClientProtocol!
     
     var presenter: HotelListPresenterProtocol? = nil
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var hotels = [String]()
+    var hotels = [Hotel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +39,7 @@ extension HotelListViewController: HotelListView {
         // TODO: hide activity indicator view
     }
     
-    func showHotels(_ hotels: [String]) {
+    func showHotels(_ hotels: [Hotel]) {
         DispatchQueue.main.async {
             self.hotels = hotels
             self.collectionView.reloadData()
@@ -64,7 +65,20 @@ extension HotelListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: HotelCell.identifier, for: indexPath) as! HotelCell
-        cell.nameLabel.text = self.hotels[indexPath.row]
+        cell.nameLabel.text = self.hotels[indexPath.row].name
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.httpClient.request(url: URL(string: self.hotels[indexPath.row].image)!) { result in
+                switch result {
+                case .success(let data):
+                    DispatchQueue.main.async {
+                        cell.imageView.image = UIImage(data: data)
+                    }
+                case .failure(_):
+                    break
+                }
+            }
+        }
         
         return cell
     }
@@ -74,7 +88,7 @@ extension HotelListViewController: UICollectionViewDelegate {}
 
 extension HotelListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.collectionView.bounds.width, height: 100.0)
+        return CGSize(width: self.collectionView.bounds.width, height: 0.30 * self.collectionView.bounds.height)
     }
 }
 

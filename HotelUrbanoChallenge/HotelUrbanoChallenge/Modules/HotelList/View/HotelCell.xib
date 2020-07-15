@@ -10,26 +10,38 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HotelCellIdentifier" id="gTV-IL-0wX" customClass="HotelCell" customModule="HotelUrbanoChallenge" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="500" height="200"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                <rect key="frame" x="0.0" y="0.0" width="500" height="200"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAx-dO-IOi">
-                        <rect key="frame" x="129" y="39.5" width="42" height="21"/>
+                        <rect key="frame" x="16" y="163" width="468" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="NKD-8h-ESV"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qr7-TV-pAH">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="147"/>
+                    </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="RAx-dO-IOi" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="HSd-BG-zGz"/>
-                <constraint firstItem="RAx-dO-IOi" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="wFY-Qd-jVe"/>
+                <constraint firstAttribute="bottom" secondItem="RAx-dO-IOi" secondAttribute="bottom" constant="16" id="F8Z-o3-ru4"/>
+                <constraint firstItem="qr7-TV-pAH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FMt-eo-l4K"/>
+                <constraint firstItem="qr7-TV-pAH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KB9-6B-ihs"/>
+                <constraint firstAttribute="trailing" secondItem="RAx-dO-IOi" secondAttribute="trailing" constant="16" id="ger-NE-4W3"/>
+                <constraint firstItem="RAx-dO-IOi" firstAttribute="top" secondItem="qr7-TV-pAH" secondAttribute="bottom" constant="16" id="iv4-ha-mgP"/>
+                <constraint firstItem="RAx-dO-IOi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="oIw-fF-zJS"/>
+                <constraint firstAttribute="trailing" secondItem="qr7-TV-pAH" secondAttribute="trailing" id="uSR-Xg-fa0"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
+                <outlet property="imageView" destination="qr7-TV-pAH" id="vW5-pK-0DX"/>
                 <outlet property="nameLabel" destination="RAx-dO-IOi" id="iNX-d8-DR9"/>
             </connections>
             <point key="canvasLocation" x="139" y="102"/>

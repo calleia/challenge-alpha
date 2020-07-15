@@ -11,7 +11,7 @@ import Foundation
 protocol HotelListView: AnyObject {
     func showActivityIndicator()
     func hideActivityIndicator()
-    func showHotels(_ hotels: [String])
+    func showHotels(_ hotels: [Hotel])
     func showError(message: String)
     func showSuggestions(suggestions: [String])
 }

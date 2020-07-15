@@ -65,13 +65,13 @@ final class HotelListPresenterTests: XCTestCase {
     }
     
     func testShowHotels() throws {
-        let hotel = Hotel(id: "Hotel ID", name: "Hotel Name")
+        let hotel = Hotel(id: "Hotel ID", name: "Hotel Name", image: "Hotel Image")
         self.searchHotelsInteractorMock.hotels = [hotel]
         
         self.presenter.searchHotels(in: "Location Value")
         
         XCTAssertEqual(self.hotelListViewMock.showHotelsCallCount, 1)
-        XCTAssertEqual(self.hotelListViewMock.lastHotelList, [hotel.name])
+        XCTAssertEqual(self.hotelListViewMock.lastHotelList, [hotel])
         
         XCTAssertEqual(self.hotelListViewMock.showErrorCallCount, 0)
         XCTAssertEqual(self.hotelListViewMock.lastErrorMessage, "")

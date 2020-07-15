@@ -14,9 +14,25 @@ final class HotelCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.initializeProperties()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        self.initializeProperties()
     }
 
+}
+
+extension HotelCell {
+    private func initializeProperties() {
+        self.nameLabel.text = nil
+        self.imageView.image = nil
+    }
 }

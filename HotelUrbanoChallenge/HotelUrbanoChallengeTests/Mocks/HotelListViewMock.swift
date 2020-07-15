@@ -16,7 +16,7 @@ final class HotelListViewMock: HotelListView {
     var hideActivityIndicatorCallCount = 0
     
     var showHotelsCallCount = 0
-    var lastHotelList = [String]()
+    var lastHotelList = [Hotel]()
     
     var showErrorCallCount = 0
     var lastErrorMessage = ""
@@ -32,7 +32,7 @@ final class HotelListViewMock: HotelListView {
         self.hideActivityIndicatorCallCount += 1
     }
     
-    func showHotels(_ hotels: [String]) {
+    func showHotels(_ hotels: [Hotel]) {
         self.lastHotelList = hotels
         self.showHotelsCallCount += 1
     }
