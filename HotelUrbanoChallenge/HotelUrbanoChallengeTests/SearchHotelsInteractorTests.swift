@@ -171,4 +171,22 @@ final class SearchHotelsInteractorTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
+    func testSearchForEmptyLocation() throws {
+        let expectation = self.expectation(description: "Service request")
+        
+        self.interactor.search(in: "") { result in
+            switch result {
+            case .success(let hotels):
+                XCTAssertEqual(hotels, [])
+                XCTAssertEqual(self.hotelSearchServiceMock.callCount, 0)
+            case .failure(_):
+                XCTFail()
+            }
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
 }

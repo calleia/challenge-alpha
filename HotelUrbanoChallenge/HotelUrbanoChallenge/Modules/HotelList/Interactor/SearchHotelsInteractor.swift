@@ -17,6 +17,11 @@ final class SearchHotelsInteractor: SearchHotelsInteractorProtocol {
     }
     
     func search(in location: String, completion: @escaping (Result<[Hotel], HotelSearchError>) -> Void) {
+        guard !location.isEmpty else {
+            completion(.success([]))
+            return
+        }
+        
         self.service.search(in: location) { result in
             switch result {
             case .success(let response):
