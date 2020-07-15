@@ -102,6 +102,7 @@ extension HotelListViewController: UISearchBarDelegate {
 extension HotelListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let suggestion = self.suggestionsViewController.suggestions[indexPath.row]
+        self.searchController.searchBar.text = suggestion
         self.presenter?.searchHotels(in: suggestion)
         self.suggestionsViewController.dismiss(animated: true, completion: nil)
     }
