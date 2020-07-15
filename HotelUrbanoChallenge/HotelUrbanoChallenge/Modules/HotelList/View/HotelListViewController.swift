@@ -67,15 +67,27 @@ extension HotelListViewController: UICollectionViewDataSource {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: HotelCell.identifier, for: indexPath) as! HotelCell
         cell.nameLabel.text = self.hotels[indexPath.row].name
         
+        for (index, starView) in cell.starStackView.arrangedSubviews.enumerated() {
+            if index < self.hotels[indexPath.row].stars {
+                starView.isHidden = false
+            } else {
+                starView.isHidden = true
+            }
+        }
+        
         DispatchQueue.global(qos: .userInitiated).async {
-            self.httpClient.request(url: URL(string: self.hotels[indexPath.row].image)!) { result in
-                switch result {
-                case .success(let data):
-                    DispatchQueue.main.async {
-                        cell.imageView.image = UIImage(data: data)
+            if let imageString = self.hotels[indexPath.row].image.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+                let imageUrl = URL(string: imageString) {
+                
+                self.httpClient.request(url: imageUrl) { result in
+                    switch result {
+                    case .success(let data):
+                        DispatchQueue.main.async {
+                            cell.imageView.image = UIImage(data: data)
+                        }
+                    case .failure(_):
+                        break
                     }
-                case .failure(_):
-                    break
                 }
             }
         }

@@ -16,6 +16,8 @@ final class HotelCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var starStackView: UIStackView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -34,5 +36,9 @@ extension HotelCell {
     private func initializeProperties() {
         self.nameLabel.text = nil
         self.imageView.image = nil
+        
+        self.starStackView.subviews.forEach { starImageView in
+            starImageView.isHidden = true
+        }
     }
 }

@@ -38,7 +38,10 @@ final class SearchHotelsInteractorTests: XCTestCase {
     }
     
     func testServiceFindHotels() throws {
-        let hotel = Hotel(id: "Hotel ID", name: "Hotel Name", image: "Hotel Image")
+        let hotel = Hotel(id: "Hotel ID",
+                          name: "Hotel Name",
+                          image: "Hotel Image",
+                          stars: 5)
         self.hotelSearchServiceMock.response = HotelServiceResponse(results: [hotel])
         
         let expectation = self.expectation(description: "Service request")
