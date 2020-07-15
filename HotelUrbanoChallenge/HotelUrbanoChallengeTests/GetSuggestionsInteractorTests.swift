@@ -174,11 +174,11 @@ final class GetSuggestionsInteractorTests: XCTestCase {
     func testSuggestionsForEmptyLocation() throws {
         let expectation = self.expectation(description: "Service request")
         
-        self.interactor.suggestions(for: "Location Value") { result in
+        self.interactor.suggestions(for: "") { result in
             switch result {
             case .success(let suggestions):
                 XCTAssertEqual(suggestions, [])
-                XCTAssertEqual(self.suggestionsServiceMock.callCount, 1)
+                XCTAssertEqual(self.suggestionsServiceMock.callCount, 0)
             case .failure(_):
                 XCTFail()
             }
