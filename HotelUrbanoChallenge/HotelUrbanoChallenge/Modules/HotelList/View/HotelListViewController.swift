@@ -109,7 +109,7 @@ extension HotelListViewController: UICollectionViewDelegate {}
 
 extension HotelListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.collectionView.bounds.width, height: 0.30 * self.collectionView.bounds.height)
+        return CGSize(width: self.collectionView.bounds.width - 32.0, height: 0.30 * self.collectionView.bounds.height)
     }
 }
 

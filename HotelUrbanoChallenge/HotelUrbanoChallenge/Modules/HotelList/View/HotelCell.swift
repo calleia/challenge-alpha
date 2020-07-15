@@ -28,6 +28,7 @@ final class HotelCell: UICollectionViewCell {
         super.awakeFromNib()
         
         self.initializeProperties()
+        self.setupShadow()
     }
     
     override func prepareForReuse() {
@@ -49,5 +50,13 @@ extension HotelCell {
         self.starStackView.subviews.forEach { starImageView in
             starImageView.isHidden = true
         }
+    }
+    
+    private func setupShadow() {
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.25
+        self.layer.shadowOffset = .zero
+        self.layer.shadowRadius = 5.0
     }
 }
