@@ -39,11 +39,13 @@ final class SearchHotelsInteractorTests: XCTestCase {
     
     func testServiceFindHotels() throws {
         let address = Address(city: "Address City", state: "Address State")
+        let price = Price(amountPerDay: 42.0)
         let hotel = Hotel(id: "Hotel ID",
                           name: "Hotel Name",
                           image: "Hotel Image",
                           stars: 5,
-                          address: address)
+                          address: address,
+                          price: price)
         self.hotelSearchServiceMock.response = HotelServiceResponse(results: [hotel])
         
         let expectation = self.expectation(description: "Service request")

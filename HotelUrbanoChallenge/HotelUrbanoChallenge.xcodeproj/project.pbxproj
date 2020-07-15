@@ -65,6 +65,7 @@
 		FBE0C07124BBC29400BA1471 /* SuggestionsServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C07024BBC29400BA1471 /* SuggestionsServiceFactory.swift */; };
 		FBE0C07324BBE74F00BA1471 /* GetSuggestionsInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C07224BBE74F00BA1471 /* GetSuggestionsInteractorMock.swift */; };
 		FBEDC6CE24BEB0A000A14EF2 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEDC6CD24BEB0A000A14EF2 /* Address.swift */; };
+		FBEDC6D024BEBD4800A14EF2 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEDC6CF24BEBD4800A14EF2 /* Price.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,7 @@
 		FBE0C07024BBC29400BA1471 /* SuggestionsServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsServiceFactory.swift; sourceTree = "<group>"; };
 		FBE0C07224BBE74F00BA1471 /* GetSuggestionsInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSuggestionsInteractorMock.swift; sourceTree = "<group>"; };
 		FBEDC6CD24BEB0A000A14EF2 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		FBEDC6CF24BEBD4800A14EF2 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +304,7 @@
 				FB68776C24A96FEE002294EF /* HotelServiceResponse.swift */,
 				FB68776E24A970DE002294EF /* Hotel.swift */,
 				FBEDC6CD24BEB0A000A14EF2 /* Address.swift */,
+				FBEDC6CF24BEBD4800A14EF2 /* Price.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				FBAFCA2524A5996D009EB562 /* HttpClientProtocol.swift in Sources */,
 				FB035F1324A17B5800CF0DC0 /* SceneDelegate.swift in Sources */,
 				FBE0C06924BBACCB00BA1471 /* GetSuggestionsInteractor.swift in Sources */,
+				FBEDC6D024BEBD4800A14EF2 /* Price.swift in Sources */,
 				FBA4685324A2E4030075AD5A /* HotelListPresenter.swift in Sources */,
 				FBEDC6CE24BEB0A000A14EF2 /* Address.swift in Sources */,
 				FBE0C06724BBAC6C00BA1471 /* GetSuggestionsInteractorProtocol.swift in Sources */,

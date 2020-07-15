@@ -67,6 +67,7 @@ extension HotelListViewController: UICollectionViewDataSource {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: HotelCell.identifier, for: indexPath) as! HotelCell
         cell.nameLabel.text = self.hotels[indexPath.row].name
         cell.addressLabel.text = "\(self.hotels[indexPath.row].address.city), \(self.hotels[indexPath.row].address.state)"
+        cell.priceLabel.text = "R$ \(Int(self.hotels[indexPath.row].price.amountPerDay))"
         
         for (index, starView) in cell.starStackView.arrangedSubviews.enumerated() {
             if index < self.hotels[indexPath.row].stars {
