@@ -71,6 +71,7 @@ final class HotelListPresenterTests: XCTestCase {
                           name: "Hotel Name",
                           image: "Hotel Image",
                           stars: 5,
+                          freeCancellation: true,
                           address: address,
                           price: price)
         self.searchHotelsInteractorMock.hotels = [hotel]

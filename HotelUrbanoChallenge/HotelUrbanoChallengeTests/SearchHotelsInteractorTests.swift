@@ -44,6 +44,7 @@ final class SearchHotelsInteractorTests: XCTestCase {
                           name: "Hotel Name",
                           image: "Hotel Image",
                           stars: 5,
+                          freeCancellation: true,
                           address: address,
                           price: price)
         self.hotelSearchServiceMock.response = HotelServiceResponse(results: [hotel])

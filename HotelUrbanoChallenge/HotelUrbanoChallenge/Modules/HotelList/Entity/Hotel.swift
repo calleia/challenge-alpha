@@ -8,11 +8,24 @@
 
 import Foundation
 
-struct Hotel: Decodable, Equatable {
+struct Hotel: Equatable {
     let id: String
     let name: String
     let image: String
     let stars: Int
+    let freeCancellation: Bool
     let address: Address
     let price: Price
+}
+
+extension Hotel: Decodable {
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case image
+        case stars
+        case freeCancellation = "hu_free_cancellation"
+        case address
+        case price
+    }
 }

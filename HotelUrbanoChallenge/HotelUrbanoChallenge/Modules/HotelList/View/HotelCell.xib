@@ -143,6 +143,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="addressLabel" destination="GJY-Es-s5f" id="gFn-8c-U5l"/>
+                <outlet property="freeCancellationLabel" destination="HeN-Ti-yZS" id="NJg-Gf-Qei"/>
                 <outlet property="imageView" destination="qr7-TV-pAH" id="vW5-pK-0DX"/>
                 <outlet property="nameLabel" destination="RAx-dO-IOi" id="iNX-d8-DR9"/>
                 <outlet property="priceLabel" destination="0yW-SV-GAO" id="ygh-zL-fpN"/>

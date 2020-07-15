@@ -18,6 +18,8 @@ final class HotelCell: UICollectionViewCell {
     
     @IBOutlet weak var priceLabel: UILabel!
     
+    @IBOutlet weak var freeCancellationLabel: UILabel!
+    
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var starStackView: UIStackView!
@@ -41,6 +43,7 @@ extension HotelCell {
         self.nameLabel.text = nil
         self.addressLabel.text = nil
         self.priceLabel.text = nil
+        self.freeCancellationLabel.isHidden = true
         self.imageView.image = nil
         
         self.starStackView.subviews.forEach { starImageView in
