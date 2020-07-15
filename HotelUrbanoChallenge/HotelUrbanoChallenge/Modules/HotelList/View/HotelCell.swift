@@ -14,6 +14,8 @@ final class HotelCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var addressLabel: UILabel!
+    
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var starStackView: UIStackView!
@@ -35,6 +37,7 @@ final class HotelCell: UICollectionViewCell {
 extension HotelCell {
     private func initializeProperties() {
         self.nameLabel.text = nil
+        self.addressLabel.text = nil
         self.imageView.image = nil
         
         self.starStackView.subviews.forEach { starImageView in

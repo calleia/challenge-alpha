@@ -65,10 +65,12 @@ final class HotelListPresenterTests: XCTestCase {
     }
     
     func testShowHotels() throws {
+        let address = Address(city: "Address City", state: "Address State")
         let hotel = Hotel(id: "Hotel ID",
                           name: "Hotel Name",
                           image: "Hotel Image",
-                          stars: 5)
+                          stars: 5,
+                          address: address)
         self.searchHotelsInteractorMock.hotels = [hotel]
         
         self.presenter.searchHotels(in: "Location Value")

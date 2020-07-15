@@ -13,4 +13,5 @@ struct Hotel: Decodable, Equatable {
     let name: String
     let image: String
     let stars: Int
+    let address: Address
 }
