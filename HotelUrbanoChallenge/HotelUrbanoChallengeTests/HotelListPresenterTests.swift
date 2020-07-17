@@ -160,6 +160,7 @@ extension HotelListPresenterTests {
                           name: "Hotel Name",
                           smallDescription: "Hotel Description",
                           image: "Hotel Image",
+                          gallery: [],
                           stars: 5,
                           freeCancellation: true,
                           address: address,

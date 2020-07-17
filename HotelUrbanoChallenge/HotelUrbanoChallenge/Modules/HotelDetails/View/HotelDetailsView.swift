@@ -11,7 +11,7 @@ import UIKit
 protocol HotelDetailsView: AnyObject {
     func setName(_ name: String)
     func setDescription(_ description: String)
-    func setImage(_ image: UIImage)
+    func setGallery(_ image: [UIImage])
     func setStars(_ stars: Int)
     func setFreeCancellation(_ freeCancellation: Bool)
     func setCity(_ city: String)

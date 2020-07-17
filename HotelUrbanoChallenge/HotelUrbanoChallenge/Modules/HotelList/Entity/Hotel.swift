@@ -13,6 +13,7 @@ struct Hotel: Equatable {
     let name: String
     let smallDescription: String
     let image: String
+    let gallery: [GalleryImage]
     let stars: Int
     let freeCancellation: Bool
     let address: Address
@@ -25,6 +26,7 @@ extension Hotel: Decodable {
         case name
         case smallDescription
         case image
+        case gallery
         case stars
         case freeCancellation = "hu_free_cancellation"
         case address

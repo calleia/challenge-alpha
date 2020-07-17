@@ -27,7 +27,7 @@ extension HotelDetailsViewController: HotelDetailsView {
         // TODO
     }
     
-    func setImage(_ image: UIImage) {
+    func setGallery(_ image: [UIImage]) {
         // TODO
     }
     

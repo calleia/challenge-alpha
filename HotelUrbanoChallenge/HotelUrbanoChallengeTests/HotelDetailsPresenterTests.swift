@@ -32,6 +32,7 @@ final class HotelDetailsPresenterTests: XCTestCase {
                                name: "Hotel Name",
                                smallDescription: "Hotel Description",
                                image: "Hotel Image",
+                               gallery: [],
                                stars: 5,
                                freeCancellation: true,
                                address: self.addressMock,
@@ -57,8 +58,8 @@ final class HotelDetailsPresenterTests: XCTestCase {
         XCTAssertEqual(self.hotelDetailsViewMock.setNameCallCount, 0)
         XCTAssertEqual(self.hotelDetailsViewMock.lastSetName, nil)
         
-        XCTAssertEqual(self.hotelDetailsViewMock.setImageCallCount, 0)
-        XCTAssertEqual(self.hotelDetailsViewMock.lastSetImage, nil)
+        XCTAssertEqual(self.hotelDetailsViewMock.setGalleryCallCount, 0)
+        XCTAssertEqual(self.hotelDetailsViewMock.lastSetGallery, [])
         
         XCTAssertEqual(self.hotelDetailsViewMock.setStarsCallCount, 0)
         XCTAssertEqual(self.hotelDetailsViewMock.lastSetStars, nil)
@@ -92,12 +93,12 @@ final class HotelDetailsPresenterTests: XCTestCase {
         XCTAssertEqual(self.hotelDetailsViewMock.lastSetDescription, "Hotel Description")
     }
     
-//    func testSetImage() throws {
+//    func testSetGallery() throws {
 //        self.presenter.hotel = self.hotelMock
 //        self.presenter.viewDidLoad()
 //
-//        XCTAssertEqual(self.hotelDetailsViewMock.setImageCallCount, 1)
-//        XCTAssertEqual(self.hotelDetailsViewMock.lastSetImage, )
+//        XCTAssertEqual(self.hotelDetailsViewMock.setGalleryCallCount, 1)
+//        XCTAssertEqual(self.hotelDetailsViewMock.lastSetGallery, [])
 //    }
     
     func testSetStars() throws {
