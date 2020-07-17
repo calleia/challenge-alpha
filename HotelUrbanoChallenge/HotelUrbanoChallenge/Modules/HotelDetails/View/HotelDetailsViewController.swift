@@ -50,4 +50,8 @@ extension HotelDetailsViewController: HotelDetailsView {
     func setPrice(_ price: Int) {
         // TODO
     }
+    
+    func setAmenities(_ amenities: [String]) {
+        // TODO
+    }
 }

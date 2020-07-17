@@ -18,6 +18,7 @@ struct Hotel: Equatable {
     let freeCancellation: Bool
     let address: Address
     let price: Price
+    let featuredItem: FeaturedItem
 }
 
 extension Hotel: Decodable {
@@ -31,5 +32,6 @@ extension Hotel: Decodable {
         case freeCancellation = "hu_free_cancellation"
         case address
         case price
+        case featuredItem
     }
 }

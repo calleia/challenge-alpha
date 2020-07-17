@@ -156,6 +156,7 @@ extension HotelListPresenterTests {
     private func makeHotelMock() -> Hotel {
         let address = Address(city: "Address City", state: "Address State")
         let price = Price(amountPerDay: 42.0)
+        let featuredItem = FeaturedItem(amenities: [])
         let hotel = Hotel(id: "Hotel ID",
                           name: "Hotel Name",
                           smallDescription: "Hotel Description",
@@ -164,7 +165,8 @@ extension HotelListPresenterTests {
                           stars: 5,
                           freeCancellation: true,
                           address: address,
-                          price: price)
+                          price: price,
+                          featuredItem: featuredItem)
         
         return hotel
     }

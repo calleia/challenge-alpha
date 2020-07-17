@@ -17,4 +17,5 @@ protocol HotelDetailsView: AnyObject {
     func setCity(_ city: String)
     func setState(_ state: String)
     func setPrice(_ price: Int)
+    func setAmenities(_ amenities: [String])
 }

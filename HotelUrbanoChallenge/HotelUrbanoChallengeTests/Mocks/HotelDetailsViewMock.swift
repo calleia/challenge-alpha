@@ -36,6 +36,9 @@ final class HotelDetailsViewMock: HotelDetailsView {
     var setPriceCallCount = 0
     var lastSetPrice: Int? = nil
     
+    var setAmenitiesCallCount = 0
+    var lastSetAmenities: [String] = []
+    
     func setName(_ name: String) {
         self.setNameCallCount += 1
         self.lastSetName = name
@@ -74,5 +77,10 @@ final class HotelDetailsViewMock: HotelDetailsView {
     func setPrice(_ price: Int) {
         self.setPriceCallCount += 1
         self.lastSetPrice = price
+    }
+    
+    func setAmenities(_ amenities: [String]) {
+        self.setAmenitiesCallCount += 1
+        self.lastSetAmenities = amenities
     }
 }

@@ -18,6 +18,7 @@ final class HotelDetailsPresenterTests: XCTestCase {
     
     private var addressMock: Address!
     private var priceMock: Price!
+    private var featuredItem: FeaturedItem!
     private var hotelMock: Hotel!
     
     override func setUpWithError() throws {
@@ -28,6 +29,7 @@ final class HotelDetailsPresenterTests: XCTestCase {
         
         self.addressMock = Address(city: "Address City", state: "Address State")
         self.priceMock = Price(amountPerDay: 42.42)
+        self.featuredItem = FeaturedItem(amenities: ["Amenity 1", "Amenity 2"])
         self.hotelMock = Hotel(id: "Hotel ID",
                                name: "Hotel Name",
                                smallDescription: "Hotel Description",
@@ -36,7 +38,8 @@ final class HotelDetailsPresenterTests: XCTestCase {
                                stars: 5,
                                freeCancellation: true,
                                address: self.addressMock,
-                               price: self.priceMock)
+                               price: self.priceMock,
+                               featuredItem: featuredItem)
     }
     
     override func tearDownWithError() throws {
@@ -46,6 +49,7 @@ final class HotelDetailsPresenterTests: XCTestCase {
         
         self.addressMock = nil
         self.priceMock = nil
+        self.featuredItem = nil
         self.hotelMock = nil
     }
     
@@ -57,6 +61,9 @@ final class HotelDetailsPresenterTests: XCTestCase {
         
         XCTAssertEqual(self.hotelDetailsViewMock.setNameCallCount, 0)
         XCTAssertEqual(self.hotelDetailsViewMock.lastSetName, nil)
+        
+        XCTAssertEqual(self.hotelDetailsViewMock.setDescriptionCallCount, 0)
+        XCTAssertEqual(self.hotelDetailsViewMock.lastSetDescription, nil)
         
         XCTAssertEqual(self.hotelDetailsViewMock.setGalleryCallCount, 0)
         XCTAssertEqual(self.hotelDetailsViewMock.lastSetGallery, [])
@@ -75,6 +82,9 @@ final class HotelDetailsPresenterTests: XCTestCase {
         
         XCTAssertEqual(self.hotelDetailsViewMock.setPriceCallCount, 0)
         XCTAssertEqual(self.hotelDetailsViewMock.lastSetPrice, nil)
+        
+        XCTAssertEqual(self.hotelDetailsViewMock.setAmenitiesCallCount, 0)
+        XCTAssertEqual(self.hotelDetailsViewMock.lastSetAmenities, [])
     }
     
     func testSetName() throws {
@@ -93,13 +103,13 @@ final class HotelDetailsPresenterTests: XCTestCase {
         XCTAssertEqual(self.hotelDetailsViewMock.lastSetDescription, "Hotel Description")
     }
     
-//    func testSetGallery() throws {
-//        self.presenter.hotel = self.hotelMock
-//        self.presenter.viewDidLoad()
-//
-//        XCTAssertEqual(self.hotelDetailsViewMock.setGalleryCallCount, 1)
-//        XCTAssertEqual(self.hotelDetailsViewMock.lastSetGallery, [])
-//    }
+    //    func testSetGallery() throws {
+    //        self.presenter.hotel = self.hotelMock
+    //        self.presenter.viewDidLoad()
+    //
+    //        XCTAssertEqual(self.hotelDetailsViewMock.setGalleryCallCount, 1)
+    //        XCTAssertEqual(self.hotelDetailsViewMock.lastSetGallery, [])
+    //    }
     
     func testSetStars() throws {
         self.presenter.hotel = self.hotelMock
@@ -139,6 +149,14 @@ final class HotelDetailsPresenterTests: XCTestCase {
         
         XCTAssertEqual(self.hotelDetailsViewMock.setPriceCallCount, 1)
         XCTAssertEqual(self.hotelDetailsViewMock.lastSetPrice, 42)
+    }
+    
+    func testSetAmenities() throws {
+        self.presenter.hotel = self.hotelMock
+        self.presenter.viewDidLoad()
+        
+        XCTAssertEqual(self.hotelDetailsViewMock.setAmenitiesCallCount, 1)
+        XCTAssertEqual(self.hotelDetailsViewMock.lastSetAmenities, ["Amenity 1", "Amenity 2"])
     }
     
 }

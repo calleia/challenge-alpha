@@ -29,8 +29,8 @@ final class HotelDetailsPresenter: HotelDetailsPresenterProtocol {
         
         self.view?.setDescription(hotel.smallDescription)
         
-        // TODO: set image
-        // self.view?.setImage()
+        // TODO: set gallery images
+        // self.view?.setGallery()
         
         self.view?.setStars(hotel.stars)
         
@@ -46,5 +46,9 @@ final class HotelDetailsPresenter: HotelDetailsPresenterProtocol {
         
         let price = Int(hotel.price.amountPerDay)
         self.view?.setPrice(price)
+        
+        if hotel.featuredItem.amenities.count > 0 {
+            self.view?.setAmenities(hotel.featuredItem.amenities)
+        }
     }
 }
