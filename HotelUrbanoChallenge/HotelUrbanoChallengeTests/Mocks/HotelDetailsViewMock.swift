@@ -15,6 +15,9 @@ final class HotelDetailsViewMock: HotelDetailsView {
     var setNameCallCount = 0
     var lastSetName: String? = nil
     
+    var setDescriptionCallCount = 0
+    var lastSetDescription: String? = nil
+    
     var setImageCallCount = 0
     var lastSetImage: UIImage? = nil
     
@@ -36,6 +39,11 @@ final class HotelDetailsViewMock: HotelDetailsView {
     func setName(_ name: String) {
         self.setNameCallCount += 1
         self.lastSetName = name
+    }
+    
+    func setDescription(_ description: String) {
+        self.setDescriptionCallCount += 1
+        self.lastSetDescription = description
     }
     
     func setImage(_ image: UIImage) {

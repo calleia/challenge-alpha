@@ -23,6 +23,10 @@ extension HotelDetailsViewController: HotelDetailsView {
         // TODO
     }
     
+    func setDescription(_ description: String) {
+        // TODO
+    }
+    
     func setImage(_ image: UIImage) {
         // TODO
     }

@@ -27,6 +27,8 @@ final class HotelDetailsPresenter: HotelDetailsPresenterProtocol {
         
         self.view?.setName(hotel.name)
         
+        self.view?.setDescription(hotel.smallDescription)
+        
         // TODO: set image
         // self.view?.setImage()
         

@@ -11,6 +11,7 @@ import Foundation
 struct Hotel: Equatable {
     let id: String
     let name: String
+    let smallDescription: String
     let image: String
     let stars: Int
     let freeCancellation: Bool
@@ -22,6 +23,7 @@ extension Hotel: Decodable {
     enum CodingKeys: String, CodingKey {
         case id
         case name
+        case smallDescription
         case image
         case stars
         case freeCancellation = "hu_free_cancellation"

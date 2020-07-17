@@ -42,6 +42,7 @@ final class SearchHotelsInteractorTests: XCTestCase {
         let price = Price(amountPerDay: 42.0)
         let hotel = Hotel(id: "Hotel ID",
                           name: "Hotel Name",
+                          smallDescription: "Hotel Description",
                           image: "Hotel Image",
                           stars: 5,
                           freeCancellation: true,
