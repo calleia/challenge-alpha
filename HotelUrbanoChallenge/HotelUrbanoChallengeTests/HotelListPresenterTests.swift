@@ -52,6 +52,9 @@ final class HotelListPresenterTests: XCTestCase {
         
         XCTAssertEqual(self.getSuggestionsInteractorMock.callCount, 0)
         XCTAssertEqual(self.getSuggestionsInteractorMock.lastLocation, "")
+        
+        XCTAssertEqual(self.hotelListWireframeMock.presentDetailsCallCount, 0)
+        XCTAssertEqual(self.hotelListWireframeMock.lastPresentedDetails, nil)
     }
     
     func testSearchHotels() throws {
@@ -65,15 +68,7 @@ final class HotelListPresenterTests: XCTestCase {
     }
     
     func testShowHotels() throws {
-        let address = Address(city: "Address City", state: "Address State")
-        let price = Price(amountPerDay: 42.0)
-        let hotel = Hotel(id: "Hotel ID",
-                          name: "Hotel Name",
-                          image: "Hotel Image",
-                          stars: 5,
-                          freeCancellation: true,
-                          address: address,
-                          price: price)
+        let hotel = self.makeHotelMock()
         self.searchHotelsInteractorMock.hotels = [hotel]
         
         self.presenter.searchHotels(in: "Location Value")
@@ -147,4 +142,28 @@ final class HotelListPresenterTests: XCTestCase {
         XCTAssertEqual(self.hotelListViewMock.lastSuggestions, [])
     }
     
+    func testPresentHotelDetails() throws {
+        let hotel = self.makeHotelMock()
+        self.presenter.showDetails(for: hotel)
+        
+        XCTAssertEqual(self.hotelListWireframeMock.presentDetailsCallCount, 1)
+        XCTAssertEqual(self.hotelListWireframeMock.lastPresentedDetails, hotel)
+    }
+    
+}
+
+extension HotelListPresenterTests {
+    private func makeHotelMock() -> Hotel {
+        let address = Address(city: "Address City", state: "Address State")
+        let price = Price(amountPerDay: 42.0)
+        let hotel = Hotel(id: "Hotel ID",
+                          name: "Hotel Name",
+                          image: "Hotel Image",
+                          stars: 5,
+                          freeCancellation: true,
+                          address: address,
+                          price: price)
+        
+        return hotel
+    }
 }

@@ -54,6 +54,10 @@ final class HotelListPresenter: HotelListPresenterProtocol {
             }
         }
     }
+    
+    func showDetails(for hotel: Hotel) {
+        self.wireframe.presentDetails(for: hotel)
+    }
 }
 
 extension HotelListPresenter {

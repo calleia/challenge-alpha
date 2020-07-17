@@ -105,7 +105,12 @@ extension HotelListViewController: UICollectionViewDataSource {
     }
 }
 
-extension HotelListViewController: UICollectionViewDelegate {}
+extension HotelListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let hotel = self.hotels[indexPath.row]
+        self.presenter?.showDetails(for: hotel)
+    }
+}
 
 extension HotelListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

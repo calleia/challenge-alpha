@@ -11,4 +11,5 @@ import Foundation
 protocol HotelListPresenterProtocol {
     func searchHotels(in location: String)
     func getSuggestions(for location: String)
+    func showDetails(for hotel: Hotel)
 }
