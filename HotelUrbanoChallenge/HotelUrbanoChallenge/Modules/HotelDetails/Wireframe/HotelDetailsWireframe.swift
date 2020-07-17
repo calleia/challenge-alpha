@@ -9,7 +9,10 @@
 import UIKit
 
 final class HotelDetailsWireframe: HotelDetailsWireframeProtocol {
+    
+    let viewController = HotelDetailsViewController()
+    
     func present(in navigationController: UINavigationController) {
-        // TODO: create & present details view controller
+        navigationController.pushViewController(self.viewController, animated: true)
     }
 }
