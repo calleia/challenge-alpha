@@ -10,6 +10,8 @@ import UIKit
 
 final class HotelDetailsViewController: UIViewController {
     
+    var presenter: HotelDetailsPresenterProtocol? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
