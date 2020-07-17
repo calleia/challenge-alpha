@@ -14,9 +14,6 @@ final class HotelDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("\n\nVIEW LOADED\n\n")
-        print(self.presenter)
     }
     
 }

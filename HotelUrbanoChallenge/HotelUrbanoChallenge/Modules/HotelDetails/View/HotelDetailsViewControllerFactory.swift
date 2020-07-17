@@ -19,7 +19,7 @@ final class HotelDetailsViewControllerFactory {
 
 extension HotelDetailsViewControllerFactory {
     private static func setupPresenter(_ viewController: HotelDetailsViewController, wireframe: HotelDetailsWireframeProtocol, with hotel: Hotel) {
-        let presenter = HotelDetailsPresenter(wireframe: wireframe)
+        let presenter = HotelDetailsPresenterFactory.make(wireframe: wireframe)
         presenter.hotel = hotel
         presenter.view = viewController
         
