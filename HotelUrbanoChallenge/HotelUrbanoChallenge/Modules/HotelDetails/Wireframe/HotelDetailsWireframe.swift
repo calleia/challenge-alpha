@@ -10,8 +10,8 @@ import UIKit
 
 final class HotelDetailsWireframe: HotelDetailsWireframeProtocol {
     
-    func present(in navigationController: UINavigationController) {
-        let viewController = HotelDetailsViewControllerFactory.make(wireframe: self)
+    func present(hotel: Hotel, in navigationController: UINavigationController) {
+        let viewController = HotelDetailsViewControllerFactory.make(wireframe: self, hotel: hotel)
         navigationController.pushViewController(viewController, animated: true)
     }
 }

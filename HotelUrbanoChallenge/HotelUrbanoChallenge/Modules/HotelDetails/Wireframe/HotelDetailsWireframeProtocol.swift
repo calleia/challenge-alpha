@@ -9,5 +9,5 @@
 import UIKit
 
 protocol HotelDetailsWireframeProtocol {
-    func present(in navigationController: UINavigationController)
+    func present(hotel: Hotel, in navigationController: UINavigationController)
 }

@@ -6,6 +6,14 @@
 //  Copyright © 2020 Fellipe Calleia. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-protocol HotelDetailsView {}
+protocol HotelDetailsView: AnyObject {
+    func setName(_ name: String)
+    func setImage(_ image: UIImage)
+    func setStars(_ stars: Int)
+    func setFreeCancellation(_ freeCancellation: Bool)
+    func setCity(_ city: String)
+    func setState(_ state: String)
+    func setPrice(_ price: Int)
+}

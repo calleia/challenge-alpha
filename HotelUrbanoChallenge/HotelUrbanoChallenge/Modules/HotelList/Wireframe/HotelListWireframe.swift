@@ -27,6 +27,6 @@ final class HotelListWireframe: HotelListWireframeProtocol {
             return
         }
         
-        self.hotelDetailsWireframe.present(in: navigationController)
+        self.hotelDetailsWireframe.present(hotel: hotel, in: navigationController)
     }
 }

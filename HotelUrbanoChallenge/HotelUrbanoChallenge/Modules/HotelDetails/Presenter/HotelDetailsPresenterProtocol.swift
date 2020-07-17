@@ -8,4 +8,6 @@
 
 import Foundation
 
-protocol HotelDetailsPresenterProtocol {}
+protocol HotelDetailsPresenterProtocol {
+    func viewDidLoad()
+}

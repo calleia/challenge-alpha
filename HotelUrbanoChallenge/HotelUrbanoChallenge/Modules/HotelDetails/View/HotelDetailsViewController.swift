@@ -14,8 +14,39 @@ final class HotelDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("\n\nVIEW LOADED\n\n")
+        print(self.presenter)
     }
     
 }
 
-extension HotelDetailsViewController: HotelDetailsView {}
+extension HotelDetailsViewController: HotelDetailsView {
+    func setName(_ name: String) {
+        // TODO
+    }
+    
+    func setImage(_ image: UIImage) {
+        // TODO
+    }
+    
+    func setStars(_ stars: Int) {
+        // TODO
+    }
+    
+    func setFreeCancellation(_ freeCancellation: Bool) {
+        // TODO
+    }
+    
+    func setCity(_ city: String) {
+        // TODO
+    }
+    
+    func setState(_ state: String) {
+        // TODO
+    }
+    
+    func setPrice(_ price: Int) {
+        // TODO
+    }
+}
