@@ -38,7 +38,8 @@ final class SearchHotelsInteractorTests: XCTestCase {
     }
     
     func testServiceFindHotels() throws {
-        let address = Address(city: "Address City", state: "Address State")
+        let geoLocation = GeoLocation(lat: 12.34, lon: 56.78)
+        let address = Address(city: "Address City", state: "Address State", geoLocation: geoLocation)
         let price = Price(amountPerDay: 42.0)
         let featuredItem = FeaturedItem(amenities: [])
         let hotel = Hotel(id: "Hotel ID",

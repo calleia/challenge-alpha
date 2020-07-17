@@ -16,6 +16,7 @@ protocol HotelDetailsView: AnyObject {
     func setFreeCancellation(_ freeCancellation: Bool)
     func setCity(_ city: String)
     func setState(_ state: String)
+    func setMap(lat: Float, lon: Float)
     func setPrice(_ price: Int)
     func setAmenities(_ amenities: [String])
 }

@@ -16,6 +16,7 @@ final class HotelDetailsPresenterTests: XCTestCase {
     private var hotelDetailsWireframeMock: HotelDetailsWireframeMock!
     private var presenter: HotelDetailsPresenter!
     
+    private var geoLocation: GeoLocation!
     private var addressMock: Address!
     private var priceMock: Price!
     private var featuredItem: FeaturedItem!
@@ -27,7 +28,8 @@ final class HotelDetailsPresenterTests: XCTestCase {
         self.presenter = HotelDetailsPresenter(wireframe: self.hotelDetailsWireframeMock)
         self.presenter.view = self.hotelDetailsViewMock
         
-        self.addressMock = Address(city: "Address City", state: "Address State")
+        self.geoLocation = GeoLocation(lat: 12.34, lon: 56.78)
+        self.addressMock = Address(city: "Address City", state: "Address State", geoLocation: self.geoLocation)
         self.priceMock = Price(amountPerDay: 42.42)
         self.featuredItem = FeaturedItem(amenities: ["Amenity 1", "Amenity 2"])
         self.hotelMock = Hotel(id: "Hotel ID",
@@ -79,6 +81,10 @@ final class HotelDetailsPresenterTests: XCTestCase {
         
         XCTAssertEqual(self.hotelDetailsViewMock.setStateCallCount, 0)
         XCTAssertEqual(self.hotelDetailsViewMock.lastSetState, nil)
+        
+        XCTAssertEqual(self.hotelDetailsViewMock.setMapCallCount, 0)
+        XCTAssertEqual(self.hotelDetailsViewMock.lastSetLat, nil)
+        XCTAssertEqual(self.hotelDetailsViewMock.lastSetLon, nil)
         
         XCTAssertEqual(self.hotelDetailsViewMock.setPriceCallCount, 0)
         XCTAssertEqual(self.hotelDetailsViewMock.lastSetPrice, nil)
@@ -141,6 +147,15 @@ final class HotelDetailsPresenterTests: XCTestCase {
         
         XCTAssertEqual(self.hotelDetailsViewMock.setStateCallCount, 1)
         XCTAssertEqual(self.hotelDetailsViewMock.lastSetState, "Address State")
+    }
+    
+    func testSetMap() throws {
+        self.presenter.hotel = self.hotelMock
+        self.presenter.viewDidLoad()
+        
+        XCTAssertEqual(self.hotelDetailsViewMock.setMapCallCount, 1)
+        XCTAssertEqual(self.hotelDetailsViewMock.lastSetLat, 12.34)
+        XCTAssertEqual(self.hotelDetailsViewMock.lastSetLon, 56.78)
     }
     
     func testSetPrice() throws {

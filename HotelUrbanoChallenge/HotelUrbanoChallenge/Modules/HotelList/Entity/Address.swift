@@ -11,4 +11,5 @@ import Foundation
 struct Address: Decodable, Equatable {
     let city: String?
     let state: String?
+    let geoLocation: GeoLocation
 }

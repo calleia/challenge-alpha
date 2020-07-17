@@ -47,6 +47,10 @@ extension HotelDetailsViewController: HotelDetailsView {
         // TODO
     }
     
+    func setMap(lat: Float, lon: Float) {
+        // TODO
+    }
+    
     func setPrice(_ price: Int) {
         // TODO
     }

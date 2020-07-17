@@ -33,6 +33,10 @@ final class HotelDetailsViewMock: HotelDetailsView {
     var setStateCallCount = 0
     var lastSetState: String? = nil
     
+    var setMapCallCount = 0
+    var lastSetLat: Float? = nil
+    var lastSetLon: Float? = nil
+    
     var setPriceCallCount = 0
     var lastSetPrice: Int? = nil
     
@@ -72,6 +76,12 @@ final class HotelDetailsViewMock: HotelDetailsView {
     func setState(_ state: String) {
         self.setStateCallCount += 1
         self.lastSetState = state
+    }
+    
+    func setMap(lat: Float, lon: Float) {
+        self.setMapCallCount += 1
+        self.lastSetLat = lat
+        self.lastSetLon = lon
     }
     
     func setPrice(_ price: Int) {

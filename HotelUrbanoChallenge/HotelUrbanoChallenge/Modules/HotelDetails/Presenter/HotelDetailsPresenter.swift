@@ -44,6 +44,8 @@ final class HotelDetailsPresenter: HotelDetailsPresenterProtocol {
             self.view?.setState(state)
         }
         
+        self.view?.setMap(lat: hotel.address.geoLocation.lat, lon: hotel.address.geoLocation.lon)
+        
         let price = Int(hotel.price.amountPerDay)
         self.view?.setPrice(price)
         
