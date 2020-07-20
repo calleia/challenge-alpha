@@ -10,21 +10,37 @@ import UIKit
 
 final class HotelDetailsViewController: UIViewController {
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    @IBOutlet weak var starStackView: UIStackView!
+    
+    @IBOutlet weak var amenitiesStackView: UIStackView!
+    
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    @IBOutlet weak var freeCancellationLabel: UILabel!
+    
+    @IBOutlet weak var addressLabel: UILabel!
+    
     var presenter: HotelDetailsPresenterProtocol? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.presenter?.viewDidLoad()
     }
     
 }
 
 extension HotelDetailsViewController: HotelDetailsView {
     func setName(_ name: String) {
-        // TODO
+        self.nameLabel.text = name
     }
     
     func setDescription(_ description: String) {
-        // TODO
+        self.descriptionLabel.text = description
     }
     
     func setGallery(_ image: [UIImage]) {
@@ -32,19 +48,29 @@ extension HotelDetailsViewController: HotelDetailsView {
     }
     
     func setStars(_ stars: Int) {
-        // TODO
+        for (index, starView) in self.starStackView.arrangedSubviews.enumerated() {
+            if index < stars {
+                starView.isHidden = false
+            } else {
+                starView.isHidden = true
+            }
+        }
     }
     
     func setFreeCancellation(_ freeCancellation: Bool) {
-        // TODO
+        self.freeCancellationLabel.isHidden = !freeCancellation
     }
     
     func setCity(_ city: String) {
-        // TODO
+        self.addressLabel.text = city
     }
     
     func setState(_ state: String) {
-        // TODO
+        if self.addressLabel.text != nil {
+            self.addressLabel.text?.append(", \(state)")
+        } else {
+            self.addressLabel.text = state
+        }
     }
     
     func setMap(lat: Float, lon: Float) {
@@ -52,10 +78,15 @@ extension HotelDetailsViewController: HotelDetailsView {
     }
     
     func setPrice(_ price: Int) {
-        // TODO
+        self.priceLabel.text = "R$ \(Int(price))"
     }
     
     func setAmenities(_ amenities: [String]) {
-        // TODO
+        amenities.forEach { amenity in
+            let label = UILabel()
+            label.text = "- \(amenity)"
+            label.font = label.font.withSize(15.0)
+            self.amenitiesStackView.addArrangedSubview(label)
+        }
     }
 }
