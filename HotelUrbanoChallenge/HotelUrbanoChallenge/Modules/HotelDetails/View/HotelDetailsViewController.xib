@@ -14,6 +14,7 @@
                 <outlet property="collectionView" destination="a5L-yQ-61j" id="Kef-7j-Ib4"/>
                 <outlet property="descriptionLabel" destination="djR-bo-Jfe" id="pQu-uV-jG8"/>
                 <outlet property="freeCancellationLabel" destination="JFz-hY-Z59" id="EGf-7S-Hi6"/>
+                <outlet property="mapView" destination="HNT-1p-Od9" id="gPJ-OM-GCc"/>
                 <outlet property="nameLabel" destination="MxO-W6-seA" id="al3-G0-P9E"/>
                 <outlet property="priceLabel" destination="YY4-IF-hfH" id="yzB-Xl-tOj"/>
                 <outlet property="starStackView" destination="FPJ-u2-QzT" id="ewo-1L-x5d"/>
@@ -149,13 +150,12 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1M4-KZ-9SQ">
+                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HNT-1p-Od9">
                                             <rect key="frame" x="0.0" y="52" width="382" height="382"/>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="1M4-KZ-9SQ" secondAttribute="height" multiplier="1:1" id="DRh-aB-2Ih"/>
+                                                <constraint firstAttribute="width" secondItem="HNT-1p-Od9" secondAttribute="height" multiplier="1:1" id="mXw-1A-cah"/>
                                             </constraints>
-                                        </view>
+                                        </mapView>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bvB-bX-wvl">
@@ -171,7 +171,7 @@
                                 </stackView>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="1M4-KZ-9SQ" firstAttribute="width" secondItem="4IK-aq-Ft7" secondAttribute="width" id="l9i-84-BXY"/>
+                                <constraint firstItem="HNT-1p-Od9" firstAttribute="width" secondItem="4IK-aq-Ft7" secondAttribute="width" id="SFB-si-FzS"/>
                             </constraints>
                         </stackView>
                     </subviews>

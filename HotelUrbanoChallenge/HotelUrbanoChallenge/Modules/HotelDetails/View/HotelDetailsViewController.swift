@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 final class HotelDetailsViewController: UIViewController {
     
@@ -23,6 +24,8 @@ final class HotelDetailsViewController: UIViewController {
     @IBOutlet weak var freeCancellationLabel: UILabel!
     
     @IBOutlet weak var addressLabel: UILabel!
+    
+    @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -99,7 +102,21 @@ extension HotelDetailsViewController: HotelDetailsView {
     }
     
     func setMap(lat: Float, lon: Float) {
-        // TODO
+        // Set visible region
+        let latitude = CLLocationDegrees(lat)
+        let longitude = CLLocationDegrees(lon)
+        let location = CLLocation(latitude: latitude, longitude: longitude)
+        let radius = CLLocationDistance(1500)
+        let region = MKCoordinateRegion(center: location.coordinate,
+                                        latitudinalMeters: radius,
+                                        longitudinalMeters: radius)
+        
+        self.mapView.setRegion(region, animated: true)
+        
+        // Mark hotel coordinates on the map
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location.coordinate
+        self.mapView.addAnnotation(annotation)
     }
     
     func setPrice(_ price: Int) {
