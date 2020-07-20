@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="addressLabel" destination="iHQ-on-Ofs" id="ROm-fe-R68"/>
                 <outlet property="amenitiesStackView" destination="bvB-bX-wvl" id="jYy-5Y-UTp"/>
+                <outlet property="collectionView" destination="a5L-yQ-61j" id="Kef-7j-Ib4"/>
                 <outlet property="descriptionLabel" destination="djR-bo-Jfe" id="pQu-uV-jG8"/>
                 <outlet property="freeCancellationLabel" destination="JFz-hY-Z59" id="EGf-7S-Hi6"/>
                 <outlet property="nameLabel" destination="MxO-W6-seA" id="al3-G0-P9E"/>
@@ -24,24 +25,25 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDN-X3-pTy">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDN-X3-pTy">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="a5L-yQ-61j">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="a5L-yQ-61j">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="313.5"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="300" id="maz-rE-uUf"/>
-                            </constraints>
-                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1T0-Ih-ccq">
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1T0-Ih-ccq">
                                 <size key="itemSize" width="128" height="128"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="wWJ-zn-Y8E"/>
+                                <outlet property="delegate" destination="-1" id="aC3-V0-5Hs"/>
+                            </connections>
                         </collectionView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="4IK-aq-Ft7">
-                            <rect key="frame" x="16" y="316" width="382" height="644.5"/>
+                            <rect key="frame" x="16" y="329.5" width="382" height="644.5"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ad4-4k-c3o">
                                     <rect key="frame" x="0.0" y="0.0" width="119" height="70.5"/>
@@ -188,6 +190,7 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="a5L-yQ-61j" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.35" id="Js7-7L-Fum"/>
                 <constraint firstItem="DDN-X3-pTy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Kuf-TJ-88a"/>
                 <constraint firstAttribute="bottom" secondItem="DDN-X3-pTy" secondAttribute="bottom" id="ULV-P4-eA6"/>
                 <constraint firstItem="a5L-yQ-61j" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Uez-2l-m5w"/>

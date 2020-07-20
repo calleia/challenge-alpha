@@ -24,10 +24,21 @@ final class HotelDetailsViewController: UIViewController {
     
     @IBOutlet weak var addressLabel: UILabel!
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var presenter: HotelDetailsPresenterProtocol? = nil
+    
+    private var images = [UIImage]() {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let nib = UINib(nibName: "ImageCell", bundle: nil)
+        self.collectionView.register(nib, forCellWithReuseIdentifier: ImageCell.identifier)
         
         self.presenter?.viewDidLoad()
     }
@@ -36,40 +47,54 @@ final class HotelDetailsViewController: UIViewController {
 
 extension HotelDetailsViewController: HotelDetailsView {
     func setName(_ name: String) {
-        self.nameLabel.text = name
+        DispatchQueue.main.async {
+            self.nameLabel.text = name
+        }
     }
     
     func setDescription(_ description: String) {
-        self.descriptionLabel.text = description
+        DispatchQueue.main.async {
+            self.descriptionLabel.text = description
+        }
     }
     
-    func setGallery(_ image: [UIImage]) {
-        // TODO
+    func setGallery(_ images: [UIImage]) {
+        DispatchQueue.main.async {
+            self.images = images
+        }
     }
     
     func setStars(_ stars: Int) {
-        for (index, starView) in self.starStackView.arrangedSubviews.enumerated() {
-            if index < stars {
-                starView.isHidden = false
-            } else {
-                starView.isHidden = true
+        DispatchQueue.main.async {
+            for (index, starView) in self.starStackView.arrangedSubviews.enumerated() {
+                if index < stars {
+                    starView.isHidden = false
+                } else {
+                    starView.isHidden = true
+                }
             }
         }
     }
     
     func setFreeCancellation(_ freeCancellation: Bool) {
-        self.freeCancellationLabel.isHidden = !freeCancellation
+        DispatchQueue.main.async {
+            self.freeCancellationLabel.isHidden = !freeCancellation
+        }
     }
     
     func setCity(_ city: String) {
-        self.addressLabel.text = city
+        DispatchQueue.main.async {
+            self.addressLabel.text = city
+        }
     }
     
     func setState(_ state: String) {
-        if self.addressLabel.text != nil {
-            self.addressLabel.text?.append(", \(state)")
-        } else {
-            self.addressLabel.text = state
+        DispatchQueue.main.async {
+            if self.addressLabel.text != nil {
+                self.addressLabel.text?.append(", \(state)")
+            } else {
+                self.addressLabel.text = state
+            }
         }
     }
     
@@ -78,15 +103,38 @@ extension HotelDetailsViewController: HotelDetailsView {
     }
     
     func setPrice(_ price: Int) {
-        self.priceLabel.text = "R$ \(Int(price))"
+        DispatchQueue.main.async {
+            self.priceLabel.text = "R$ \(Int(price))"
+        }
     }
     
     func setAmenities(_ amenities: [String]) {
-        amenities.forEach { amenity in
-            let label = UILabel()
-            label.text = "- \(amenity)"
-            label.font = label.font.withSize(15.0)
-            self.amenitiesStackView.addArrangedSubview(label)
+        DispatchQueue.main.async {
+            amenities.forEach { amenity in
+                let label = UILabel()
+                label.text = "- \(amenity)"
+                label.font = label.font.withSize(15.0)
+                self.amenitiesStackView.addArrangedSubview(label)
+            }
         }
+    }
+}
+
+extension HotelDetailsViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        self.images.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.identifier, for: indexPath) as! ImageCell
+        cell.imageView.image = self.images[indexPath.row]
+        
+        return cell
+    }
+}
+
+extension HotelDetailsViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.collectionView.bounds.width, height: self.collectionView.bounds.height)
     }
 }

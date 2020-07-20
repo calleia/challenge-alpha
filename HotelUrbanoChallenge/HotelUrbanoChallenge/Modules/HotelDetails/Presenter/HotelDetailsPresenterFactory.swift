@@ -10,7 +10,8 @@ import Foundation
 
 final class HotelDetailsPresenterFactory {
     static func make(wireframe: HotelDetailsWireframeProtocol) -> HotelDetailsPresenter {
-        let presenter = HotelDetailsPresenter(wireframe: wireframe)
+        let httpClient = HttpClient()
+        let presenter = HotelDetailsPresenter(wireframe: wireframe, httpClient: httpClient)
         
         return presenter
     }

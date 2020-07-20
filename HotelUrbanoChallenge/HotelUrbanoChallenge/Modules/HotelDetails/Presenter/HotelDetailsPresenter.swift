@@ -6,18 +6,20 @@
 //  Copyright © 2020 Fellipe Calleia. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class HotelDetailsPresenter: HotelDetailsPresenterProtocol {
     
     private var wireframe: HotelDetailsWireframeProtocol
+    private var httpClient: HttpClientProtocol!
     
     weak var view: HotelDetailsView? = nil
     
     var hotel: Hotel? = nil
     
-    init(wireframe: HotelDetailsWireframeProtocol) {
+    init(wireframe: HotelDetailsWireframeProtocol, httpClient: HttpClientProtocol) {
         self.wireframe = wireframe
+        self.httpClient = httpClient
     }
     
     func viewDidLoad() {
@@ -29,8 +31,9 @@ final class HotelDetailsPresenter: HotelDetailsPresenterProtocol {
         
         self.view?.setDescription(hotel.smallDescription)
         
-        // TODO: set gallery images
-        // self.view?.setGallery()
+        if let imageUrls = self.hotel?.gallery.map({ $0.url }) {
+            self.loadImages(imageUrls)
+        }
         
         self.view?.setStars(hotel.stars)
         
@@ -53,4 +56,48 @@ final class HotelDetailsPresenter: HotelDetailsPresenterProtocol {
             self.view?.setAmenities(hotel.featuredItem.amenities)
         }
     }
+}
+
+extension HotelDetailsPresenter {
+    
+    private func loadImages(_ urlStrings: [String]) {
+        var images = [UIImage]()
+        let safeUrls = urlStrings.compactMap({ $0.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) })
+        let urls = safeUrls.compactMap({ URL(string: $0) })
+        
+        let semaphore = DispatchSemaphore(value: 1)
+        let group = DispatchGroup()
+        
+        urls.forEach { url in
+            group.enter()
+            
+            DispatchQueue.global(qos: .userInitiated).async {
+                self.httpClient.request(url: url) { result in
+                    switch result {
+                    case .success(let data):
+                        guard let image = UIImage(data: data) else {
+                            break
+                        }
+                        
+                        semaphore.wait()
+                        images.append(image)
+                        semaphore.signal()
+                    case .failure(_):
+                        break
+                    }
+                    
+                    group.leave()
+                }
+            }
+        }
+        
+        group.notify(queue: .global(qos: .userInitiated)) {
+            guard !images.isEmpty else {
+                return
+            }
+            
+            self.view?.setGallery(images)
+        }
+    }
+    
 }

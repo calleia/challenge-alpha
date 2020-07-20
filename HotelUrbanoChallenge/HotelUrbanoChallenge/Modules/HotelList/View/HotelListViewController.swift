@@ -18,7 +18,11 @@ final class HotelListViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var hotels = [Hotel]()
+    var hotels = [Hotel]() {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +46,6 @@ extension HotelListViewController: HotelListView {
     func showHotels(_ hotels: [Hotel]) {
         DispatchQueue.main.async {
             self.hotels = hotels
-            self.collectionView.reloadData()
         }
     }
     
