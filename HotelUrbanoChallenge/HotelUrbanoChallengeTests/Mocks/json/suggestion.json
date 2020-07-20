@@ -1,0 +1,54 @@
+{
+    "suggestions": [
+        {
+            "text": "Viana do Castelo, Norte Region, Portugal",
+            "suggestionType": "city",
+            "country": "Portugal",
+            "state": "Norte Region",
+            "city": "Viana do Castelo",
+            "filter": "city_viana_do_castelo|1,state_norte_region|1,country_portugal|1",
+            "url": ""
+        },
+        {
+            "text": "Castelo Branco, Centro Region, Portugal",
+            "suggestionType": "city",
+            "country": "Portugal",
+            "state": "Centro Region",
+            "city": "Castelo Branco",
+            "filter": "city_castelo_branco|1,state_centro_region|1,country_portugal|1",
+            "url": ""
+        },
+        {
+            "text": "Castelo Branco, Portugal",
+            "suggestionType": "estado",
+            "country": "Portugal",
+            "state": "Castelo Branco",
+            "filter": "state_castelo_branco|1,country_portugal|1",
+            "city": "",
+            "url": ""
+        },
+        {
+            "text": "Pousada Castelo Estremoz, Alentejo Region",
+            "suggestionType": "hotel",
+            "country": "Portugal",
+            "state": "Alentejo Region",
+            "city": "",
+            "sku": "JNP-JP842843-0-0-0-0-0-0",
+            "filter": "hotel_JNP-JP842843|1,is_hotel|1",
+            "url": ""
+        },
+        {
+            "text": "Pousada Viana do Castelo, Viana do Castelo",
+            "suggestionType": "hotel",
+            "country": "Portugal",
+            "state": "Norte Region",
+            "city": "Viana do Castelo",
+            "sku": "JNP-JP053821-0-0-0-0-0-0",
+            "filter": "hotel_JNP-JP053821|1,is_hotel|1",
+            "url": ""
+        }
+    ],
+    "total": 5,
+    "search": "castelo",
+    "packages": []
+}
