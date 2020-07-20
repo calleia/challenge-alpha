@@ -16,6 +16,8 @@ final class HotelListViewController: UIViewController {
     
     var presenter: HotelListPresenterProtocol? = nil
     
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var hotels = [Hotel]() {
@@ -36,11 +38,15 @@ final class HotelListViewController: UIViewController {
 
 extension HotelListViewController: HotelListView {
     func showActivityIndicator() {
-        // TODO: show activity indicator view
+        DispatchQueue.main.async {
+            self.activityIndicatorView.startAnimating()
+        }
     }
     
     func hideActivityIndicator() {
-        // TODO: hide activity indicator view
+        DispatchQueue.main.async {
+            self.activityIndicatorView.stopAnimating()
+        }
     }
     
     func showHotels(_ hotels: [Hotel]) {
@@ -50,11 +56,13 @@ extension HotelListViewController: HotelListView {
     }
     
     func showError(message: String) {
-        let alert = UIAlertController(title: "ERROR", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(action)
-        
-        self.present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "ERROR", message: message, preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(action)
+            
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func showSuggestions(suggestions: [String]) {

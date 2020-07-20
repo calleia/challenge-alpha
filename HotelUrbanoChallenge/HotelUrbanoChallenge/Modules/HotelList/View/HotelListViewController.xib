@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HotelListViewController" customModule="HotelUrbanoChallenge" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicatorView" destination="gs6-gb-aig" id="6iI-qD-Tmy"/>
                 <outlet property="collectionView" destination="VDE-cm-OZP" id="H78-vv-tir"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -18,6 +19,9 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="gs6-gb-aig">
+                    <rect key="frame" x="197" y="443" width="20" height="20"/>
+                </activityIndicatorView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VDE-cm-OZP">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -35,9 +39,11 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="gs6-gb-aig" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Crg-et-dBK"/>
                 <constraint firstItem="VDE-cm-OZP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Qqd-ab-uzu"/>
                 <constraint firstItem="VDE-cm-OZP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jKj-em-b0u"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VDE-cm-OZP" secondAttribute="trailing" id="mig-dV-JDV"/>
+                <constraint firstItem="gs6-gb-aig" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="mjY-Vj-HPa"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VDE-cm-OZP" secondAttribute="bottom" id="sSE-KE-EsX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
