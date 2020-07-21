@@ -8,4 +8,14 @@
 
 import Foundation
 
-protocol PackageSearchServiceProtocol {}
+enum PackageServiceError: Error, Equatable {
+    case couldNotParseResponse
+    case connection(_ description: String)
+    case server(_ statusCode: Int)
+    case noResponse
+    case emptyResponse
+}
+
+protocol PackageSearchServiceProtocol {
+    func search(in location: String, completion: @escaping (Result<PackageServiceResponse, PackageServiceError>) -> Void)
+}
