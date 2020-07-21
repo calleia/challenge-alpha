@@ -365,7 +365,6 @@
 			children = (
 				FB68776C24A96FEE002294EF /* HotelServiceResponse.swift */,
 				FB68776E24A970DE002294EF /* Hotel.swift */,
-				FB86FB6D24C166750078670C /* GeoLocation.swift */,
 				FB86FB6B24C162440078670C /* FeaturedItem.swift */,
 			);
 			path = Entity;
@@ -456,6 +455,7 @@
 			children = (
 				FBEDC6CD24BEB0A000A14EF2 /* Address.swift */,
 				FB86FB6924C15B770078670C /* GalleryImage.swift */,
+				FB86FB6D24C166750078670C /* GeoLocation.swift */,
 				FBEDC6CF24BEBD4800A14EF2 /* Price.swift */,
 			);
 			path = Entity;
