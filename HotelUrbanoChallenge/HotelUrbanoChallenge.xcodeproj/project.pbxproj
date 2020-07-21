@@ -369,7 +369,6 @@
 				FB86FB6D24C166750078670C /* GeoLocation.swift */,
 				FBEDC6CF24BEBD4800A14EF2 /* Price.swift */,
 				FB86FB6B24C162440078670C /* FeaturedItem.swift */,
-				FB86FB6924C15B770078670C /* GalleryImage.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -454,9 +453,18 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		FBA9D29924C680F80000F877 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FB86FB6924C15B770078670C /* GalleryImage.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		FBAFCA2224A5993C009EB562 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				FBA9D29924C680F80000F877 /* Entity */,
 				FBAFCA2324A5994A009EB562 /* HttpClient */,
 			);
 			path = Shared;
