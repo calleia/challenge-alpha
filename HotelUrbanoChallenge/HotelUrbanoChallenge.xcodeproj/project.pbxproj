@@ -365,7 +365,6 @@
 			children = (
 				FB68776C24A96FEE002294EF /* HotelServiceResponse.swift */,
 				FB68776E24A970DE002294EF /* Hotel.swift */,
-				FBEDC6CD24BEB0A000A14EF2 /* Address.swift */,
 				FB86FB6D24C166750078670C /* GeoLocation.swift */,
 				FBEDC6CF24BEBD4800A14EF2 /* Price.swift */,
 				FB86FB6B24C162440078670C /* FeaturedItem.swift */,
@@ -456,6 +455,7 @@
 		FBA9D29924C680F80000F877 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				FBEDC6CD24BEB0A000A14EF2 /* Address.swift */,
 				FB86FB6924C15B770078670C /* GalleryImage.swift */,
 			);
 			path = Entity;
