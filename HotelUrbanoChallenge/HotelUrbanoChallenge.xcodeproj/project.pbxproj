@@ -59,6 +59,7 @@
 		FBA9D29824C67D370000F877 /* Amenity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D29724C67D370000F877 /* Amenity.swift */; };
 		FBA9D29D24C682BB0000F877 /* PackageListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D29C24C682BB0000F877 /* PackageListPresenterProtocol.swift */; };
 		FBA9D29F24C6834B0000F877 /* SearchPackagesInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D29E24C6834B0000F877 /* SearchPackagesInteractorMock.swift */; };
+		FBA9D2A424C684C00000F877 /* PackageListWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D2A324C684C00000F877 /* PackageListWireframeProtocol.swift */; };
 		FBAFCA2524A5996D009EB562 /* HttpClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFCA2424A5996D009EB562 /* HttpClientProtocol.swift */; };
 		FBAFCA2724A59A00009EB562 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFCA2624A59A00009EB562 /* HttpClient.swift */; };
 		FBBFF0B824A419A000432479 /* HotelListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFF0B724A419A000432479 /* HotelListPresenterTests.swift */; };
@@ -174,6 +175,7 @@
 		FBA9D29724C67D370000F877 /* Amenity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amenity.swift; sourceTree = "<group>"; };
 		FBA9D29C24C682BB0000F877 /* PackageListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageListPresenterProtocol.swift; sourceTree = "<group>"; };
 		FBA9D29E24C6834B0000F877 /* SearchPackagesInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPackagesInteractorMock.swift; sourceTree = "<group>"; };
+		FBA9D2A324C684C00000F877 /* PackageListWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageListWireframeProtocol.swift; sourceTree = "<group>"; };
 		FBAFCA2424A5996D009EB562 /* HttpClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientProtocol.swift; sourceTree = "<group>"; };
 		FBAFCA2624A59A00009EB562 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		FBBFF0B724A419A000432479 /* HotelListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListPresenterTests.swift; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 				FBA9D28E24C678030000F877 /* Interactor */,
 				FBA9D29B24C6828A0000F877 /* Presenter */,
 				FBA9D28024C6726C0000F877 /* Service */,
+				FBA9D2A224C684AB0000F877 /* Wireframe */,
 			);
 			path = PackageList;
 			sourceTree = "<group>";
@@ -472,6 +475,14 @@
 				FBA9D29C24C682BB0000F877 /* PackageListPresenterProtocol.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FBA9D2A224C684AB0000F877 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				FBA9D2A324C684C00000F877 /* PackageListWireframeProtocol.swift */,
+			);
+			path = Wireframe;
 			sourceTree = "<group>";
 		};
 		FBAFCA2224A5993C009EB562 /* Shared */ = {
@@ -781,6 +792,7 @@
 				FBD24E3924A56F3C00CD143A /* HotelSearchServiceProtocol.swift in Sources */,
 				FBA4684924A2CD3C0075AD5A /* HotelListWireframeProtocol.swift in Sources */,
 				FBD24E3F24A5799100CD143A /* SearchHotelsInteractorFactory.swift in Sources */,
+				FBA9D2A424C684C00000F877 /* PackageListWireframeProtocol.swift in Sources */,
 				FBBFF0BE24A4286300432479 /* SearchHotelsInteractorProtocol.swift in Sources */,
 				FBD24E3D24A5712B00CD143A /* HotelSearchService.swift in Sources */,
 				FBA9D28424C673300000F877 /* PackageSearchService.swift in Sources */,
