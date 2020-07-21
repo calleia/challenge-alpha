@@ -65,6 +65,7 @@
 		FBA9D2AB24C686C30000F877 /* PackageListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D2AA24C686C30000F877 /* PackageListPresenterTests.swift */; };
 		FBA9D2AD24C6871B0000F877 /* PackageListViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D2AC24C6871B0000F877 /* PackageListViewMock.swift */; };
 		FBA9D2AF24C688160000F877 /* PackageListWireframeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D2AE24C688160000F877 /* PackageListWireframeMock.swift */; };
+		FBA9D2B124C68C6E0000F877 /* PackageSearchServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D2B024C68C6D0000F877 /* PackageSearchServiceFactory.swift */; };
 		FBAFCA2524A5996D009EB562 /* HttpClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFCA2424A5996D009EB562 /* HttpClientProtocol.swift */; };
 		FBAFCA2724A59A00009EB562 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFCA2624A59A00009EB562 /* HttpClient.swift */; };
 		FBBFF0B824A419A000432479 /* HotelListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFF0B724A419A000432479 /* HotelListPresenterTests.swift */; };
@@ -186,6 +187,7 @@
 		FBA9D2AA24C686C30000F877 /* PackageListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageListPresenterTests.swift; sourceTree = "<group>"; };
 		FBA9D2AC24C6871B0000F877 /* PackageListViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageListViewMock.swift; sourceTree = "<group>"; };
 		FBA9D2AE24C688160000F877 /* PackageListWireframeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageListWireframeMock.swift; sourceTree = "<group>"; };
+		FBA9D2B024C68C6D0000F877 /* PackageSearchServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageSearchServiceFactory.swift; sourceTree = "<group>"; };
 		FBAFCA2424A5996D009EB562 /* HttpClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientProtocol.swift; sourceTree = "<group>"; };
 		FBAFCA2624A59A00009EB562 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		FBBFF0B724A419A000432479 /* HotelListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListPresenterTests.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 			children = (
 				FBA9D28124C672A40000F877 /* PackageSearchServiceProtocol.swift */,
 				FBA9D28324C673300000F877 /* PackageSearchService.swift */,
+				FBA9D2B024C68C6D0000F877 /* PackageSearchServiceFactory.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -791,6 +794,7 @@
 				FB86FB6624C154C10078670C /* HotelDetailsPresenterFactory.swift in Sources */,
 				FBE0C05224BB97D000BA1471 /* SuggestionsPresenterFactory.swift in Sources */,
 				FB68776D24A96FEE002294EF /* HotelServiceResponse.swift in Sources */,
+				FBA9D2B124C68C6E0000F877 /* PackageSearchServiceFactory.swift in Sources */,
 				FB86FB6E24C166750078670C /* GeoLocation.swift in Sources */,
 				FBE0C05024BB977600BA1471 /* SuggestionsPresenter.swift in Sources */,
 				FBE0C06F24BBC1CA00BA1471 /* GetSuggestionsInteractorFactory.swift in Sources */,
