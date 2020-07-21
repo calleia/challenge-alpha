@@ -8,4 +8,8 @@
 
 import Foundation
 
-protocol PackageListPresenterProtocol {}
+protocol PackageListPresenterProtocol {
+    func searchPackages(in location: String)
+    func getSuggestions(for location: String)
+    func showDetails(for package: Package)
+}

@@ -8,4 +8,6 @@
 
 import Foundation
 
-protocol PackageListWireframeProtocol {}
+protocol PackageListWireframeProtocol {
+    func presentDetails(for package: Package)
+}

@@ -60,6 +60,11 @@
 		FBA9D29D24C682BB0000F877 /* PackageListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D29C24C682BB0000F877 /* PackageListPresenterProtocol.swift */; };
 		FBA9D29F24C6834B0000F877 /* SearchPackagesInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D29E24C6834B0000F877 /* SearchPackagesInteractorMock.swift */; };
 		FBA9D2A424C684C00000F877 /* PackageListWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D2A324C684C00000F877 /* PackageListWireframeProtocol.swift */; };
+		FBA9D2A624C685340000F877 /* PackageListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D2A524C685340000F877 /* PackageListPresenter.swift */; };
+		FBA9D2A924C6859B0000F877 /* PackageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D2A824C6859B0000F877 /* PackageListView.swift */; };
+		FBA9D2AB24C686C30000F877 /* PackageListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D2AA24C686C30000F877 /* PackageListPresenterTests.swift */; };
+		FBA9D2AD24C6871B0000F877 /* PackageListViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D2AC24C6871B0000F877 /* PackageListViewMock.swift */; };
+		FBA9D2AF24C688160000F877 /* PackageListWireframeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9D2AE24C688160000F877 /* PackageListWireframeMock.swift */; };
 		FBAFCA2524A5996D009EB562 /* HttpClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFCA2424A5996D009EB562 /* HttpClientProtocol.swift */; };
 		FBAFCA2724A59A00009EB562 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAFCA2624A59A00009EB562 /* HttpClient.swift */; };
 		FBBFF0B824A419A000432479 /* HotelListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBFF0B724A419A000432479 /* HotelListPresenterTests.swift */; };
@@ -176,6 +181,11 @@
 		FBA9D29C24C682BB0000F877 /* PackageListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageListPresenterProtocol.swift; sourceTree = "<group>"; };
 		FBA9D29E24C6834B0000F877 /* SearchPackagesInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPackagesInteractorMock.swift; sourceTree = "<group>"; };
 		FBA9D2A324C684C00000F877 /* PackageListWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageListWireframeProtocol.swift; sourceTree = "<group>"; };
+		FBA9D2A524C685340000F877 /* PackageListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageListPresenter.swift; sourceTree = "<group>"; };
+		FBA9D2A824C6859B0000F877 /* PackageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageListView.swift; sourceTree = "<group>"; };
+		FBA9D2AA24C686C30000F877 /* PackageListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageListPresenterTests.swift; sourceTree = "<group>"; };
+		FBA9D2AC24C6871B0000F877 /* PackageListViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageListViewMock.swift; sourceTree = "<group>"; };
+		FBA9D2AE24C688160000F877 /* PackageListWireframeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageListWireframeMock.swift; sourceTree = "<group>"; };
 		FBAFCA2424A5996D009EB562 /* HttpClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientProtocol.swift; sourceTree = "<group>"; };
 		FBAFCA2624A59A00009EB562 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		FBBFF0B724A419A000432479 /* HotelListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListPresenterTests.swift; sourceTree = "<group>"; };
@@ -277,11 +287,12 @@
 		FB035F2624A17B5900CF0DC0 /* HotelUrbanoChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				FBBFF0B924A41FAB00432479 /* Mocks */,
+				FBA9D2AA24C686C30000F877 /* PackageListPresenterTests.swift */,
 				FBA9D29324C679080000F877 /* SearchPackagesInteractorTests.swift */,
 				FBA9D28524C6735B0000F877 /* PackageSearchServiceTests.swift */,
 				FB86FB5F24C145C00078670C /* HotelDetailsPresenterTests.swift */,
 				FBE0C06A24BBACFA00BA1471 /* GetSuggestionsInteractorTests.swift */,
-				FBBFF0B924A41FAB00432479 /* Mocks */,
 				FB68776024A8EC00002294EF /* HotelSearchServiceTests.swift */,
 				FBD24E3324A56D8100CD143A /* SearchHotelsInteractorTests.swift */,
 				FBBFF0B724A419A000432479 /* HotelListPresenterTests.swift */,
@@ -425,6 +436,7 @@
 				FBA9D28E24C678030000F877 /* Interactor */,
 				FBA9D29B24C6828A0000F877 /* Presenter */,
 				FBA9D28024C6726C0000F877 /* Service */,
+				FBA9D2A724C685830000F877 /* View */,
 				FBA9D2A224C684AB0000F877 /* Wireframe */,
 			);
 			path = PackageList;
@@ -473,6 +485,7 @@
 			isa = PBXGroup;
 			children = (
 				FBA9D29C24C682BB0000F877 /* PackageListPresenterProtocol.swift */,
+				FBA9D2A524C685340000F877 /* PackageListPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -483,6 +496,14 @@
 				FBA9D2A324C684C00000F877 /* PackageListWireframeProtocol.swift */,
 			);
 			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		FBA9D2A724C685830000F877 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FBA9D2A824C6859B0000F877 /* PackageListView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FBAFCA2224A5993C009EB562 /* Shared */ = {
@@ -513,6 +534,8 @@
 				FBBFF0BA24A41FBF00432479 /* HotelListWireframeMock.swift */,
 				FBD24E3A24A5708F00CD143A /* HotelSearchServiceMock.swift */,
 				FB68776624A8F078002294EF /* HttpClientMock.swift */,
+				FBA9D2AC24C6871B0000F877 /* PackageListViewMock.swift */,
+				FBA9D2AE24C688160000F877 /* PackageListWireframeMock.swift */,
 				FBA9D29524C679FE0000F877 /* PackageSearchServiceMock.swift */,
 				FBBFF0BF24A4291F00432479 /* SearchHotelsInteractorMock.swift */,
 				FBA9D29E24C6834B0000F877 /* SearchPackagesInteractorMock.swift */,
@@ -760,6 +783,7 @@
 				FBE0C04E24BB96F100BA1471 /* SuggestionsPresenterProtocol.swift in Sources */,
 				FB3ADE6424BD4669005E1EC3 /* HotelCell.swift in Sources */,
 				FBA9D28924C674720000F877 /* PackageServiceResponse.swift in Sources */,
+				FBA9D2A924C6859B0000F877 /* PackageListView.swift in Sources */,
 				FB035F1124A17B5800CF0DC0 /* AppDelegate.swift in Sources */,
 				FBA4685524A2EAB10075AD5A /* HotelListPresenterFactory.swift in Sources */,
 				FBA4684F24A2E2600075AD5A /* HotelListView.swift in Sources */,
@@ -802,6 +826,7 @@
 				FBAFCA2724A59A00009EB562 /* HttpClient.swift in Sources */,
 				FB86FB6C24C162440078670C /* FeaturedItem.swift in Sources */,
 				FBBFF0C224A42B2300432479 /* SearchHotelsInteractor.swift in Sources */,
+				FBA9D2A624C685340000F877 /* PackageListPresenter.swift in Sources */,
 				FBE0C04324BB92A500BA1471 /* SuggestionsViewController.swift in Sources */,
 				FBE0C06024BBA67800BA1471 /* SuggestionsService.swift in Sources */,
 			);
@@ -812,6 +837,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBA9D28624C6735B0000F877 /* PackageSearchServiceTests.swift in Sources */,
+				FBA9D2AB24C686C30000F877 /* PackageListPresenterTests.swift in Sources */,
 				FB86FB6424C147120078670C /* HotelDetailsWireframeMock.swift in Sources */,
 				FB68776724A8F078002294EF /* HttpClientMock.swift in Sources */,
 				FBE0C06B24BBACFA00BA1471 /* GetSuggestionsInteractorTests.swift in Sources */,
@@ -819,9 +845,11 @@
 				FBA9D29424C679080000F877 /* SearchPackagesInteractorTests.swift in Sources */,
 				FBD24E3B24A5708F00CD143A /* HotelSearchServiceMock.swift in Sources */,
 				FBBFF0B824A419A000432479 /* HotelListPresenterTests.swift in Sources */,
+				FBA9D2AF24C688160000F877 /* PackageListWireframeMock.swift in Sources */,
 				FBE0C07324BBE74F00BA1471 /* GetSuggestionsInteractorMock.swift in Sources */,
 				FBBFF0C024A4291F00432479 /* SearchHotelsInteractorMock.swift in Sources */,
 				FBE0C06D24BBADA200BA1471 /* SuggestionsServiceMock.swift in Sources */,
+				FBA9D2AD24C6871B0000F877 /* PackageListViewMock.swift in Sources */,
 				FBBFF0BB24A41FBF00432479 /* HotelListWireframeMock.swift in Sources */,
 				FBD24E3424A56D8100CD143A /* SearchHotelsInteractorTests.swift in Sources */,
 				FB86FB6024C145C00078670C /* HotelDetailsPresenterTests.swift in Sources */,
