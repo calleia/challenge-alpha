@@ -21,7 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(windowScene: windowScene)
         
-        HotelListWireframe().present(in: self.window!)
+        let hotelListViewController = HotelListViewControllerFactory.make()
+        let hotelNavigationController = UINavigationController(rootViewController: hotelListViewController)
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [hotelNavigationController]
+        
+        self.window!.rootViewController = tabBarController
+        self.window!.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

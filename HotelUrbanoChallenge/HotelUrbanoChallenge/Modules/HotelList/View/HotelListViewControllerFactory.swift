@@ -9,9 +9,9 @@
 import UIKit
 
 final class HotelListViewControllerFactory {
-    static func make(wireframe: HotelListWireframeProtocol) -> HotelListViewController {
+    static func make() -> HotelListViewController {
         let viewController = HotelListViewController()
-        self.setupPresenter(viewController, wireframe: wireframe)
+        self.setupPresenter(viewController)
         self.setupSearchController(viewController)
         self.setupHttpClient(viewController)
         
@@ -20,7 +20,10 @@ final class HotelListViewControllerFactory {
 }
 
 extension HotelListViewControllerFactory {
-    private static func setupPresenter(_ viewController: HotelListViewController, wireframe: HotelListWireframeProtocol) {
+    private static func setupPresenter(_ viewController: HotelListViewController) {
+        let wireframe = HotelListWireframe()
+        wireframe.viewController = viewController
+        
         let presenter = HotelListPresenterFactory.make(wireframe: wireframe)
         presenter.view = viewController
         

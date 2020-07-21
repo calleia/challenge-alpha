@@ -51,6 +51,7 @@ final class HotelDetailsViewController: UIViewController {
 extension HotelDetailsViewController: HotelDetailsView {
     func setName(_ name: String) {
         DispatchQueue.main.async {
+            self.navigationItem.title = name
             self.nameLabel.text = name
         }
     }

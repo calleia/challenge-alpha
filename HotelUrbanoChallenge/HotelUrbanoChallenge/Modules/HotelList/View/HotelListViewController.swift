@@ -29,6 +29,10 @@ final class HotelListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let title = "Hotéis"
+        self.navigationItem.title = title
+        self.navigationController?.tabBarItem.title = title
+        
         let nib = UINib(nibName: "HotelCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: HotelCell.identifier)
         

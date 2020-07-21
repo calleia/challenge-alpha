@@ -9,6 +9,5 @@
 import UIKit
 
 protocol HotelListWireframeProtocol {
-    func present(in window: UIWindow)
     func presentDetails(for hotel: Hotel)
 }
