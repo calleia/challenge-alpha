@@ -9,6 +9,6 @@
 import Foundation
 
 struct GalleryImage: Decodable, Equatable {
-    let description: String
+    let description: String?
     let url: String
 }

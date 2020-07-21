@@ -10,4 +10,11 @@ import Foundation
 
 struct Package: Equatable, Decodable {
     let id: String
+    let name: String
+    let smallDescription: String
+    let description: String
+    let gallery: [GalleryImage]
+    let address: Address
+    let price: Price
+    let amenities: [Amenity]
 }
