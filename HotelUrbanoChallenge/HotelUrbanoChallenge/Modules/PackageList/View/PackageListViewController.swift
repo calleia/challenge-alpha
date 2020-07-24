@@ -12,6 +12,7 @@ final class PackageListViewController: UIViewController {
     
     var searchController: UISearchController!
     var suggestionsViewController: SuggestionsViewController!
+    var httpClient: HttpClientProtocol!
     
     var presenter: PackageListPresenterProtocol? = nil
     
@@ -89,7 +90,22 @@ extension PackageListViewController: UICollectionViewDataSource {
         address.append(self.packages[indexPath.row].address.state ?? "")
         cell.addressLabel.text = address
         
-        // TODO: set image
+        DispatchQueue.global(qos: .userInitiated).async {
+            if let imageString = self.packages[indexPath.row].gallery.first?.url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+                let imageUrl = URL(string: imageString) {
+                
+                self.httpClient.request(url: imageUrl) { result in
+                    switch result {
+                    case .success(let data):
+                        DispatchQueue.main.async {
+                            cell.imageView.image = UIImage(data: data)
+                        }
+                    case .failure(_):
+                        break
+                    }
+                }
+            }
+        }
         
         return cell
     }

@@ -13,6 +13,7 @@ final class PackageListViewControllerFactory {
         let viewController = PackageListViewController()
         self.setupPresenter(viewController)
         self.setupSearchController(viewController)
+        self.setupHttpClient(viewController)
         
         return viewController
     }
@@ -50,5 +51,10 @@ extension PackageListViewControllerFactory {
         
         // Always show search bar.
         viewController.navigationItem.hidesSearchBarWhenScrolling = false
+    }
+    
+    private static func setupHttpClient(_ viewController: PackageListViewController) {
+        let httpClient = HttpClient()
+        viewController.httpClient = httpClient
     }
 }
