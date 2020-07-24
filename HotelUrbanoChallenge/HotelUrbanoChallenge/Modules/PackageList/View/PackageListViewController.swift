@@ -76,6 +76,12 @@ extension PackageListViewController: UICollectionViewDataSource {
         cell.nameLabel.text = self.packages[indexPath.row].name
         cell.priceLabel.text = "R$ \(Int(self.packages[indexPath.row].price.amountPerDay))"
         
+        let nightCountDescriptor = self.packages[indexPath.row].quantityDescriptors.nights > 1 ? "diárias" : "diária"
+        cell.nightCountLabel.text = "\(self.packages[indexPath.row].quantityDescriptors.nights) \(nightCountDescriptor)"
+        
+        let peopleCountDescriptor = self.packages[indexPath.row].quantityDescriptors.maxPeople > 1 ? "pessoas" : "pessoa"
+        cell.peopleCountLabel.text = "\(self.packages[indexPath.row].quantityDescriptors.maxPeople) \(peopleCountDescriptor)"
+        
         var address = self.packages[indexPath.row].address.city ?? ""
         if !address.isEmpty {
             address.append(", ")
@@ -84,8 +90,6 @@ extension PackageListViewController: UICollectionViewDataSource {
         cell.addressLabel.text = address
         
         // TODO: set image
-        // TODO: set night count
-        // TODO: set people count
         
         return cell
     }

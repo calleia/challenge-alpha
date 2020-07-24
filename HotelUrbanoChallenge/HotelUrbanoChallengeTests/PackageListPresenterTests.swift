@@ -158,6 +158,7 @@ extension PackageListPresenterTests {
         let geoLocation = GeoLocation(lat: 12.34, lon: 56.78)
         let address = Address(city: "Address City", state: "Address State", geoLocation: geoLocation)
         let price = Price(amountPerDay: 42.0)
+        let quantityDescriptor = QuantityDescriptor(nights: 4, maxPeople: 2)
         let amenity = Amenity(name: "Amenity Name", category: "Amenity Category")
         let package = Package(id: "Package ID",
                               name: "Package Name",
@@ -166,6 +167,7 @@ extension PackageListPresenterTests {
                               gallery: [],
                               address: address,
                               price: price,
+                              quantityDescriptors: quantityDescriptor,
                               amenities: [amenity])
         
         return package

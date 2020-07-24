@@ -16,5 +16,6 @@ struct Package: Equatable, Decodable {
     let gallery: [GalleryImage]
     let address: Address
     let price: Price
+    let quantityDescriptors: QuantityDescriptor
     let amenities: [Amenity]
 }

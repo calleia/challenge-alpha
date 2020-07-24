@@ -12,6 +12,7 @@
 		FB035F1A24A17B5900CF0DC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB035F1924A17B5900CF0DC0 /* Assets.xcassets */; };
 		FB035F1D24A17B5900CF0DC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB035F1B24A17B5900CF0DC0 /* LaunchScreen.storyboard */; };
 		FB035F3324A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB035F3224A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests.swift */; };
+		FB0769C024CA8D67008096BB /* QuantityDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0769BF24CA8D67008096BB /* QuantityDescriptor.swift */; };
 		FB151F8A24CA45A3003377C2 /* PackageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB151F8824CA45A3003377C2 /* PackageCell.swift */; };
 		FB151F8B24CA45A3003377C2 /* PackageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB151F8924CA45A3003377C2 /* PackageCell.xib */; };
 		FB3ADE6024BD3152005E1EC3 /* SuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3ADE5E24BD3152005E1EC3 /* SuggestionCell.swift */; };
@@ -142,6 +143,7 @@
 		FB035F2E24A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotelUrbanoChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB035F3224A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelUrbanoChallengeUITests.swift; sourceTree = "<group>"; };
 		FB035F3424A17B5A00CF0DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB0769BF24CA8D67008096BB /* QuantityDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityDescriptor.swift; sourceTree = "<group>"; };
 		FB151F8824CA45A3003377C2 /* PackageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageCell.swift; sourceTree = "<group>"; };
 		FB151F8924CA45A3003377C2 /* PackageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageCell.xib; sourceTree = "<group>"; };
 		FB3ADE5E24BD3152005E1EC3 /* SuggestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCell.swift; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 				FBA9D28824C674720000F877 /* PackageServiceResponse.swift */,
 				FBA9D28A24C674910000F877 /* Package.swift */,
 				FBA9D29724C67D370000F877 /* Amenity.swift */,
+				FB0769BF24CA8D67008096BB /* QuantityDescriptor.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -831,6 +834,7 @@
 				FB86FB4E24C138840078670C /* HotelDetailsWireframeProtocol.swift in Sources */,
 				FBAFCA2524A5996D009EB562 /* HttpClientProtocol.swift in Sources */,
 				FB035F1324A17B5800CF0DC0 /* SceneDelegate.swift in Sources */,
+				FB0769C024CA8D67008096BB /* QuantityDescriptor.swift in Sources */,
 				FBA9D29824C67D370000F877 /* Amenity.swift in Sources */,
 				FBE0C06924BBACCB00BA1471 /* GetSuggestionsInteractor.swift in Sources */,
 				FBEDC6D024BEBD4800A14EF2 /* Price.swift in Sources */,
