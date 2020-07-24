@@ -10,12 +10,28 @@ import UIKit
 
 final class PackageListViewController: UIViewController {
     
+    var searchController: UISearchController!
+    var suggestionsViewController: SuggestionsViewController!
+    
     var presenter: PackageListPresenterProtocol? = nil
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var packages = [Package]() {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "Pacotes"
+        
+        let nib = UINib(nibName: "PackageCell", bundle: nil)
+        self.collectionView.register(nib, forCellWithReuseIdentifier: PackageCell.identifier)
+        
+        self.searchController.searchBar.placeholder = "Para onde deseja viajar?"
     }
     
 }
@@ -31,7 +47,9 @@ extension PackageListViewController: PackageListView {
     }
     
     func showPackages(_ packages: [Package]) {
-        // TODO: show packages
+        DispatchQueue.main.async {
+            self.packages = packages
+        }
     }
     
     func showError(message: String) {
@@ -39,7 +57,79 @@ extension PackageListViewController: PackageListView {
     }
     
     func showSuggestions(suggestions: [String]) {
-        // TODO: show suggestions
+        DispatchQueue.main.async {
+            self.suggestionsViewController.suggestions = suggestions
+            self.suggestionsViewController.tableView.reloadData()
+        }
     }
     
+}
+
+extension PackageListViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        self.packages.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: PackageCell.identifier, for: indexPath) as! PackageCell
+        
+        cell.nameLabel.text = self.packages[indexPath.row].name
+        cell.priceLabel.text = "R$ \(Int(self.packages[indexPath.row].price.amountPerDay))"
+        
+        var address = self.packages[indexPath.row].address.city ?? ""
+        if !address.isEmpty {
+            address.append(", ")
+        }
+        address.append(self.packages[indexPath.row].address.state ?? "")
+        cell.addressLabel.text = address
+        
+        // TODO: set image
+        // TODO: set night count
+        // TODO: set people count
+        
+        return cell
+    }
+}
+
+extension PackageListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let package = self.packages[indexPath.row]
+        self.presenter?.showDetails(for: package)
+    }
+}
+
+extension PackageListViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.collectionView.bounds.width - 32.0, height: 0.30 * self.collectionView.bounds.height)
+    }
+}
+
+extension PackageListViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        self.presenter?.getSuggestions(for: searchBar.text!)
+    }
+}
+
+extension PackageListViewController: UISearchControllerDelegate {}
+
+extension PackageListViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        self.presenter?.searchPackages(in: searchBar.text ?? "")
+        self.suggestionsViewController.dismiss(animated: true, completion: nil)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        self.updateSearchResults(for: self.searchController)
+    }
+}
+
+extension PackageListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let suggestion = self.suggestionsViewController.suggestions[indexPath.row]
+        self.searchController.searchBar.text = suggestion
+        self.presenter?.searchPackages(in: suggestion)
+        self.suggestionsViewController.dismiss(animated: true, completion: nil)
+    }
 }
