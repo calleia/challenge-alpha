@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PackageListViewController" customModule="HotelUrbanoChallenge" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicatorView" destination="eGi-jA-5lf" id="Vrj-I1-c3l"/>
                 <outlet property="collectionView" destination="pn0-mD-O2J" id="3ug-Aq-eyh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -18,9 +19,12 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="eGi-jA-5lf">
+                    <rect key="frame" x="197" y="443" width="20" height="20"/>
+                </activityIndicatorView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pn0-mD-O2J">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="a60-ZO-XE4">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -36,6 +40,8 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pn0-mD-O2J" secondAttribute="bottom" id="3qJ-N6-Irk"/>
+                <constraint firstItem="eGi-jA-5lf" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Bgd-pN-srk"/>
+                <constraint firstItem="eGi-jA-5lf" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="U53-dS-nMV"/>
                 <constraint firstItem="pn0-mD-O2J" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Wnv-7e-ymU"/>
                 <constraint firstItem="pn0-mD-O2J" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pxm-UL-5xl"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pn0-mD-O2J" secondAttribute="trailing" id="rfh-p3-bi0"/>

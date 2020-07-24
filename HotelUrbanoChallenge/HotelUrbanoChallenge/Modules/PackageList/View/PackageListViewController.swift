@@ -16,6 +16,8 @@ final class PackageListViewController: UIViewController {
     
     var presenter: PackageListPresenterProtocol? = nil
     
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var packages = [Package]() {
@@ -40,11 +42,15 @@ final class PackageListViewController: UIViewController {
 extension PackageListViewController: PackageListView {
     
     func showActivityIndicator() {
-        // TODO: show activity indicator
+        DispatchQueue.main.async {
+            self.activityIndicatorView.startAnimating()
+        }
     }
     
     func hideActivityIndicator() {
-        // TODO: hide activity indicator
+        DispatchQueue.main.async {
+            self.activityIndicatorView.stopAnimating()
+        }
     }
     
     func showPackages(_ packages: [Package]) {
