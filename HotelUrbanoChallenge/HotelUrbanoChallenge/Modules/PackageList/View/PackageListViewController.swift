@@ -54,7 +54,13 @@ extension PackageListViewController: PackageListView {
     }
     
     func showError(message: String) {
-        // TODO: show error
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "ERROR", message: message, preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(action)
+            
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func showSuggestions(suggestions: [String]) {
