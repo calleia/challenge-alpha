@@ -6,6 +6,8 @@
 //  Copyright © 2020 Fellipe Calleia. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-protocol PackageDetailsWireframeProtocol {}
+protocol PackageDetailsWireframeProtocol {
+    func present(package: Package, in navigationController: UINavigationController)
+}
