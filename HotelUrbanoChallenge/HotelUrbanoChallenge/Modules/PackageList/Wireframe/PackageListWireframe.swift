@@ -10,10 +10,16 @@ import Foundation
 
 final class PackageListWireframe: PackageListWireframeProtocol {
     
+    private var packageDetailsWireframe = PackageDetailsWireframe()
+    
     weak var viewController: PackageListViewController? = nil
     
     func presentDetails(for package: Package) {
-        // TODO: present details view controller
+        guard let navigationController = self.viewController?.navigationController else {
+            return
+        }
+        
+        self.packageDetailsWireframe.present(package: package, in: navigationController)
     }
     
 }

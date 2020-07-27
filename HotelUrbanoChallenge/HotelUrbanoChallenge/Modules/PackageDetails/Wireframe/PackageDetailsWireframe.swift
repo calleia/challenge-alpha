@@ -11,7 +11,8 @@ import UIKit
 final class PackageDetailsWireframe: PackageDetailsWireframeProtocol {
     
     func present(package: Package, in navigationController: UINavigationController) {
-        // TODO: present package details
+        let viewController = PackageDetailsViewControllerFactory.make(wireframe: self)
+        navigationController.pushViewController(viewController, animated: true)
     }
     
 }
