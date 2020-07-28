@@ -10,10 +10,12 @@ import UIKit
 
 final class PackageDetailsViewController: UIViewController {
     
+    var presenter: PackageDetailsPresenterProtocol? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.presenter?.viewDidLoad()
     }
     
 }

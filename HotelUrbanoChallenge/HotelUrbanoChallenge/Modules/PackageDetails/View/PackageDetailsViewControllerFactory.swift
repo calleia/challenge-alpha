@@ -9,9 +9,20 @@
 import Foundation
 
 final class PackageDetailsViewControllerFactory {
-    static func make(wireframe: PackageDetailsWireframeProtocol) -> PackageDetailsViewController {
+    static func make(wireframe: PackageDetailsWireframeProtocol, package: Package) -> PackageDetailsViewController {
         let viewController = PackageDetailsViewController()
+        self.setupPresenter(viewController, wireframe: wireframe, with: package)
         
         return viewController
+    }
+}
+
+extension PackageDetailsViewControllerFactory {
+    private static func setupPresenter(_ viewController: PackageDetailsViewController, wireframe: PackageDetailsWireframeProtocol, with package: Package) {
+        let presenter = PackageDetailsPresenterFactory.make(wireframe: wireframe)
+        presenter.package = package
+        presenter.view = viewController
+        
+        viewController.presenter = presenter
     }
 }
