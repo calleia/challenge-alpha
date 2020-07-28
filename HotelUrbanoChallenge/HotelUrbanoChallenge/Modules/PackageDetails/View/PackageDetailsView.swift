@@ -6,6 +6,17 @@
 //  Copyright © 2020 Fellipe Calleia. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-protocol PackageDetailsView {}
+protocol PackageDetailsView: AnyObject {
+    func setName(_ name: String)
+    func setSmallDescription(_ smallDescription: String)
+    func setDescription(_ description: String)
+    func setGallery(_ images: [UIImage])
+    func setAddress(_ address: String)
+    func setMap(lat: Float, lon: Float)
+    func setPrice(_ price: String)
+    func setNights(_ nights: Int)
+    func setMaxPeople(_ maxPeople: Int)
+    func setAmenities(_ amenities: [String])
+}

@@ -8,4 +8,6 @@
 
 import Foundation
 
-protocol PackageDetailsPresenterProtocol {}
+protocol PackageDetailsPresenterProtocol {
+    func viewDidLoad()
+}
