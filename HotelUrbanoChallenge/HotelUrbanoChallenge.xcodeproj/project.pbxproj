@@ -19,6 +19,7 @@
 		FB3ADE6124BD3152005E1EC3 /* SuggestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3ADE5F24BD3152005E1EC3 /* SuggestionCell.xib */; };
 		FB3ADE6424BD4669005E1EC3 /* HotelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3ADE6224BD4669005E1EC3 /* HotelCell.swift */; };
 		FB3ADE6524BD4669005E1EC3 /* HotelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3ADE6324BD4669005E1EC3 /* HotelCell.xib */; };
+		FB4E342224CFEA26008BC3E8 /* PackageDetailsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4E342124CFEA26008BC3E8 /* PackageDetailsPresenterProtocol.swift */; };
 		FB68776124A8EC00002294EF /* HotelSearchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68776024A8EC00002294EF /* HotelSearchServiceTests.swift */; };
 		FB68776724A8F078002294EF /* HttpClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68776624A8F078002294EF /* HttpClientMock.swift */; };
 		FB68776A24A91A9B002294EF /* hotel.json in Resources */ = {isa = PBXBuildFile; fileRef = FB68776924A91A9B002294EF /* hotel.json */; };
@@ -156,6 +157,7 @@
 		FB3ADE5F24BD3152005E1EC3 /* SuggestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionCell.xib; sourceTree = "<group>"; };
 		FB3ADE6224BD4669005E1EC3 /* HotelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelCell.swift; sourceTree = "<group>"; };
 		FB3ADE6324BD4669005E1EC3 /* HotelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelCell.xib; sourceTree = "<group>"; };
+		FB4E342124CFEA26008BC3E8 /* PackageDetailsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsPresenterProtocol.swift; sourceTree = "<group>"; };
 		FB68776024A8EC00002294EF /* HotelSearchServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelSearchServiceTests.swift; sourceTree = "<group>"; };
 		FB68776624A8F078002294EF /* HttpClientMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientMock.swift; sourceTree = "<group>"; };
 		FB68776924A91A9B002294EF /* hotel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = hotel.json; path = ../../../../examples/hotel.json; sourceTree = "<group>"; };
@@ -400,6 +402,14 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		FB4E342024CFEA0F008BC3E8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FB4E342124CFEA26008BC3E8 /* PackageDetailsPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		FB68776824A91A62002294EF /* json */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,6 +475,7 @@
 		FB9C751224CF358900F5505C /* PackageDetails */ = {
 			isa = PBXGroup;
 			children = (
+				FB4E342024CFEA0F008BC3E8 /* Presenter */,
 				FB9C751824CF3A2300F5505C /* View */,
 				FB9C751324CF35DB00F5505C /* Wireframe */,
 			);
@@ -873,6 +884,7 @@
 				FBA9D2B124C68C6E0000F877 /* PackageSearchServiceFactory.swift in Sources */,
 				FB86FB6E24C166750078670C /* GeoLocation.swift in Sources */,
 				FBE0C05024BB977600BA1471 /* SuggestionsPresenter.swift in Sources */,
+				FB4E342224CFEA26008BC3E8 /* PackageDetailsPresenterProtocol.swift in Sources */,
 				FBE0C06F24BBC1CA00BA1471 /* GetSuggestionsInteractorFactory.swift in Sources */,
 				FB151F8A24CA45A3003377C2 /* PackageCell.swift in Sources */,
 				FB86FB5C24C141130078670C /* HotelDetailsPresenterProtocol.swift in Sources */,
