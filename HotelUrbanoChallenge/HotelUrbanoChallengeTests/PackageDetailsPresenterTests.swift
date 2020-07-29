@@ -180,19 +180,79 @@ final class PackageDetailsPresenterTests: XCTestCase {
     }
     
     func testSetNights() throws {
-        self.presenter.package = self.packageMock
+        let quantityDescriptorMock = QuantityDescriptor(nights: 2, maxPeople: 1)
+        let packageMock = Package(id: "Package ID",
+                                  name: "Package Name",
+                                  smallDescription: "Package Small Description",
+                                  description: "Package Description",
+                                  gallery: [self.galleryImageMock],
+                                  address: self.addressMock,
+                                  price: self.priceMock,
+                                  quantityDescriptors: quantityDescriptorMock,
+                                  amenities: [self.amenityMock])
+        
+        self.presenter.package = packageMock
         self.presenter.viewDidLoad()
         
         XCTAssertEqual(self.packageDetailsViewMock.setNightsCallCount, 1)
-        XCTAssertEqual(self.packageDetailsViewMock.lastSetNights, 1)
+        XCTAssertEqual(self.packageDetailsViewMock.lastSetNights, "2 diárias")
+    }
+    
+    func testSetSingleNight() throws {
+        let quantityDescriptorMock = QuantityDescriptor(nights: 1, maxPeople: 2)
+        let packageMock = Package(id: "Package ID",
+                                  name: "Package Name",
+                                  smallDescription: "Package Small Description",
+                                  description: "Package Description",
+                                  gallery: [self.galleryImageMock],
+                                  address: self.addressMock,
+                                  price: self.priceMock,
+                                  quantityDescriptors: quantityDescriptorMock,
+                                  amenities: [self.amenityMock])
+        
+        self.presenter.package = packageMock
+        self.presenter.viewDidLoad()
+        
+        XCTAssertEqual(self.packageDetailsViewMock.setNightsCallCount, 1)
+        XCTAssertEqual(self.packageDetailsViewMock.lastSetNights, "1 diária")
     }
     
     func testSetMaxPeople() throws {
-        self.presenter.package = self.packageMock
+        let quantityDescriptorMock = QuantityDescriptor(nights: 1, maxPeople: 2)
+        let packageMock = Package(id: "Package ID",
+                                  name: "Package Name",
+                                  smallDescription: "Package Small Description",
+                                  description: "Package Description",
+                                  gallery: [self.galleryImageMock],
+                                  address: self.addressMock,
+                                  price: self.priceMock,
+                                  quantityDescriptors: quantityDescriptorMock,
+                                  amenities: [self.amenityMock])
+        
+        self.presenter.package = packageMock
         self.presenter.viewDidLoad()
         
         XCTAssertEqual(self.packageDetailsViewMock.setMaxPeopleCallCount, 1)
-        XCTAssertEqual(self.packageDetailsViewMock.lastSetMaxPeople, 2)
+        XCTAssertEqual(self.packageDetailsViewMock.lastSetMaxPeople, "2 pessoas")
+    }
+    
+    func testSetSingleMaxPeople() throws {
+        let quantityDescriptorMock = QuantityDescriptor(nights: 2, maxPeople: 1)
+        let packageMock = Package(id: "Package ID",
+                                  name: "Package Name",
+                                  smallDescription: "Package Small Description",
+                                  description: "Package Description",
+                                  gallery: [self.galleryImageMock],
+                                  address: self.addressMock,
+                                  price: self.priceMock,
+                                  quantityDescriptors: quantityDescriptorMock,
+                                  amenities: [self.amenityMock])
+        
+        self.presenter.package = packageMock
+        self.presenter.viewDidLoad()
+        
+        XCTAssertEqual(self.packageDetailsViewMock.setMaxPeopleCallCount, 1)
+        XCTAssertEqual(self.packageDetailsViewMock.lastSetMaxPeople, "1 pessoa")
     }
     
     func testSetAmenities() throws {

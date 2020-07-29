@@ -16,7 +16,7 @@ protocol PackageDetailsView: AnyObject {
     func setAddress(_ address: String)
     func setMap(lat: Float, lon: Float)
     func setPrice(_ price: String)
-    func setNights(_ nights: Int)
-    func setMaxPeople(_ maxPeople: Int)
+    func setNights(_ nights: String)
+    func setMaxPeople(_ maxPeople: String)
     func setAmenities(_ amenities: [String])
 }

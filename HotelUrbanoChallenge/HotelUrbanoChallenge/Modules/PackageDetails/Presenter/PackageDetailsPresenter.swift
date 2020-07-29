@@ -44,12 +44,14 @@ final class PackageDetailsPresenter: PackageDetailsPresenterProtocol {
             self.view?.setMap(lat: latitude, lon: longitude)
         }
         
-        let price = Int(package.price.amountPerDay)
-        self.view?.setPrice("R$ \(price)")
+        let price = self.formatPrice(package.price.amountPerDay)
+        self.view?.setPrice(price)
         
-        self.view?.setNights(package.quantityDescriptors.nights)
+        let nightCount = self.formatNightCount(package.quantityDescriptors.nights)
+        self.view?.setNights(nightCount)
         
-        self.view?.setMaxPeople(package.quantityDescriptors.maxPeople)
+        let peopleCount = self.formatPeopleCount(package.quantityDescriptors.maxPeople)
+        self.view?.setMaxPeople(peopleCount)
         
         let amenities = package.amenities.map({ $0.name })
         self.view?.setAmenities(amenities)
@@ -115,6 +117,24 @@ extension PackageDetailsPresenter {
         }
         
         return address
+    }
+    
+    private func formatPrice(_ price: Float) -> String {
+        let intPrice = Int(price)
+        
+        return "R$ \(intPrice)"
+    }
+    
+    private func formatNightCount(_ nightCount: Int) -> String {
+        let descriptor = nightCount > 1 ? "diárias" : "diária"
+        
+        return "\(nightCount) \(descriptor)"
+    }
+    
+    private func formatPeopleCount(_ peopleCount: Int) -> String {
+        let descriptor = peopleCount > 1 ? "pessoas" : "pessoa"
+        
+        return "\(peopleCount) \(descriptor)"
     }
     
 }

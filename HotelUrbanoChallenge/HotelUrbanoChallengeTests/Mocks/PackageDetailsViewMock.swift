@@ -35,10 +35,10 @@ final class PackageDetailsViewMock: PackageDetailsView {
     var lastSetPrice: String? = nil
     
     var setNightsCallCount = 0
-    var lastSetNights: Int? = nil
+    var lastSetNights: String? = nil
     
     var setMaxPeopleCallCount = 0
-    var lastSetMaxPeople: Int? = nil
+    var lastSetMaxPeople: String? = nil
     
     var setAmenitiesCallCount = 0
     var lastSetAmenities: [String] = []
@@ -79,12 +79,12 @@ final class PackageDetailsViewMock: PackageDetailsView {
         self.lastSetPrice = price
     }
     
-    func setNights(_ nights: Int) {
+    func setNights(_ nights: String) {
         self.setNightsCallCount += 1
         self.lastSetNights = nights
     }
     
-    func setMaxPeople(_ maxPeople: Int) {
+    func setMaxPeople(_ maxPeople: String) {
         self.setMaxPeopleCallCount += 1
         self.lastSetMaxPeople = maxPeople
     }
