@@ -31,7 +31,8 @@ final class PackageDetailsPresenter: PackageDetailsPresenterProtocol {
         
         self.view?.setSmallDescription(package.smallDescription)
         
-        self.view?.setDescription(package.description)
+        let description = self.formatDescription(package.description)
+        self.view?.setDescription(description)
         
         if let imageUrls = self.package?.gallery.map({ $0.url }) {
             self.loadImages(imageUrls)
@@ -135,6 +136,27 @@ extension PackageDetailsPresenter {
         let descriptor = peopleCount > 1 ? "pessoas" : "pessoa"
         
         return "\(peopleCount) \(descriptor)"
+    }
+    
+    private func formatDescription(_ description: String) -> String {
+        let descriptionLines = description.components(separatedBy: "\n")
+        let cleanDescriptionLines: [String] = descriptionLines.map { substring in
+            let line = String(substring)
+            return self.cleanHtmlEntities(line)
+        }
+        
+        return cleanDescriptionLines.joined(separator: "\n")
+    }
+    
+    private func cleanHtmlEntities(_ string: String) -> String {
+        let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
+            .documentType: NSAttributedString.DocumentType.html,
+            .characterEncoding: String.Encoding.utf8.rawValue
+        ]
+        
+        let cleanString = try? NSAttributedString(data: string.data(using: .utf8)!, options: options, documentAttributes: nil).string
+        
+        return cleanString ?? ""
     }
     
 }

@@ -272,4 +272,22 @@ final class PackageDetailsPresenterTests: XCTestCase {
         XCTAssertEqual(self.packageDetailsViewMock.lastSetLon, 56.78)
     }
     
+    func testFormatDescription() throws {
+        let packageMock = Package(id: "Package ID",
+                                  name: "Package Name",
+                                  smallDescription: "Package Small Description",
+                                  description: "O&nbsp;pacote&nbsp;inclui:\r\n\r\n- Passagem a&eacute;rea de ida e volta.",
+                                  gallery: [self.galleryImageMock],
+                                  address: self.addressMock,
+                                  price: self.priceMock,
+                                  quantityDescriptors: self.quantityDescriptorMock,
+                                  amenities: [self.amenityMock])
+        
+        self.presenter.package = packageMock
+        self.presenter.viewDidLoad()
+        
+        XCTAssertEqual(self.packageDetailsViewMock.setDescriptionCallCount, 1)
+        XCTAssertEqual(self.packageDetailsViewMock.lastSetDescription, "O pacote inclui: \n\n- Passagem aérea de ida e volta.")
+    }
+    
 }
