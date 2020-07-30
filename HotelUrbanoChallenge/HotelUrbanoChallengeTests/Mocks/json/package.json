@@ -1,0 +1,1634 @@
+{
+    "filters":{
+        "attributes":[
+            {
+                "term":"Aluguel de carro",
+                "filter":"attribute_aluguel_de_carro|1",
+                "count":4
+            },
+            {
+                "term":"Apartamento",
+                "filter":"attribute_apartamento|1",
+                "count":13
+            },
+            {
+                "term":"Atendimento Bilíngue",
+                "filter":"attribute_atendimento_bilingue|1",
+                "count":1
+            },
+            {
+                "term":"Café da manhã",
+                "filter":"attribute_cafe_da_manha|1",
+                "count":17
+            },
+            {
+                "term":"Camareira",
+                "filter":"attribute_camareira|1",
+                "count":1
+            },
+            {
+                "term":"Cofre",
+                "filter":"attribute_cofre|1",
+                "count":1
+            },
+            {
+                "term":"Com criança grátis",
+                "filter":"attribute_freechildren_yes|1",
+                "count":18
+            },
+            {
+                "term":"Estacionamento",
+                "filter":"attribute_estacionamento|1",
+                "count":1
+            },
+            {
+                "term":"Grátis para criança",
+                "filter":"attribute_gratis_para_crianca|1",
+                "count":1
+            },
+            {
+                "term":"Internet wireless",
+                "filter":"attribute_internet_wireless|1",
+                "count":1
+            },
+            {
+                "term":"Passagem Aérea",
+                "filter":"attribute_passagem_aerea|1",
+                "count":9
+            },
+            {
+                "term":"Pensão completa",
+                "filter":"attribute_pensao_completa|1",
+                "count":1
+            },
+            {
+                "term":"Piscina",
+                "filter":"attribute_piscina|1",
+                "count":1
+            },
+            {
+                "term":"Quarto",
+                "filter":"attribute_quarto|1",
+                "count":5
+            },
+            {
+                "term":"Serviço de quarto",
+                "filter":"attribute_servico_de_quarto|1",
+                "count":1
+            },
+            {
+                "term":"Transfer",
+                "filter":"attribute_transfer|1",
+                "count":2
+            },
+            {
+                "term":"Área de lazer",
+                "filter":"attribute_area_de_lazer|1",
+                "count":1
+            }
+        ],
+        "countries":[
+            {
+                "term":"Brasil",
+                "filter":"country_brasil|1",
+                "count":18
+            }
+        ],
+        "cities":[
+            {
+                "term":"Armação dos Búzios",
+                "filter":"city_armacao_dos_buzios|1,state_rio_de_janeiro|1,country_brasil|1",
+                "count":15
+            },
+            {
+                "term":"Cabo Frio",
+                "filter":"city_cabo_frio|1,state_rio_de_janeiro|1,country_brasil|1",
+                "count":2
+            },
+            {
+                "term":"Rio de Janeiro",
+                "filter":"city_rio_de_janeiro|1,state_rio_de_janeiro|1,country_brasil|1",
+                "count":1
+            }
+        ],
+        "departureCities":[
+            {
+                "term":"Belo Horizonte",
+                "filter":"departurecity_belo_horizonte|1",
+                "count":8
+            },
+            {
+                "term":"Belém",
+                "filter":"departurecity_belem|1",
+                "count":7
+            },
+            {
+                "term":"Brasília",
+                "filter":"departurecity_brasilia|1",
+                "count":8
+            },
+            {
+                "term":"Curitiba",
+                "filter":"departurecity_curitiba|1",
+                "count":8
+            },
+            {
+                "term":"Florianópolis",
+                "filter":"departurecity_florianopolis|1",
+                "count":5
+            },
+            {
+                "term":"Fortaleza",
+                "filter":"departurecity_fortaleza|1",
+                "count":1
+            },
+            {
+                "term":"Manaus",
+                "filter":"departurecity_manaus|1",
+                "count":1
+            },
+            {
+                "term":"Porto Alegre",
+                "filter":"departurecity_porto_alegre|1",
+                "count":8
+            },
+            {
+                "term":"Recife",
+                "filter":"departurecity_recife|1",
+                "count":5
+            },
+            {
+                "term":"Salvador",
+                "filter":"departurecity_salvador|1",
+                "count":8
+            },
+            {
+                "term":"São Paulo",
+                "filter":"departurecity_sao_paulo|1",
+                "count":9
+            },
+            {
+                "term":"Vitória",
+                "filter":"departurecity_vitoria|1",
+                "count":5
+            }
+        ],
+        "duration":[
+            {
+                "term":"2 diárias",
+                "filter":"duration_2_diarias|1",
+                "count":9
+            },
+            {
+                "term":"3 diárias",
+                "filter":"duration_3_diarias|1",
+                "count":5
+            },
+            {
+                "term":"4 diárias",
+                "filter":"duration_4_diarias|1",
+                "count":13
+            },
+            {
+                "term":"5 diárias",
+                "filter":"duration_5_diarias|1",
+                "count":2
+            },
+            {
+                "term":"6 diárias",
+                "filter":"duration_6_diarias|1",
+                "count":6
+            },
+            {
+                "term":"7 diárias",
+                "filter":"duration_7_diarias|1",
+                "count":7
+            },
+            {
+                "term":"8 diárias",
+                "filter":"duration_8_diarias|1",
+                "count":2
+            },
+            {
+                "term":"9 diárias",
+                "filter":"duration_9_diarias|1",
+                "count":3
+            },
+            {
+                "term":"10 diárias",
+                "filter":"duration_10_diarias|1",
+                "count":2
+            },
+            {
+                "term":"12 diárias",
+                "filter":"duration_12_diarias|1",
+                "count":2
+            }
+        ],
+        "food":[
+            {
+                "term":"Café da manhã",
+                "filter":"food_cafe_da_manha|1",
+                "count":17
+            },
+            {
+                "term":"Pensão completa",
+                "filter":"food_pensao_completa|1",
+                "count":1
+            }
+        ],
+        "people":[
+            {
+                "term":"1",
+                "filter":"total_people_1|1",
+                "count":7
+            },
+            {
+                "term":"2",
+                "filter":"total_people_2|1",
+                "count":11
+            }
+        ],
+        "prices":[
+            {
+                "min":0,
+                "maxExclusive":300,
+                "filter":"pricegroup_1|1",
+                "count":2
+            },
+            {
+                "min":300,
+                "maxExclusive":600,
+                "filter":"pricegroup_2|1",
+                "count":6
+            },
+            {
+                "min":600,
+                "maxExclusive":900,
+                "filter":"pricegroup_3|1",
+                "count":3
+            },
+            {
+                "min":900,
+                "maxExclusive":1200,
+                "filter":"pricegroup_4|1",
+                "count":1
+            },
+            {
+                "min":1200,
+                "maxExclusive":1500,
+                "filter":"pricegroup_5|1",
+                "count":3
+            },
+            {
+                "min":1500,
+                "maxExclusive":1800,
+                "filter":"pricegroup_6|1",
+                "count":3
+            }
+        ],
+        "priceInterval":{
+            "min":25900,
+            "max":173875,
+            "filterPattern":"price_[min|max]_[value]"
+        },
+        "productType":[
+            {
+                "term":"hospedagem",
+                "filter":"product_type_hospedagem|1",
+                "count":18
+            }
+        ],
+        "regulation":[
+            {
+                "term":"accessibility_no",
+                "filter":"regulation_accessibility_no|1",
+                "count":18
+            },
+            {
+                "term":"child_yes",
+                "filter":"regulation_child_yes|1",
+                "count":18
+            },
+            {
+                "term":"extra_bed_no",
+                "filter":"regulation_extra_bed_no|1",
+                "count":18
+            },
+            {
+                "term":"internet_no",
+                "filter":"regulation_internet_no|1",
+                "count":16
+            },
+            {
+                "term":"internet_yes",
+                "filter":"regulation_internet_yes|1",
+                "count":2
+            },
+            {
+                "term":"parking_no",
+                "filter":"regulation_parking_no|1",
+                "count":16
+            },
+            {
+                "term":"parking_yes",
+                "filter":"regulation_parking_yes|1",
+                "count":2
+            }
+        ],
+        "states":[
+            {
+                "term":"Rio de Janeiro",
+                "filter":"state_rio_de_janeiro|1,country_brasil|1",
+                "count":18
+            }
+        ]
+    },
+    "results":[
+        {
+            "sku":"LGPKG-872453-0",
+            "isPackage":true,
+            "name":"Pacote Búzios - 2021",
+            "url":"https://www.hurb.com/br/packages/buzios-passagem-aerea-hospedagem/872453",
+            "smallDescription":"Aéreo + Hospedagem + Opção de Transfer",
+            "description":"O pacote&nbsp;inclui:\r\n\r\nA&eacute;reo: Passagem a&eacute;rea de ida e volta da cidade de origem para Rio de Janeiro, em classe econ&ocirc;mica padr&atilde;o, com direito a 10KG de bagagem de m&atilde;o.&nbsp;\r\n\r\n\r\n\t\r\n\tObtenha informa&ccedil;&otilde;es sobre despacho de bagagem entrando em contato com a companhia a&eacute;rea informada em sua documenta&ccedil;&atilde;o de viagem.\r\n\t\r\n\r\n\r\nHospedagem:&nbsp;em&nbsp;B&uacute;zios&nbsp;no&nbsp;Pousada Brisas de B&uacute;zios, Villa Valentina, Mandragora, B&uacute;zios Garden, B&uacute;zios Centro Hotel ou pousada de mesma categoria, padr&atilde;o 3&nbsp;estrelas - com Caf&eacute; da Manh&atilde;.\r\n\r\nOpcional: Transfer de ida e volta do aeroporto para o hotel, de acordo com a op&ccedil;&atilde;o escolhida no momento da compra.\r\n\r\nAproveite e confira nossa oferta especial de Passeio de Escuna&nbsp;em Buzios, clicando&nbsp;Aqui\r\n",
+            "gallery":[
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/26/19/49/armacao_dos_buzios_capa.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/26/19/52/armacao_dos_buzios_001.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/26/19/52/armacao_dos_buzios_002.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/26/19/52/armacao_dos_buzios_003.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/26/19/52/armacao_dos_buzios_004.jpg"
+                }
+            ],
+            "address":{
+                "country":"Brasil",
+                "state":"Rio de Janeiro",
+                "city":"Búzios",
+                "geoLocation":{
+                    "lat":-22.958415,
+                    "lon":-43.303063
+                }
+            },
+            "tags":[
+                "Boletos 2021"
+            ],
+            "price":{
+                "oldPrice":998,
+                "currentPrice":998,
+                "sku":"LGPKG-872453-0",
+                "originalAmount":998,
+                "amountPerDay":499,
+                "amount":998
+            },
+            "featuredItem":{
+                "description":"Apartamento Duplo.",
+                "hasInternet":false,
+                "hasParking":false
+            },
+            "category":"hospedagem",
+            "quantityDescriptors":{
+                "nights":2,
+                "maxPeople":1
+            },
+            "id":"872453",
+            "amenities":[
+                {
+                    "name":"Apartamento",
+                    "category":"Acomodações"
+                },
+                {
+                    "name":"Café da manhã",
+                    "category":"Alimentação"
+                },
+                {
+                    "name":"Passagem Aérea",
+                    "category":"Passagem aérea"
+                }
+            ],
+            "hasAvailability":true
+        },
+        {
+            "sku":"LGPKG-872405-0",
+            "isPackage":true,
+            "name":"Pacote Búzios + Arraial do Cabo - 2021",
+            "url":"https://www.hurb.com/br/packages/buzios-arraial-do-cabo-passagem-aerea-hospedagem/872405",
+            "smallDescription":"Aéreo + Hotel + Opção de Aluguel de Carro",
+            "description":"O pacote&nbsp;inclui:\r\n\r\nA&eacute;reo:&nbsp;Passagem a&eacute;rea de ida e volta da cidade de origem para Rio de Janeiro,&nbsp;em classe econ&ocirc;mica padr&atilde;o, com direito a 10KG de bagagem de m&atilde;o.\r\n\r\n\r\n\t\r\n\tObtenha informa&ccedil;&otilde;es sobre despacho de bagagem entrando em contato com a companhia a&eacute;rea informada em sua documenta&ccedil;&atilde;o de viagem.\r\n\t\r\n\r\n\r\nHospedagem:&nbsp;Em B&uacute;zios&nbsp;no Terra Sol Buzios by HTL ou outro hotel&nbsp;de mesma categoria:&nbsp;padr&atilde;o 3 estrelas, com caf&eacute; da manh&atilde;.\r\n\r\nEm Arraial do Cabo na Pousada Para&iacute;so do Atl&acirc;ntico ou outra pousada de mesma categoria: padr&atilde;o 3 estrelas, com caf&eacute; da manh&atilde;.\r\n\r\nAluguel de carro:&nbsp;Aluguel&nbsp;de&nbsp;carro*&nbsp;econ&ocirc;mico com KM Livre e seguro CDW (taxas n&atilde;o inclusas).\r\n\r\n*Para o aluguel do carro, &eacute; necess&aacute;rio que o viajante tenha, no m&iacute;nimo, 25 anos de idade e possuir CNH v&aacute;lida e definitiva. Taxas e impostos locais do aluguel de carro&nbsp;n&atilde;o&nbsp;est&atilde;o inclusas e dever&atilde;o ser pagas diretamente na locadora.\r\n\r\nConfira aqui nossas op&ccedil;&otilde;es de Atividades em B&uacute;zios e Arraial do Cabo.&nbsp;\r\n",
+            "gallery":[
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/24/19/41/armacao_dos_buzios_capa.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/24/19/43/armacao_dos_buzios_001.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/24/19/43/armacao_dos_buzios_002.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/24/19/43/armacao_dos_buzios_003.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/24/19/43/armacao_dos_buzios_004__01_.jpg"
+                }
+            ],
+            "address":{
+                "country":"Brasil",
+                "state":"Rio de Janeiro",
+                "city":"Búzios",
+                "geoLocation":{
+                    "lat":-22.774787,
+                    "lon":-41.92319
+                }
+            },
+            "tags":[
+                "Boletos 2021"
+            ],
+            "price":{
+                "oldPrice":1058,
+                "currentPrice":1058,
+                "sku":"LGPKG-872405-0",
+                "originalAmount":1058,
+                "amountPerDay":352.6666666666667,
+                "amount":1058
+            },
+            "featuredItem":{
+                "description":"Apartamento duplo.",
+                "hasInternet":false,
+                "hasParking":false
+            },
+            "category":"hospedagem",
+            "quantityDescriptors":{
+                "nights":3,
+                "maxPeople":1
+            },
+            "id":"872405",
+            "amenities":[
+                {
+                    "name":"Apartamento",
+                    "category":"Acomodações"
+                },
+                {
+                    "name":"Café da manhã",
+                    "category":"Alimentação"
+                },
+                {
+                    "name":"Aluguel de carro",
+                    "category":"Aluguel de carro"
+                },
+                {
+                    "name":"Passagem Aérea",
+                    "category":"Passagem aérea"
+                }
+            ],
+            "hasAvailability":true
+        },
+        {
+            "sku":"LGPKG-872378-0",
+            "isPackage":true,
+            "name":"Pacote Búzios + Arraial do Cabo - 2021 Casal",
+            "url":"https://www.hurb.com/br/packages/buzios-arraial-do-cabo-casal-passagem-aerea-hospedagem/872378",
+            "smallDescription":"Aéreo + Hotel + Opção de Aluguel de carro",
+            "description":"O pacote&nbsp;inclui:\r\n\r\nA&eacute;reo:&nbsp;Passagem a&eacute;rea de ida e volta da cidade de origem para Rio de Janeiro,&nbsp;em classe econ&ocirc;mica padr&atilde;o, com direito a 10KG de bagagem de m&atilde;o.\r\n\r\n\r\n\t\r\n\tObtenha informa&ccedil;&otilde;es sobre despacho de bagagem entrando em contato com a companhia a&eacute;rea informada em sua documenta&ccedil;&atilde;o de viagem.\r\n\t\r\n\r\n\r\nHospedagem:&nbsp;Em B&uacute;zios&nbsp;no Terra Sol Buzios by HTL &nbsp;ou outro hotel&nbsp;de mesma categoria:&nbsp;padr&atilde;o 3 estrelas, com caf&eacute; da manh&atilde;.\r\n\r\nEm Arraial do Cabo na Pousada Para&iacute;so do Atl&acirc;ntico ou outra pousada de mesma categoria: padr&atilde;o 3 estrelas, com caf&eacute; da manh&atilde;.\r\n\r\nAluguel de carro:&nbsp;Aluguel&nbsp;de&nbsp;carro*&nbsp;econ&ocirc;mico com KM Livre e seguro CDW (taxas n&atilde;o inclusas).\r\n\r\n*Para o aluguel do carro, &eacute; necess&aacute;rio que o viajante tenha, no m&iacute;nimo, 25 anos de idade e possuir CNH v&aacute;lida e definitiva. Taxas e impostos locais do aluguel de carro&nbsp;n&atilde;o&nbsp;est&atilde;o inclusas e dever&atilde;o ser pagas diretamente na locadora.\r\n\r\nConfira aqui nossas op&ccedil;&otilde;es de Atividades em B&uacute;zios e Arraial do Cabo.&nbsp;\r\n",
+            "gallery":[
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/23/17/46/arraial_do_cabo_capa.png"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/23/17/49/arraial_do_cabo_002.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/23/17/49/arraial_do_cabo_003.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/23/17/49/arraial_do_cabo_004.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/23/17/49/arraial_do_cabo_005__01_.jpg"
+                }
+            ],
+            "address":{
+                "country":"Brasil",
+                "state":"Rio de Janeiro",
+                "city":"Búzios",
+                "geoLocation":{
+                    "lat":-22.774787,
+                    "lon":-41.92319
+                }
+            },
+            "tags":[
+                "Boletos 2021"
+            ],
+            "price":{
+                "oldPrice":2898,
+                "currentPrice":2898,
+                "sku":"LGPKG-872378-0",
+                "originalAmount":2898,
+                "amountPerDay":966,
+                "amount":2898
+            },
+            "featuredItem":{
+                "description":"Apartamento duplo.",
+                "hasInternet":false,
+                "hasParking":false
+            },
+            "category":"hospedagem",
+            "quantityDescriptors":{
+                "nights":3,
+                "maxPeople":2
+            },
+            "id":"872378",
+            "amenities":[
+                {
+                    "name":"Apartamento",
+                    "category":"Acomodações"
+                },
+                {
+                    "name":"Café da manhã",
+                    "category":"Alimentação"
+                },
+                {
+                    "name":"Aluguel de carro",
+                    "category":"Aluguel de carro"
+                },
+                {
+                    "name":"Passagem Aérea",
+                    "category":"Passagem aérea"
+                }
+            ],
+            "hasAvailability":true
+        },
+        {
+            "sku":"LGPKG-872393-0",
+            "isPackage":true,
+            "name":"Pacote Cabo Frio + Arraial do Cabo + Búzios Casal - 2021",
+            "url":"https://www.hurb.com/br/packages/cabo-frio-arraial-do-cabo-buzios-passagem-aerea-hospedagem/872393",
+            "smallDescription":"Aéreo + Hotel com Café da Manhã + Transfer",
+            "description":"O Pacote&nbsp;inclui:\r\n\r\nA&eacute;reo:&nbsp;Passagem a&eacute;rea de ida e volta&nbsp;da cidade de origem para Rio de Janeiro em&nbsp;classe econ&ocirc;mica padr&atilde;o, com direito a 10KG de bagagem de m&atilde;o.&nbsp;\r\n\r\n\r\n\t\r\n\tObtenha informa&ccedil;&otilde;es sobre despacho de bagagem entrando em contato com a companhia a&eacute;rea informada em sua documenta&ccedil;&atilde;o de viagem.\r\n\t\r\n\r\n\r\nHospedagem: Em Cabo Frio no&nbsp;Hotel Balne&aacute;rio Cabo Frio, C&oacute;rdoba, Hotel La Brise, Pousada Caminho do Mar, Pousada Porto do Sol ou outra pousada de mesma categoria, padr&atilde;o 3 estrelas com&nbsp;caf&eacute; da manh&atilde;.\r\n\r\nEm Arraial do Cabo na&nbsp;Pousada Nascer do Sol ou outra pousada de mesma categoria, padr&atilde;o 3 estrelas com&nbsp;caf&eacute; da manh&atilde;.\r\n\r\nEm B&uacute;zios na&nbsp;Pousada Brisas de B&uacute;zios, Villa Valentina, Mandragora, B&uacute;zios Garden, B&uacute;zios Centro Hotel ou outra pousada de mesma categoria, padr&atilde;o 3 estrelas com&nbsp;caf&eacute; da manh&atilde;.\r\n\r\nTransfer:&nbsp;Transfer regular entre cidades.&nbsp;\r\n",
+            "gallery":[
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/24/14/28/arraial_do_cabo_capa.JPG"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/24/14/31/arraial_do_cabo_002.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/24/14/31/arraial_do_cabo_003.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/24/14/31/arraial_do_cabo_004.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/24/14/31/arraial_do_cabo_005__01_.jpg"
+                }
+            ],
+            "address":{
+                "country":"Brasil",
+                "state":"Rio de Janeiro",
+                "city":"Cabo Frio",
+                "geoLocation":{
+                    "lat":-22.88268222316041,
+                    "lon":-42.014911316957125
+                }
+            },
+            "tags":[
+                "Boletos 2021"
+            ],
+            "price":{
+                "oldPrice":3058,
+                "currentPrice":3058,
+                "sku":"LGPKG-872393-0",
+                "originalAmount":3058,
+                "amountPerDay":611.6,
+                "amount":3058
+            },
+            "featuredItem":{
+                "description":"Apartamento duplo casal. ",
+                "hasInternet":false,
+                "hasParking":false
+            },
+            "category":"hospedagem",
+            "quantityDescriptors":{
+                "nights":5,
+                "maxPeople":2
+            },
+            "id":"872393",
+            "amenities":[
+                {
+                    "name":"Apartamento",
+                    "category":"Acomodações"
+                },
+                {
+                    "name":"Café da manhã",
+                    "category":"Alimentação"
+                },
+                {
+                    "name":"Passagem Aérea",
+                    "category":"Passagem aérea"
+                },
+                {
+                    "name":"Transfer",
+                    "category":"Traslado"
+                }
+            ],
+            "hasAvailability":true
+        },
+        {
+            "sku":"LGPKG-852254-0",
+            "isPackage":true,
+            "name":"Pacote Búzios + Arraial do Cabo - 2020",
+            "url":"https://www.hurb.com/br/packages/buzios-arraial-do-cabo-aereo-hotel-aluguel-de-carro/852254",
+            "smallDescription":"Viaje em 2020!",
+            "description":"O pacote&nbsp;inclui:\r\n\r\nA&eacute;reo:&nbsp;Passagem a&eacute;rea de ida e volta da cidade de origem para Rio de Janeiro,&nbsp;em classe econ&ocirc;mica padr&atilde;o, com direito a 10KG de bagagem de m&atilde;o.\r\n\r\n\r\n\t\r\n\tObtenha informa&ccedil;&otilde;es sobre despacho de bagagem entrando em contato com a companhia a&eacute;rea informada em sua documenta&ccedil;&atilde;o de viagem.\r\n\t\r\n\r\n\r\nHospedagem:&nbsp;Em B&uacute;zios&nbsp;no Costa do Sol ou outro hotel&nbsp;de mesma categoria:&nbsp;padr&atilde;o 3 estrelas, com caf&eacute; da manh&atilde;.\r\n\r\nEm Arraial do Cabo na Pousada Para&iacute;so do Atl&acirc;ntico ou outra pousada de mesma categoria: padr&atilde;o 3 estrelas, com caf&eacute; da manh&atilde;.\r\n\r\nAluguel de carro:&nbsp;Aluguel&nbsp;de&nbsp;carro*&nbsp;econ&ocirc;mico com KM Livre e seguro CDW (taxas n&atilde;o inclusas).\r\n\r\n*Para o aluguel do carro, &eacute; necess&aacute;rio que o viajante tenha, no m&iacute;nimo, 25 anos de idade e possuir CNH v&aacute;lida e definitiva. Taxas e impostos locais do aluguel de carro&nbsp;n&atilde;o&nbsp;est&atilde;o inclusas e dever&atilde;o ser pagas diretamente na locadora.\r\n\r\n&nbsp;\r\n\r\nConfira aqui nossas op&ccedil;&otilde;es de Atividades em B&uacute;zios e Arraial do Cabo.&nbsp;\r\n",
+            "gallery":[
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/02/27/18/08/Pacote_B__zios___Arraial_do_Cabo___ID_852254.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/01/17/10/20/armacao_dos_buzios_001.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/01/17/10/20/armacao_dos_buzios_002.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/01/17/10/20/armacao_dos_buzios_003.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/01/17/10/20/armacao_dos_buzios_004__01_.jpg"
+                }
+            ],
+            "address":{
+                "country":"Brasil",
+                "state":"Rio de Janeiro",
+                "city":"Búzios",
+                "geoLocation":{
+                    "lat":-22.774787,
+                    "lon":-41.92319
+                }
+            },
+            "tags":[
+                "Boleto parcelado - Pacotes Nacional",
+                "Baixa temporada Boleto"
+            ],
+            "price":{
+                "oldPrice":3058,
+                "currentPrice":3058,
+                "sku":"LGPKG-852254-0",
+                "originalAmount":3058,
+                "amountPerDay":611.6,
+                "amount":3058
+            },
+            "featuredItem":{
+                "description":"Apartamento duplo.",
+                "hasInternet":false,
+                "hasParking":false
+            },
+            "category":"hospedagem",
+            "quantityDescriptors":{
+                "nights":5,
+                "maxPeople":1
+            },
+            "id":"852254",
+            "amenities":[
+                {
+                    "name":"Apartamento",
+                    "category":"Acomodações"
+                },
+                {
+                    "name":"Café da manhã",
+                    "category":"Alimentação"
+                },
+                {
+                    "name":"Aluguel de carro",
+                    "category":"Aluguel de carro"
+                },
+                {
+                    "name":"Passagem Aérea",
+                    "category":"Passagem aérea"
+                }
+            ],
+            "hasAvailability":true
+        },
+        {
+            "sku":"LGPKG-868742-0",
+            "isPackage":true,
+            "name":"Pacote Búzios - 2020",
+            "url":"https://www.hurb.com/br/packages/buzios-rio-de-janeiro-hospedagem-aluguel-de-carro/868742",
+            "smallDescription":"Hospedagem com Café da Manhã + Aluguel de Carro",
+            "description":"O pacote&nbsp;inclui:\r\n\r\nHospedagem: em&nbsp;B&uacute;zios&nbsp;no&nbsp;Hotel Don Quijote ou hotel de mesma categoria, padr&atilde;o 3&nbsp;estrelas - com Caf&eacute; da Manh&atilde;.\r\n\r\nServi&ccedil;o&nbsp;incluso:&nbsp;Aluguel de carro econ&ocirc;mico com KM Livre e Seguro B&aacute;sico.\r\nRetirada e Devolu&ccedil;&atilde;o do Carro dever&aacute; ser feito no Aeroporto Gale&atilde;o.&nbsp;\r\n\r\n&nbsp;\r\n\r\nAproveite e confira nossa oferta especial de Passeio de Escuna&nbsp;em Buzios, clicando&nbsp;Aqui\r\n",
+            "gallery":[
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/11/29/12/14/capa.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/11/29/12/18/armacao_dos_buzios_001.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/11/29/12/18/armacao_dos_buzios_002.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/11/29/12/18/armacao_dos_buzios_003.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/11/29/12/18/armacao_dos_buzios_004__01_.jpg"
+                }
+            ],
+            "address":{
+                "country":"Brasil",
+                "state":"Rio de Janeiro",
+                "city":"Búzios",
+                "geoLocation":{
+                    "lat":-22.958415,
+                    "lon":-43.303063
+                }
+            },
+            "tags":null,
+            "price":{
+                "oldPrice":838,
+                "currentPrice":838,
+                "sku":"LGPKG-868742-0",
+                "originalAmount":838,
+                "amountPerDay":838,
+                "amount":838
+            },
+            "featuredItem":{
+                "description":"Apartamento duplo.",
+                "hasInternet":false,
+                "hasParking":false
+            },
+            "category":"hospedagem",
+            "quantityDescriptors":{
+                "nights":1,
+                "maxPeople":1
+            },
+            "id":"868742",
+            "amenities":[
+                {
+                    "name":"Apartamento",
+                    "category":"Acomodações"
+                },
+                {
+                    "name":"Café da manhã",
+                    "category":"Alimentação"
+                },
+                {
+                    "name":"Aluguel de carro",
+                    "category":"Aluguel de carro"
+                }
+            ],
+            "hasAvailability":true
+        },
+        {
+            "sku":"LGPKG-870429-0",
+            "isPackage":true,
+            "name":"Pacote Búzios Beach Resort - Mais Férias",
+            "url":"https://www.hurb.com/br/packages/buzios-beach-resort-hospedagem-pensao-completa/870429",
+            "smallDescription":"Hospedagem com Pensão Completa + Apresentação",
+            "description":"O pacote inclui:\r\n\r\n- 2 ou 3 di&aacute;rias de hospedagem, de acordo com a op&ccedil;&atilde;o escolhida, em acomoda&ccedil;&atilde;o Luxo Dupla para 2 adultos e 2 crian&ccedil;as de at&eacute; 12 anos com Pens&atilde;o Completa, com check in de Domingo a Ter&ccedil;a-Feira\r\n\r\n- Apresenta&ccedil;&atilde;o sobre o produto de f&eacute;rias WAM.\r\n",
+            "gallery":[
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/01/24/14/31/buzios_beach_resort_capa.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/01/24/12/48/buzios_beach_resort_001.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/01/24/12/48/buzios_beach_resort_002.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/01/24/12/48/buzios_beach_resort_003.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/01/24/12/48/buzios_beach_resort_004.jpg"
+                }
+            ],
+            "address":{
+                "country":"Brasil",
+                "state":"Rio de Janeiro",
+                "city":"Búzios",
+                "geoLocation":{
+                    "lat":-22.790782171729642,
+                    "lon":-41.92614050510447
+                }
+            },
+            "tags":null,
+            "price":{
+                "oldPrice":1320,
+                "currentPrice":1320,
+                "sku":"LGPKG-870429-0",
+                "originalAmount":1320,
+                "amountPerDay":1320,
+                "amount":1320
+            },
+            "featuredItem":{
+                "description":"Luxo Duplo",
+                "hasInternet":true,
+                "hasParking":true
+            },
+            "category":"hospedagem",
+            "quantityDescriptors":{
+                "nights":1,
+                "maxPeople":2
+            },
+            "id":"870429",
+            "amenities":[
+                {
+                    "name":"Apartamento",
+                    "category":"Acomodações"
+                },
+                {
+                    "name":"Pensão completa",
+                    "category":"Alimentação"
+                }
+            ],
+            "hasAvailability":true
+        },
+        {
+            "sku":"LGPKG-1042292-0",
+            "isPackage":true,
+            "name":"Visite Búzios - Hospedagem na Pousada Bucaneiro",
+            "url":"https://www.hurb.com/br/packages/buzios-hospedagem-com-cafe-da-manha/1042292",
+            "smallDescription":"Hospedagem com Café da Manhã",
+            "description":"O pacote inclui:\r\n\r\n- Hospedagem: Em B&uacute;zios na Pousada Bucaneiro&nbsp;com caf&eacute; da manh&atilde;.\r\n\r\nO pacote N&atilde;o inclui:\r\n\r\n- Passagem a&eacute;rea;\r\n\r\n- Outros servi&ccedil;os n&atilde;o descritos.\r\n",
+            "gallery":[
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/08/22/54/pousada_bucaneiro_armacao_dos_buzios_capa.png"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/08/22/56/pousada_bucaneiro_armacao_dos_buzios_001.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/08/22/56/pousada_bucaneiro_armacao_dos_buzios_002.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/08/22/56/pousada_bucaneiro_armacao_dos_buzios_003.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/08/22/56/pousada_bucaneiro_armacao_dos_buzios_004.jpg"
+                }
+            ],
+            "address":{
+                "country":"Brasil",
+                "state":"Rio de Janeiro",
+                "city":"Búzios",
+                "geoLocation":{
+                    "lat":-22.757214585088132,
+                    "lon":-41.88375868503707
+                }
+            },
+            "tags":null,
+            "price":{
+                "oldPrice":1038,
+                "currentPrice":1038,
+                "sku":"LGPKG-1042292-0",
+                "originalAmount":1038,
+                "amountPerDay":1038,
+                "amount":1038
+            },
+            "featuredItem":{
+                "description":"Quarto Duplo",
+                "hasInternet":false,
+                "hasParking":false
+            },
+            "category":"hospedagem",
+            "quantityDescriptors":{
+                "nights":1,
+                "maxPeople":2
+            },
+            "id":"1042292",
+            "amenities":[
+                {
+                    "name":"Quarto",
+                    "category":"Acomodações"
+                },
+                {
+                    "name":"Café da manhã",
+                    "category":"Alimentação"
+                }
+            ],
+            "hasAvailability":true
+        },
+        {
+            "sku":"LGPKG-1030739-0",
+            "isPackage":true,
+            "name":"Visite Búzios 2020 - Hospedagem de 2, 4 ou 7 diárias",
+            "url":"https://www.hurb.com/br/packages/buzios-hospedagem-com-cafe-da-manha/1030739",
+            "smallDescription":"Hospedagem com Café da Manhã",
+            "description":"O pacote inclui:\r\n\r\n- Hospedagem: Em B&uacute;zios no Sarata Arma&ccedil;&atilde;o, Brisas de B&uacute;zios, Pousada Azul dos B&uacute;zios ou outro hotel de mesma categoria&nbsp;padr&atilde;o 3 estrelas - com caf&eacute; da manh&atilde;.\r\n\r\nO pacote N&atilde;o inclui:\r\n\r\n- Passagem a&eacute;rea;\r\n\r\n- Outros servi&ccedil;os n&atilde;o descritos.\r\n",
+            "gallery":[
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/05/29/18/23/capa.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/05/29/18/26/armacao_dos_buzios_001.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/05/29/18/26/armacao_dos_buzios_002.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/05/29/18/26/armacao_dos_buzios_003.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/05/29/18/26/armacao_dos_buzios_004__01_.jpg"
+                }
+            ],
+            "address":{
+                "country":"Brasil",
+                "state":"Rio de Janeiro",
+                "city":"Búzios",
+                "geoLocation":{
+                    "lat":-22.76147783358763,
+                    "lon":-41.95338359208911
+                }
+            },
+            "tags":[
+                "Apoie o Turismo - 2020",
+                "Apoie o Turismo - Sudeste 2020"
+            ],
+            "price":{
+                "oldPrice":518,
+                "currentPrice":518,
+                "sku":"LGPKG-1030739-0",
+                "originalAmount":518,
+                "amountPerDay":518,
+                "amount":518
+            },
+            "featuredItem":{
+                "description":"Quarto Duplo",
+                "hasInternet":false,
+                "hasParking":false
+            },
+            "category":"hospedagem",
+            "quantityDescriptors":{
+                "nights":1,
+                "maxPeople":2
+            },
+            "id":"1030739",
+            "amenities":[
+                {
+                    "name":"Quarto",
+                    "category":"Acomodações"
+                },
+                {
+                    "name":"Café da manhã",
+                    "category":"Alimentação"
+                }
+            ],
+            "hasAvailability":true
+        },
+        {
+            "sku":"LGPKG-1030817-0",
+            "isPackage":true,
+            "name":"Visite Búzios 2021 - Hospedagem de 2, 4 ou 7 diárias",
+            "url":"https://www.hurb.com/br/packages/buzios-hospedagem-com-cafe-da-manha/1030817",
+            "smallDescription":"Hospedagem com Café da Manhã",
+            "description":"O pacote inclui:\r\n\r\n- Hospedagem: Em B&uacute;zios&nbsp;na Pousada Sarata Arma&ccedil;&atilde;o, Pousada Brisas de B&uacute;zios&nbsp;ou outro hotel de mesma categoria&nbsp;padr&atilde;o 3 estrelas - com caf&eacute; da manh&atilde;\r\n\r\n&nbsp;O pacote N&atilde;o inclui:&nbsp;\r\n\r\n- Passagem a&eacute;rea&nbsp;\r\n\r\n- Outros servi&ccedil;os n&atilde;o descritos\r\n",
+            "gallery":[
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/06/03/13/44/armacao_dos_buzios_capa.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/06/03/14/43/armacao_dos_buzios_001.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/06/03/14/43/armacao_dos_buzios_002.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/06/03/14/43/armacao_dos_buzios_003.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/06/03/14/43/armacao_dos_buzios_004.jpg"
+                }
+            ],
+            "address":{
+                "country":"Brasil",
+                "state":"Rio de Janeiro",
+                "city":"Búzios",
+                "geoLocation":{
+                    "lat":-22.76147783358763,
+                    "lon":-41.95338359208911
+                }
+            },
+            "tags":[
+                "Apoie o Turismo - 2021",
+                "Apoie o Turismo - Sudeste 2021"
+            ],
+            "price":{
+                "oldPrice":518,
+                "currentPrice":518,
+                "sku":"LGPKG-1030817-0",
+                "originalAmount":518,
+                "amountPerDay":518,
+                "amount":518
+            },
+            "featuredItem":{
+                "description":"Quarto Duplo",
+                "hasInternet":false,
+                "hasParking":false
+            },
+            "category":"hospedagem",
+            "quantityDescriptors":{
+                "nights":1,
+                "maxPeople":2
+            },
+            "id":"1030817",
+            "amenities":[
+                {
+                    "name":"Apartamento",
+                    "category":"Acomodações"
+                },
+                {
+                    "name":"Café da manhã",
+                    "category":"Alimentação"
+                }
+            ],
+            "hasAvailability":true
+        },
+        {
+            "sku":"LGPKG-1041946-0",
+            "isPackage":true,
+            "name":"Visite Búzios - Hospedagem na Pousada Brava Club",
+            "url":"https://www.hurb.com/br/packages/pousada-brava-club-hospedagem-com-cafe-da-manha/1041946",
+            "smallDescription":"Hospedagem com Café da Manhã",
+            "description":"O pacote inclui:\r\n\r\n- Hospedagem: No Hotel Pousada Brava Club - com caf&eacute; da manh&atilde;.\r\n\r\nO pacote N&atilde;o inclui: \r\n\r\n- Passagem a&eacute;rea\r\n\r\n- Outros servi&ccedil;os n&atilde;o descritos\r\n",
+            "gallery":[
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/07/20/29/pousada_brava_club_armacao_dos_buzios_capa.png"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/07/20/31/pousada_brava_club_armacao_dos_buzios_001_01.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/07/20/31/pousada_brava_club_armacao_dos_buzios_001_02.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/07/20/31/pousada_brava_club_armacao_dos_buzios_002.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/07/20/31/pousada_brava_club_armacao_dos_buzios_003.jpg"
+                }
+            ],
+            "address":{
+                "country":"Brasil",
+                "state":"Rio de Janeiro",
+                "city":"Búzios",
+                "geoLocation":{
+                    "lat":-22.754809885089365,
+                    "lon":-41.87544358503718
+                }
+            },
+            "tags":null,
+            "price":{
+                "oldPrice":1698,
+                "currentPrice":1698,
+                "sku":"LGPKG-1041946-0",
+                "originalAmount":1698,
+                "amountPerDay":1698,
+                "amount":1698
+            },
+            "featuredItem":{
+                "description":"Quarto Duplo",
+                "hasInternet":false,
+                "hasParking":false
+            },
+            "category":"hospedagem",
+            "quantityDescriptors":{
+                "nights":1,
+                "maxPeople":2
+            },
+            "id":"1041946",
+            "amenities":[
+                {
+                    "name":"Café da manhã",
+                    "category":"Alimentação"
+                },
+                {
+                    "name":"Quarto",
+                    "category":"Acomodações"
+                }
+            ],
+            "hasAvailability":true
+        },
+        {
+            "sku":"LGPKG-1042291-0",
+            "isPackage":true,
+            "name":"Visite Búzios - Hospedagem na Pousada Aroma do Mar",
+            "url":"https://www.hurb.com/br/packages/buzios-hospedagem-com-cafe-da-manha/1042291",
+            "smallDescription":"Hospedagem com Café da Manhã",
+            "description":"O pacote inclui:\r\n\r\n- Hospedagem: Em B&uacute;zios&nbsp;na Pousada Aroma do Mar- com caf&eacute; da manh&atilde;.\r\n\r\nO pacote N&atilde;o inclui:\r\n\r\n- Passagem a&eacute;rea;\r\n\r\n- Outros servi&ccedil;os n&atilde;o descritos.\r\n",
+            "gallery":[
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/08/22/53/pousada_aroma_do_mar_armacao_dos_buzios_capa.png"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/08/22/55/pousada_aroma_do_mar_armacao_dos_buzios_001.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/08/22/55/pousada_aroma_do_mar_armacao_dos_buzios_002.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/08/22/55/pousada_aroma_do_mar_armacao_dos_buzios_003.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/08/22/55/pousada_aroma_do_mar_armacao_dos_buzios_004.jpg"
+                }
+            ],
+            "address":{
+                "country":"Brasil",
+                "state":"Rio de Janeiro",
+                "city":"Búzios",
+                "geoLocation":{
+                    "lat":-22.752660985090436,
+                    "lon":-41.88107968503723
+                }
+            },
+            "tags":null,
+            "price":{
+                "oldPrice":958,
+                "currentPrice":958,
+                "sku":"LGPKG-1042291-0",
+                "originalAmount":958,
+                "amountPerDay":958,
+                "amount":958
+            },
+            "featuredItem":{
+                "description":"Quarto Duplo",
+                "hasInternet":false,
+                "hasParking":false
+            },
+            "category":"hospedagem",
+            "quantityDescriptors":{
+                "nights":1,
+                "maxPeople":2
+            },
+            "id":"1042291",
+            "amenities":[
+                {
+                    "name":"Quarto",
+                    "category":"Acomodações"
+                },
+                {
+                    "name":"Café da manhã",
+                    "category":"Alimentação"
+                }
+            ],
+            "hasAvailability":true
+        },
+        {
+            "sku":"LGPKG-867734-0",
+            "isPackage":true,
+            "name":"Pacote Búzios - 2020",
+            "url":"https://www.hurb.com/br/packages/buzios-rio-de-janeiro-passagem-aerea-hospedagem/867734",
+            "smallDescription":"Aéreo + Hotel/Café da Manhã + Opção de Aluguel de Carro",
+            "description":"O pacote&nbsp;inclui:\r\n\r\nA&eacute;reo: Passagem a&eacute;rea de ida e volta da cidade de origem para o Rio de Janeiro, em classe econ&ocirc;mica padr&atilde;o, com direito a 10KG de bagagem de m&atilde;o.&nbsp;\r\n\r\n\r\n\t\r\n\tObtenha informa&ccedil;&otilde;es sobre despacho de bagagem entrando em contato com a companhia a&eacute;rea informada em sua documenta&ccedil;&atilde;o de viagem.\r\n\t\r\n\r\n\r\n.\r\n\r\nHospedagem: Em&nbsp;B&uacute;zios&nbsp;na Pousada HTL ou hotel de mesma categoria, padr&atilde;o 3 estrelas - com Caf&eacute; da Manh&atilde;.\r\n\r\nServi&ccedil;os opcionais: Aluguel de carro econ&ocirc;mico com KM Livre e Seguro B&aacute;sico,&nbsp;de acordo com a op&ccedil;&atilde;o escolhidfa no momento da compra.\r\n\r\n&nbsp;\r\n\r\nCaso queira conferir nossas op&ccedil;&otilde;es de atividades no destino,&nbsp;CLIQUE AQUI!\r\n",
+            "gallery":[
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/11/04/13/39/armacao_dos_buzios_capa.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/11/04/13/42/armacao_dos_buzios_001.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/11/04/13/42/armacao_dos_buzios_002.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/11/04/13/42/armacao_dos_buzios_003.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/11/04/13/42/armacao_dos_buzios_004__01_.jpg"
+                }
+            ],
+            "address":{
+                "country":"Brasil",
+                "state":"Rio de Janeiro",
+                "city":"Búzios",
+                "geoLocation":{
+                    "lat":-22.958415,
+                    "lon":-43.303063
+                }
+            },
+            "tags":null,
+            "price":{
+                "oldPrice":998,
+                "currentPrice":998,
+                "sku":"LGPKG-867734-0",
+                "originalAmount":998,
+                "amountPerDay":499,
+                "amount":998
+            },
+            "featuredItem":{
+                "description":"Apartamento Duplo.",
+                "hasInternet":false,
+                "hasParking":false
+            },
+            "category":"hospedagem",
+            "quantityDescriptors":{
+                "nights":2,
+                "maxPeople":1
+            },
+            "id":"867734",
+            "amenities":[
+                {
+                    "name":"Apartamento",
+                    "category":"Acomodações"
+                },
+                {
+                    "name":"Café da manhã",
+                    "category":"Alimentação"
+                },
+                {
+                    "name":"Passagem Aérea",
+                    "category":"Passagem aérea"
+                }
+            ],
+            "hasAvailability":true
+        },
+        {
+            "sku":"LGPKG-858150-0",
+            "isPackage":true,
+            "name":"Pacote Búzios + Arraial do Cabo - Pacote para 2 pessoas",
+            "url":"https://www.hurb.com/br/packages/buzios-arraial-do-cabo-rio-de-janeiro-para-duas-pessoas-passagem-aerea-hospedagem-aluguel-de-carro/858150",
+            "smallDescription":"Passagem Aérea + Hospedagem + Opção de Aluguel de Carro",
+            "description":"O pacote inclui:&nbsp;\r\n\r\nA&eacute;reo: Passagem a&eacute;rea de ida e volta da cidade de origem para o Rio de Janeiro,&nbsp;em classe econ&ocirc;mica padr&atilde;o, com direito a 10KG de bagagem de m&atilde;o.\r\n\r\n\r\n\t\r\n\tObtenha informa&ccedil;&otilde;es sobre despacho de bagagem entrando em contato com a companhia a&eacute;rea informada em sua documenta&ccedil;&atilde;o de viagem.\r\n\t\r\n\r\n\r\nHospedagem:&nbsp;Em B&uacute;zios na Terra Sol Buzios by HTL ou outro hotel&nbsp;de mesma categoria:&nbsp;padr&atilde;o 3 estrelas, com caf&eacute; da manh&atilde;.\r\n\r\nEm Arraial do Cabo na Pousada Para&iacute;so do Atl&acirc;ntico ou outra pousada de mesma categoria: padr&atilde;o 3 estrelas, com caf&eacute; da manh&atilde;.\r\n\r\nOpcional: Aluguel de carro econ&ocirc;mico com KM Livre e Seguro B&aacute;sico,&nbsp;de acordo com a op&ccedil;&atilde;o escolhida no momento da compra.\r\n\r\n&nbsp;\r\n\r\nConfira aqui nossas op&ccedil;&otilde;es de Atividades em B&uacute;zios e Arraial do Cabo.&nbsp;\r\n",
+            "gallery":[
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/04/18/18/34/arraial_do_cabo_capa.png"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/04/18/18/37/arraial_do_cabo_001.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/04/18/18/37/arraial_do_cabo_002.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/04/18/18/37/arraial_do_cabo_003.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/04/18/18/37/arraial_do_cabo_004.jpg"
+                }
+            ],
+            "address":{
+                "country":"Brasil",
+                "state":"Rio de Janeiro",
+                "city":"Búzios",
+                "geoLocation":{
+                    "lat":-22.774787,
+                    "lon":-41.92319
+                }
+            },
+            "tags":null,
+            "price":{
+                "oldPrice":2675,
+                "currentPrice":2675,
+                "sku":"LGPKG-858150-0",
+                "originalAmount":2675,
+                "amountPerDay":891.6666666666666,
+                "amount":2675
+            },
+            "featuredItem":{
+                "description":"Apartamento duplo.",
+                "hasInternet":false,
+                "hasParking":false
+            },
+            "category":"hospedagem",
+            "quantityDescriptors":{
+                "nights":3,
+                "maxPeople":2
+            },
+            "id":"858150",
+            "amenities":[
+                {
+                    "name":"Apartamento",
+                    "category":"Acomodações"
+                },
+                {
+                    "name":"Café da manhã",
+                    "category":"Alimentação"
+                },
+                {
+                    "name":"Passagem Aérea",
+                    "category":"Passagem aérea"
+                }
+            ],
+            "hasAvailability":true
+        },
+        {
+            "sku":"LGPKG-872292-0",
+            "isPackage":true,
+            "name":"Pacote Cabo Frio + Arraial do Cabo + Búzios - 2021",
+            "url":"https://www.hurb.com/br/packages/cabo-frio-arraial-do-cabo-buzios-passagem-aerea-hospedagem-transfer/872292",
+            "smallDescription":"Aéreo + Hotel com Café da Manhã + Transfer",
+            "description":"O pacote inclui:&nbsp;\r\n\r\nA&eacute;reo: Passagem a&eacute;rea de ida e volta da cidade de origem para o Rio de Janeiro,&nbsp;em classe econ&ocirc;mica padr&atilde;o, com direito a 10KG de bagagem de m&atilde;o.\r\n\r\n\r\n\t\r\n\tObtenha informa&ccedil;&otilde;es sobre despacho de bagagem entrando em contato com a companhia a&eacute;rea informada em sua documenta&ccedil;&atilde;o de viagem.\r\n\t\r\n\r\n\r\nHospedagem:&nbsp;Em Cabo Frio&nbsp;no&nbsp;Hotel Balne&aacute;rio Cabo Frio, C&oacute;rdoba, Hotel La Brise, Pousada Caminho do Mar, Pousada Porto do Sol ou outro hotel&nbsp;de mesma categoria:&nbsp;padr&atilde;o 3 estrelas, com caf&eacute; da manh&atilde;.\r\n\r\nEm Arraial do Cabo na Pousada Nascer do Sol ou outra pousada de mesma categoria: padr&atilde;o 3 estrelas, com caf&eacute; da manh&atilde;.\r\n\r\nEm B&uacute;zios na&nbsp;Pousada Brisas de B&uacute;zios, Villa Valentina, Mandragora, B&uacute;zios Garden, B&uacute;zios Centro Hotel&nbsp;ou outra pousada de mesma categoria: padr&atilde;o 3 estrelas, com caf&eacute; da manh&atilde;.\r\n\r\nTransfer: Transfer com o trajeto Rio de Janeiro x Cabo Frio x Rio de Janeiro.\r\n\r\nConfira aqui nossas op&ccedil;&otilde;es de Atividades em B&uacute;zios e Arraial do Cabo.&nbsp;\r\n",
+            "gallery":[
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/17/11/47/armacao_dos_buzios_capa.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/17/11/49/armacao_dos_buzios_001.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/17/11/49/armacao_dos_buzios_002.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/17/11/50/armacao_dos_buzios_004__01_.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/03/17/11/50/armacao_dos_buzios_004__02_.jpg"
+                }
+            ],
+            "address":{
+                "country":"Brasil",
+                "state":"Rio de Janeiro",
+                "city":"Cabo Frio",
+                "geoLocation":{
+                    "lat":-22.88268222316041,
+                    "lon":-42.014911316957125
+                }
+            },
+            "tags":[
+                "Boletos 2021"
+            ],
+            "price":{
+                "oldPrice":1918,
+                "currentPrice":1918,
+                "sku":"LGPKG-872292-0",
+                "originalAmount":1918,
+                "amountPerDay":383.6,
+                "amount":1918
+            },
+            "featuredItem":{
+                "description":"Apartamento duplo.",
+                "hasInternet":false,
+                "hasParking":false
+            },
+            "category":"hospedagem",
+            "quantityDescriptors":{
+                "nights":5,
+                "maxPeople":1
+            },
+            "id":"872292",
+            "amenities":[
+                {
+                    "name":"Apartamento",
+                    "category":"Acomodações"
+                },
+                {
+                    "name":"Café da manhã",
+                    "category":"Alimentação"
+                },
+                {
+                    "name":"Passagem Aérea",
+                    "category":"Passagem aérea"
+                },
+                {
+                    "name":"Transfer",
+                    "category":"Traslado"
+                }
+            ],
+            "hasAvailability":true
+        },
+        {
+            "sku":"LGPKG-1041948-0",
+            "isPackage":true,
+            "name":"Visite Pedra da Laguna Hotel Boutique e Spa   - Hospedagem 2, 4 ou 7 diárias",
+            "url":"https://www.hurb.com/br/packages/pedra-da-laguna-hotel-boutique-spa-hospedagem-com-cafe-da-manha/1041948",
+            "smallDescription":"Hospedagem com Café da Manhã",
+            "description":"O pacote inclui:\r\n\r\n- Hospedagem: No Pedra da Luguna - Hotel Boutique Spa B&uacute;zios&nbsp;- com caf&eacute; da manh&atilde;.\r\n\r\nO pacote N&atilde;o inclui:\r\n\r\n- Passagem a&eacute;rea;\r\n\r\n- Outros servi&ccedil;os n&atilde;o descritos.\r\n",
+            "gallery":[
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/07/21/40/pedra_da_laguna_boutique_hotel_e_spa_armacao_dos_buzios_capa.png"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/07/22/15/pedra_da_laguna_boutique_hotel_e_spa_armacao_dos_buzios_001.png"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/07/22/15/pedra_da_laguna_boutique_hotel_e_spa_armacao_dos_buzios_002.png"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/07/22/15/pedra_da_laguna_boutique_hotel_e_spa_armacao_dos_buzios_003.png"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2020/07/07/22/15/pedra_da_laguna_boutique_hotel_e_spa_armacao_dos_buzios_004.png"
+                }
+            ],
+            "address":{
+                "country":"Brasil",
+                "state":"Rio de Janeiro",
+                "city":"Búzios",
+                "geoLocation":{
+                    "lat":-22.76980778508157,
+                    "lon":-41.881419185036755
+                }
+            },
+            "tags":null,
+            "price":{
+                "oldPrice":2658,
+                "currentPrice":2658,
+                "sku":"LGPKG-1041948-0",
+                "originalAmount":2658,
+                "amountPerDay":2658,
+                "amount":2658
+            },
+            "featuredItem":{
+                "description":"Quarto Duplo",
+                "hasInternet":false,
+                "hasParking":false
+            },
+            "category":"hospedagem",
+            "quantityDescriptors":{
+                "nights":1,
+                "maxPeople":2
+            },
+            "id":"1041948",
+            "amenities":[
+                {
+                    "name":"Quarto",
+                    "category":"Acomodações"
+                },
+                {
+                    "name":"Café da manhã",
+                    "category":"Alimentação"
+                }
+            ],
+            "hasAvailability":true
+        },
+        {
+            "sku":"LGPKG-858625-0",
+            "isPackage":true,
+            "name":"Pacote Hotel Don Quijote",
+            "url":"https://www.hurb.com/br/packages/hotel-don-quijote-buzios-rio-de-janeiro/858625",
+            "smallDescription":"Hospedagem com Café da Manhã",
+            "description":"",
+            "gallery":[
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/05/03/18/21/hotel_don_quijote_armacao_dos_buzios_capa.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/05/03/18/23/hotel_don_quijote_armacao_dos_buzios_rj_001.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/05/03/18/23/hotel_don_quijote_armacao_dos_buzios_rj_002.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/05/03/18/23/hotel_don_quijote_armacao_dos_buzios_rj_003___01.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/05/03/18/23/hotel_don_quijote_armacao_dos_buzios_rj_003___02.jpg"
+                }
+            ],
+            "address":{
+                "country":"Brasil",
+                "state":"Rio de Janeiro",
+                "city":"Búzios",
+                "geoLocation":{
+                    "lat":-22.759925,
+                    "lon":-41.889024
+                }
+            },
+            "tags":null,
+            "price":{
+                "oldPrice":480,
+                "currentPrice":480,
+                "sku":"LGPKG-858625-0",
+                "originalAmount":480,
+                "amountPerDay":480,
+                "amount":480
+            },
+            "featuredItem":{
+                "description":"Standard Duplo",
+                "hasInternet":true,
+                "hasParking":true
+            },
+            "category":"hospedagem",
+            "quantityDescriptors":{
+                "nights":1,
+                "maxPeople":2
+            },
+            "id":"858625",
+            "amenities":[
+                {
+                    "name":"Apartamento",
+                    "category":"Acomodações"
+                },
+                {
+                    "name":"Café da manhã",
+                    "category":"Alimentação"
+                },
+                {
+                    "name":"Área de lazer",
+                    "category":"Area de lazer"
+                },
+                {
+                    "name":"Atendimento Bilíngue",
+                    "category":"Atendimento Bilíngue"
+                },
+                {
+                    "name":"Cofre",
+                    "category":"Cofre"
+                },
+                {
+                    "name":"Estacionamento",
+                    "category":"Estacionamento"
+                },
+                {
+                    "name":"Internet wireless",
+                    "category":"Internet"
+                },
+                {
+                    "name":"Piscina",
+                    "category":"Piscina"
+                },
+                {
+                    "name":"Serviço de quarto",
+                    "category":"Serviço de quarto"
+                },
+                {
+                    "name":"Camareira",
+                    "category":"Serviços"
+                },
+                {
+                    "name":"Grátis para criança",
+                    "category":"Vale criança"
+                }
+            ],
+            "hasAvailability":true
+        },
+        {
+            "sku":"LGPKG-867891-0",
+            "isPackage":true,
+            "name":"Pacote Hotel Nacional Rio de Janeiro + Búzios Beach Resort - 2020",
+            "url":"https://www.hurb.com/br/packages/rio-de-janeiro-buzios-passagem-aerea-hospedagem/867891",
+            "smallDescription":"Aéreo + Hotel + Opção de Aluguel de Carro",
+            "description":"O pacote&nbsp;inclui:\r\n\r\nA&eacute;reo:&nbsp;Passagem a&eacute;rea de ida e volta da cidade de origem para Rio de Janeiro,&nbsp;em classe econ&ocirc;mica padr&atilde;o, com direito a 10KG de bagagem de m&atilde;o.\r\n\r\n\r\n\t\r\n\tObtenha informa&ccedil;&otilde;es sobre despacho de bagagem entrando em contato com a companhia a&eacute;rea informada em sua documenta&ccedil;&atilde;o de viagem.\r\n\t\r\n\r\n\r\nHospedagem:&nbsp;Em Rio de Janeiro&nbsp;no Hotel Nacional - com Caf&eacute; da Manh&atilde;.\r\n\r\nEm&nbsp;B&uacute;zios&nbsp;no B&uacute;zios Beach Resort&nbsp;- com Pens&atilde;o Completa.\r\n\r\nAluguel de carro:&nbsp;Aluguel&nbsp;de&nbsp;carro&nbsp;econ&ocirc;mico com KM Livre e seguro CDW (taxas n&atilde;o inclusas).\r\n\r\n**Para o aluguel do carro, &eacute; necess&aacute;rio que o viajante tenha, no m&iacute;nimo, 25 anos de idade e possuir CNH v&aacute;lida e definitiva. Taxas e impostos locais do aluguel de carro&nbsp;n&atilde;o&nbsp;est&atilde;o inclusas e dever&atilde;o ser pagas diretamente na locadora.\r\n\r\n&nbsp;\r\n\r\nCaso queira conferir nossas op&ccedil;&otilde;es de atividades no destino,&nbsp;CLIQUE AQUI!\r\n",
+            "gallery":[
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/11/08/12/36/buzios_beach_resort_capa.png"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/11/08/12/47/buzios_beach_resort_001.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/11/08/12/47/buzios_beach_resort_002.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/11/08/12/47/buzios_beach_resort_003.jpg"
+                },
+                {
+                    "url":"https://s3.amazonaws.com/legado-prod/prod/ofertas/imagens/2019/11/08/12/48/buzios_beach_resort_004.jpg"
+                }
+            ],
+            "address":{
+                "country":"Brasil",
+                "state":"Rio de Janeiro",
+                "city":"Rio de Janeiro",
+                "geoLocation":{
+                    "lat":-22.913295,
+                    "lon":-43.1861847
+                }
+            },
+            "tags":null,
+            "price":{
+                "oldPrice":1798,
+                "currentPrice":1798,
+                "sku":"LGPKG-867891-0",
+                "originalAmount":1798,
+                "amountPerDay":599.3333333333334,
+                "amount":1798
+            },
+            "featuredItem":{
+                "description":"Apartamento duplo.",
+                "hasInternet":false,
+                "hasParking":false
+            },
+            "category":"hospedagem",
+            "quantityDescriptors":{
+                "nights":3,
+                "maxPeople":1
+            },
+            "id":"867891",
+            "amenities":[
+                {
+                    "name":"Apartamento",
+                    "category":"Acomodações"
+                },
+                {
+                    "name":"Café da manhã",
+                    "category":"Alimentação"
+                },
+                {
+                    "name":"Passagem Aérea",
+                    "category":"Passagem aérea"
+                }
+            ],
+            "hasAvailability":true
+        }
+    ]
+}

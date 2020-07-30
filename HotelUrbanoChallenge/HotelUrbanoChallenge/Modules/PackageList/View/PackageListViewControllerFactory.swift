@@ -1,16 +1,16 @@
 //
-//  HotelListViewControllerFactory.swift
+//  PackageListViewControllerFactory.swift
 //  HotelUrbanoChallenge
 //
-//  Created by Fellipe Calleia on 23/06/20.
+//  Created by Fellipe Calleia on 21/07/20.
 //  Copyright © 2020 Fellipe Calleia. All rights reserved.
 //
 
 import UIKit
 
-final class HotelListViewControllerFactory {
-    static func make() -> HotelListViewController {
-        let viewController = HotelListViewController()
+final class PackageListViewControllerFactory {
+    static func make() -> PackageListViewController {
+        let viewController = PackageListViewController()
         self.setupPresenter(viewController)
         self.setupSearchController(viewController)
         self.setupHttpClient(viewController)
@@ -19,18 +19,18 @@ final class HotelListViewControllerFactory {
     }
 }
 
-extension HotelListViewControllerFactory {
-    private static func setupPresenter(_ viewController: HotelListViewController) {
-        let wireframe = HotelListWireframe()
+extension PackageListViewControllerFactory {
+    private static func setupPresenter(_ viewController: PackageListViewController) {
+        let wireframe = PackageListWireframe()
         wireframe.viewController = viewController
         
-        let presenter = HotelListPresenterFactory.make(wireframe: wireframe)
+        let presenter = PackageListPresenterFactory.make(wireframe: wireframe)
         presenter.view = viewController
         
         viewController.presenter = presenter
     }
     
-    private static func setupSearchController(_ viewController: HotelListViewController) {
+    private static func setupSearchController(_ viewController: PackageListViewController) {
         let suggestionsViewController = SuggestionsViewControllerFactory.make()
         suggestionsViewController.tableView.delegate = viewController
         
@@ -53,7 +53,7 @@ extension HotelListViewControllerFactory {
         viewController.navigationItem.hidesSearchBarWhenScrolling = false
     }
     
-    private static func setupHttpClient(_ viewController: HotelListViewController) {
+    private static func setupHttpClient(_ viewController: PackageListViewController) {
         let httpClient = HttpClient()
         viewController.httpClient = httpClient
     }

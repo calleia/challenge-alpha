@@ -12,18 +12,10 @@ final class HotelListWireframe: HotelListWireframeProtocol {
     
     private var hotelDetailsWireframe = HotelDetailsWireframe()
     
-    private var navigationController: UINavigationController? = nil
-    
-    func present(in window: UIWindow) {
-        let hotelListViewController = HotelListViewControllerFactory.make(wireframe: self)
-        self.navigationController = UINavigationController(rootViewController: hotelListViewController)
-        
-        window.rootViewController = self.navigationController
-        window.makeKeyAndVisible()
-    }
+    weak var viewController: HotelListViewController? = nil
     
     func presentDetails(for hotel: Hotel) {
-        guard let navigationController = self.navigationController else {
+        guard let navigationController = self.viewController?.navigationController else {
             return
         }
         

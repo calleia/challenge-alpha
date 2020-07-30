@@ -1,26 +1,26 @@
 //
-//  HotelListViewController.swift
+//  PackageListViewController.swift
 //  HotelUrbanoChallenge
 //
-//  Created by Fellipe Calleia on 23/06/20.
+//  Created by Fellipe Calleia on 21/07/20.
 //  Copyright © 2020 Fellipe Calleia. All rights reserved.
 //
 
 import UIKit
 
-final class HotelListViewController: UIViewController {
+final class PackageListViewController: UIViewController {
     
     var searchController: UISearchController!
     var suggestionsViewController: SuggestionsViewController!
     var httpClient: HttpClientProtocol!
     
-    var presenter: HotelListPresenterProtocol? = nil
+    var presenter: PackageListPresenterProtocol? = nil
     
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var hotels = [Hotel]() {
+    var packages = [Package]() {
         didSet {
             self.collectionView.reloadData()
         }
@@ -29,16 +29,18 @@ final class HotelListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Hotéis"
+        self.navigationItem.title = "Pacotes"
         
-        let nib = UINib(nibName: "HotelCell", bundle: nil)
-        self.collectionView.register(nib, forCellWithReuseIdentifier: HotelCell.identifier)
+        let nib = UINib(nibName: "PackageCell", bundle: nil)
+        self.collectionView.register(nib, forCellWithReuseIdentifier: PackageCell.identifier)
         
-        self.searchController.searchBar.placeholder = "Onde deseja se hospedar?"
+        self.searchController.searchBar.placeholder = "Para onde deseja viajar?"
     }
+    
 }
 
-extension HotelListViewController: HotelListView {
+extension PackageListViewController: PackageListView {
+    
     func showActivityIndicator() {
         DispatchQueue.main.async {
             self.activityIndicatorView.startAnimating()
@@ -51,9 +53,9 @@ extension HotelListViewController: HotelListView {
         }
     }
     
-    func showHotels(_ hotels: [Hotel]) {
+    func showPackages(_ packages: [Package]) {
         DispatchQueue.main.async {
-            self.hotels = hotels
+            self.packages = packages
         }
     }
     
@@ -73,36 +75,35 @@ extension HotelListViewController: HotelListView {
             self.suggestionsViewController.tableView.reloadData()
         }
     }
+    
 }
 
-extension HotelListViewController: UICollectionViewDataSource {
+extension PackageListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        self.hotels.count
+        self.packages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: HotelCell.identifier, for: indexPath) as! HotelCell
-        cell.nameLabel.text = self.hotels[indexPath.row].name
-        cell.priceLabel.text = "R$ \(Int(self.hotels[indexPath.row].price.amountPerDay))"
-        cell.freeCancellationLabel.isHidden = !self.hotels[indexPath.row].freeCancellation
+        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: PackageCell.identifier, for: indexPath) as! PackageCell
         
-        var address = self.hotels[indexPath.row].address.city ?? ""
+        cell.nameLabel.text = self.packages[indexPath.row].name
+        cell.priceLabel.text = "R$ \(Int(self.packages[indexPath.row].price.amountPerDay))"
+        
+        let nightCountDescriptor = self.packages[indexPath.row].quantityDescriptors.nights > 1 ? "diárias" : "diária"
+        cell.nightCountLabel.text = "\(self.packages[indexPath.row].quantityDescriptors.nights) \(nightCountDescriptor)"
+        
+        let peopleCountDescriptor = self.packages[indexPath.row].quantityDescriptors.maxPeople > 1 ? "pessoas" : "pessoa"
+        cell.peopleCountLabel.text = "\(self.packages[indexPath.row].quantityDescriptors.maxPeople) \(peopleCountDescriptor)"
+        
+        var address = self.packages[indexPath.row].address.city ?? ""
         if !address.isEmpty {
             address.append(", ")
         }
-        address.append(self.hotels[indexPath.row].address.state ?? "")
+        address.append(self.packages[indexPath.row].address.state ?? "")
         cell.addressLabel.text = address
         
-        for (index, starView) in cell.starStackView.arrangedSubviews.enumerated() {
-            if index < self.hotels[indexPath.row].stars {
-                starView.isHidden = false
-            } else {
-                starView.isHidden = true
-            }
-        }
-        
         DispatchQueue.global(qos: .userInitiated).async {
-            if let imageString = self.hotels[indexPath.row].image.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+            if let imageString = self.packages[indexPath.row].gallery.first?.url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
                 let imageUrl = URL(string: imageString) {
                 
                 self.httpClient.request(url: imageUrl) { result in
@@ -122,32 +123,32 @@ extension HotelListViewController: UICollectionViewDataSource {
     }
 }
 
-extension HotelListViewController: UICollectionViewDelegate {
+extension PackageListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let hotel = self.hotels[indexPath.row]
-        self.presenter?.showDetails(for: hotel)
+        let package = self.packages[indexPath.row]
+        self.presenter?.showDetails(for: package)
     }
 }
 
-extension HotelListViewController: UICollectionViewDelegateFlowLayout {
+extension PackageListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.collectionView.bounds.width - 32.0, height: 0.30 * self.collectionView.bounds.height)
     }
 }
 
-extension HotelListViewController: UISearchResultsUpdating {
+extension PackageListViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
         self.presenter?.getSuggestions(for: searchBar.text!)
     }
 }
 
-extension HotelListViewController: UISearchControllerDelegate {}
+extension PackageListViewController: UISearchControllerDelegate {}
 
-extension HotelListViewController: UISearchBarDelegate {
+extension PackageListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        self.presenter?.searchHotels(in: searchBar.text ?? "")
+        self.presenter?.searchPackages(in: searchBar.text ?? "")
         self.suggestionsViewController.dismiss(animated: true, completion: nil)
     }
     
@@ -156,11 +157,11 @@ extension HotelListViewController: UISearchBarDelegate {
     }
 }
 
-extension HotelListViewController: UITableViewDelegate {
+extension PackageListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let suggestion = self.suggestionsViewController.suggestions[indexPath.row]
         self.searchController.searchBar.text = suggestion
-        self.presenter?.searchHotels(in: suggestion)
+        self.presenter?.searchPackages(in: suggestion)
         self.suggestionsViewController.dismiss(animated: true, completion: nil)
     }
 }

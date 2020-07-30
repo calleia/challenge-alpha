@@ -21,7 +21,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(windowScene: windowScene)
         
-        HotelListWireframe().present(in: self.window!)
+        // Create hotel view controller
+        let hotelListViewController = HotelListViewControllerFactory.make()
+        let hotelNavigationController = UINavigationController(rootViewController: hotelListViewController)
+        hotelNavigationController.tabBarItem.title = "Hóteis"
+        hotelNavigationController.tabBarItem.image = UIImage(systemName: "heart")
+        
+        // Create package view controller
+        let packageListViewController = PackageListViewControllerFactory.make()
+        let packageNavigationController = UINavigationController(rootViewController: packageListViewController)
+        packageNavigationController.tabBarItem.title = "Pacotes"
+        packageNavigationController.tabBarItem.image = UIImage(systemName: "star")
+        
+        // Include both controllers in a tab bar controller
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [hotelNavigationController, packageNavigationController]
+        
+        self.window!.rootViewController = tabBarController
+        self.window!.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

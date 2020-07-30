@@ -1,27 +1,29 @@
 //
-//  HotelDetailsViewController.swift
+//  PackageDetailsViewController.swift
 //  HotelUrbanoChallenge
 //
-//  Created by Fellipe Calleia on 16/07/20.
+//  Created by Fellipe Calleia on 27/07/20.
 //  Copyright © 2020 Fellipe Calleia. All rights reserved.
 //
 
 import UIKit
 import MapKit
 
-final class HotelDetailsViewController: UIViewController {
+final class PackageDetailsViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var smallDescriptionLabel: UILabel!
     
-    @IBOutlet weak var starStackView: UIStackView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var amenitiesStackView: UIStackView!
     
     @IBOutlet weak var priceLabel: UILabel!
     
-    @IBOutlet weak var freeCancellationLabel: UILabel!
+    @IBOutlet weak var nightCountLabel: UILabel!
+    
+    @IBOutlet weak var peopleCountLabel: UILabel!
     
     @IBOutlet weak var addressLabel: UILabel!
     
@@ -29,7 +31,7 @@ final class HotelDetailsViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var presenter: HotelDetailsPresenterProtocol? = nil
+    var presenter: PackageDetailsPresenterProtocol? = nil
     
     private var images = [UIImage]() {
         didSet {
@@ -48,11 +50,18 @@ final class HotelDetailsViewController: UIViewController {
     
 }
 
-extension HotelDetailsViewController: HotelDetailsView {
+extension PackageDetailsViewController: PackageDetailsView {
+    
     func setName(_ name: String) {
         DispatchQueue.main.async {
             self.navigationItem.title = name
             self.nameLabel.text = name
+        }
+    }
+    
+    func setSmallDescription(_ smallDescription: String) {
+        DispatchQueue.main.async {
+            self.smallDescriptionLabel.text = smallDescription
         }
     }
     
@@ -68,37 +77,9 @@ extension HotelDetailsViewController: HotelDetailsView {
         }
     }
     
-    func setStars(_ stars: Int) {
+    func setAddress(_ address: String) {
         DispatchQueue.main.async {
-            for (index, starView) in self.starStackView.arrangedSubviews.enumerated() {
-                if index < stars {
-                    starView.isHidden = false
-                } else {
-                    starView.isHidden = true
-                }
-            }
-        }
-    }
-    
-    func setFreeCancellation(_ freeCancellation: Bool) {
-        DispatchQueue.main.async {
-            self.freeCancellationLabel.isHidden = !freeCancellation
-        }
-    }
-    
-    func setCity(_ city: String) {
-        DispatchQueue.main.async {
-            self.addressLabel.text = city
-        }
-    }
-    
-    func setState(_ state: String) {
-        DispatchQueue.main.async {
-            if self.addressLabel.text != nil {
-                self.addressLabel.text?.append(", \(state)")
-            } else {
-                self.addressLabel.text = state
-            }
+            self.addressLabel.text = address
         }
     }
     
@@ -120,10 +101,18 @@ extension HotelDetailsViewController: HotelDetailsView {
         self.mapView.addAnnotation(annotation)
     }
     
-    func setPrice(_ price: Int) {
+    func setPrice(_ price: String) {
         DispatchQueue.main.async {
-            self.priceLabel.text = "R$ \(Int(price))"
+            self.priceLabel.text = price
         }
+    }
+    
+    func setNights(_ nights: String) {
+        self.nightCountLabel.text = nights
+    }
+    
+    func setMaxPeople(_ maxPeople: String) {
+        self.peopleCountLabel.text = maxPeople
     }
     
     func setAmenities(_ amenities: [String]) {
@@ -136,9 +125,10 @@ extension HotelDetailsViewController: HotelDetailsView {
             }
         }
     }
+    
 }
 
-extension HotelDetailsViewController: UICollectionViewDataSource {
+extension PackageDetailsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         self.images.count
     }
@@ -151,7 +141,7 @@ extension HotelDetailsViewController: UICollectionViewDataSource {
     }
 }
 
-extension HotelDetailsViewController: UICollectionViewDelegateFlowLayout {
+extension PackageDetailsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.collectionView.bounds.width, height: self.collectionView.bounds.height)
     }

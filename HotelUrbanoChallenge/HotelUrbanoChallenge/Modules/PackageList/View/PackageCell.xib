@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PackageCell" customModule="HotelUrbanoChallenge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="500" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1hs-7f-7UG">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="106"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Package Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nen-wo-zRd">
+                        <rect key="frame" x="16" y="122" width="468" height="17"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Package Destination" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuz-kW-cqx">
+                        <rect key="frame" x="16" y="147" width="348" height="14.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 diárias" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqx-dE-5Ds">
+                        <rect key="frame" x="16" y="169.5" width="51" height="14.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6f0-pj-w6I">
+                        <rect key="frame" x="380" y="154" width="104" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diárias por apenas" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2x-6A-Skd">
+                                <rect key="frame" x="0.0" y="0.0" width="104" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="Drm-K1-FSr"/>
+                                    <constraint firstAttribute="width" constant="104" id="NT2-89-36z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 300" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eb-Ez-IQT">
+                                <rect key="frame" x="0.0" y="14" width="104" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="Iap-Dl-XAt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 pessoas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3s6-qT-tlZ">
+                        <rect key="frame" x="83" y="169.5" width="59.5" height="14.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="6f0-pj-w6I" secondAttribute="bottom" constant="16" id="4Z4-2S-0Wj"/>
+                <constraint firstItem="yuz-kW-cqx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="7TI-hg-956"/>
+                <constraint firstItem="yuz-kW-cqx" firstAttribute="top" secondItem="Nen-wo-zRd" secondAttribute="bottom" constant="8" id="BkW-m1-U6M"/>
+                <constraint firstAttribute="trailing" secondItem="1hs-7f-7UG" secondAttribute="trailing" id="M0I-zj-qw0"/>
+                <constraint firstAttribute="trailing" secondItem="6f0-pj-w6I" secondAttribute="trailing" constant="16" id="M6p-cR-VWh"/>
+                <constraint firstItem="Cqx-dE-5Ds" firstAttribute="top" secondItem="yuz-kW-cqx" secondAttribute="bottom" constant="8" id="MH3-ry-Jjh"/>
+                <constraint firstAttribute="bottom" secondItem="Cqx-dE-5Ds" secondAttribute="bottom" constant="16" id="QnP-cB-Z2x"/>
+                <constraint firstItem="1hs-7f-7UG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="QpS-c3-Z2l"/>
+                <constraint firstAttribute="trailing" secondItem="Nen-wo-zRd" secondAttribute="trailing" constant="16" id="Wcg-gG-xJL"/>
+                <constraint firstItem="Nen-wo-zRd" firstAttribute="top" secondItem="1hs-7f-7UG" secondAttribute="bottom" constant="16" id="XZY-m7-vWI"/>
+                <constraint firstItem="Nen-wo-zRd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="aCa-Wl-nbB"/>
+                <constraint firstItem="3s6-qT-tlZ" firstAttribute="leading" secondItem="Cqx-dE-5Ds" secondAttribute="trailing" constant="16" id="axS-uv-pOG"/>
+                <constraint firstItem="6f0-pj-w6I" firstAttribute="leading" secondItem="yuz-kW-cqx" secondAttribute="trailing" constant="16" id="kg9-re-Vy4"/>
+                <constraint firstItem="1hs-7f-7UG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="koI-QN-sXY"/>
+                <constraint firstItem="3s6-qT-tlZ" firstAttribute="centerY" secondItem="Cqx-dE-5Ds" secondAttribute="centerY" id="qlB-fx-Q3D"/>
+                <constraint firstItem="Cqx-dE-5Ds" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="rAm-6I-biW"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="addressLabel" destination="yuz-kW-cqx" id="w8f-ot-HKB"/>
+                <outlet property="imageView" destination="1hs-7f-7UG" id="LX3-Ln-iOL"/>
+                <outlet property="nameLabel" destination="Nen-wo-zRd" id="Whb-yA-Img"/>
+                <outlet property="nightCountLabel" destination="Cqx-dE-5Ds" id="bs4-ab-gwu"/>
+                <outlet property="peopleCountLabel" destination="3s6-qT-tlZ" id="WjF-uH-2kc"/>
+                <outlet property="priceLabel" destination="7eb-Ez-IQT" id="Zfp-kB-REd"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="110.49107142857143"/>
+        </collectionViewCell>
+    </objects>
+</document>

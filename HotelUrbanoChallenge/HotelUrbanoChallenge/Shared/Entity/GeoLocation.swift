@@ -1,5 +1,5 @@
 //
-//  GalleryImage.swift
+//  GeoLocation.swift
 //  HotelUrbanoChallenge
 //
 //  Created by Fellipe Calleia on 17/07/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GalleryImage: Decodable, Equatable {
-    let description: String
-    let url: String
+struct GeoLocation: Decodable, Equatable {
+    let lat: Float?
+    let lon: Float?
 }

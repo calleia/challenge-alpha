@@ -17,7 +17,7 @@ final class HotelDetailsPresenterTests: XCTestCase {
     private var httpClientMock: HttpClientMock!
     private var presenter: HotelDetailsPresenter!
     
-    private var geoLocation: GeoLocation!
+    private var geoLocationMock: GeoLocation!
     private var addressMock: Address!
     private var priceMock: Price!
     private var featuredItemMock: FeaturedItem!
@@ -31,8 +31,8 @@ final class HotelDetailsPresenterTests: XCTestCase {
         self.presenter = HotelDetailsPresenter(wireframe: self.hotelDetailsWireframeMock, httpClient: self.httpClientMock)
         self.presenter.view = self.hotelDetailsViewMock
         
-        self.geoLocation = GeoLocation(lat: 12.34, lon: 56.78)
-        self.addressMock = Address(city: "Address City", state: "Address State", geoLocation: self.geoLocation)
+        self.geoLocationMock = GeoLocation(lat: 12.34, lon: 56.78)
+        self.addressMock = Address(city: "Address City", state: "Address State", geoLocation: self.geoLocationMock)
         self.priceMock = Price(amountPerDay: 42.42)
         self.featuredItemMock = FeaturedItem(amenities: ["Amenity 1", "Amenity 2"])
         self.galleryImageMock = GalleryImage(description: "Image description", url: "http://image.url")
@@ -54,14 +54,15 @@ final class HotelDetailsPresenterTests: XCTestCase {
         self.httpClientMock = nil
         self.presenter = nil
         
+        self.geoLocationMock = nil
         self.addressMock = nil
         self.priceMock = nil
         self.featuredItemMock = nil
+        self.galleryImageMock = nil
         self.hotelMock = nil
     }
     
     func testInitialValues() throws {
-        self.presenter.hotel = nil
         self.presenter.viewDidLoad()
         
         XCTAssertEqual(self.presenter.hotel, nil)
