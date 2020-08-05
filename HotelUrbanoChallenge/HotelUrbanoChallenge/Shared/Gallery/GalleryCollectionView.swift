@@ -10,9 +10,7 @@ import UIKit
 
 final class GalleryCollectionView: UICollectionView {
     
-    var shouldScrollToNextCell: Bool = true
-    
-    var autoScrollTimer: Timer? = nil
+    private var autoScrollTimer: Timer? = nil
     
     override func didMoveToWindow() {
         if self.window != nil {
@@ -28,21 +26,21 @@ final class GalleryCollectionView: UICollectionView {
         super.touchesBegan(touches, with: event)
         
         // Pause auto scroll if the user is touching the collection
-        self.shouldScrollToNextCell = false
+        self.stopAnimation()
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
         
         // Resume auto scroll if some event cancels the user touch on collection
-        self.shouldScrollToNextCell = true
+        self.startAnimation()
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         
         // Resume auto scroll if the user stop touching the collection
-        self.shouldScrollToNextCell = true
+        self.startAnimation()
     }
     
 }
@@ -61,10 +59,6 @@ extension GalleryCollectionView {
     
     // Scroll to next item
     @objc private func scrollToNextCell() {
-        guard self.shouldScrollToNextCell else {
-            return
-        }
-        
         guard self.numberOfItems(inSection: 0) > 1 else {
             return
         }
