@@ -13,6 +13,7 @@
 		FB035F1D24A17B5900CF0DC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB035F1B24A17B5900CF0DC0 /* LaunchScreen.storyboard */; };
 		FB035F3324A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB035F3224A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests.swift */; };
 		FB0769C024CA8D67008096BB /* QuantityDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0769BF24CA8D67008096BB /* QuantityDescriptor.swift */; };
+		FB0F75E024D3CCFF00FB631B /* GalleryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F75DF24D3CCFF00FB631B /* GalleryCollectionView.swift */; };
 		FB151F8A24CA45A3003377C2 /* PackageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB151F8824CA45A3003377C2 /* PackageCell.swift */; };
 		FB151F8B24CA45A3003377C2 /* PackageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB151F8924CA45A3003377C2 /* PackageCell.xib */; };
 		FB3ADE6024BD3152005E1EC3 /* SuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3ADE5E24BD3152005E1EC3 /* SuggestionCell.swift */; };
@@ -156,6 +157,7 @@
 		FB035F3224A17B5A00CF0DC0 /* HotelUrbanoChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelUrbanoChallengeUITests.swift; sourceTree = "<group>"; };
 		FB035F3424A17B5A00CF0DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB0769BF24CA8D67008096BB /* QuantityDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityDescriptor.swift; sourceTree = "<group>"; };
+		FB0F75DF24D3CCFF00FB631B /* GalleryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionView.swift; sourceTree = "<group>"; };
 		FB151F8824CA45A3003377C2 /* PackageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageCell.swift; sourceTree = "<group>"; };
 		FB151F8924CA45A3003377C2 /* PackageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageCell.xib; sourceTree = "<group>"; };
 		FB3ADE5E24BD3152005E1EC3 /* SuggestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCell.swift; sourceTree = "<group>"; };
@@ -354,6 +356,14 @@
 				FB035F3424A17B5A00CF0DC0 /* Info.plist */,
 			);
 			path = HotelUrbanoChallengeUITests;
+			sourceTree = "<group>";
+		};
+		FB0F75DE24D3CCC700FB631B /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				FB0F75DF24D3CCFF00FB631B /* GalleryCollectionView.swift */,
+			);
+			path = Gallery;
 			sourceTree = "<group>";
 		};
 		FB331B4D24A40BE4004FB2CB /* Modules */ = {
@@ -606,6 +616,7 @@
 			isa = PBXGroup;
 			children = (
 				FBA9D29924C680F80000F877 /* Entity */,
+				FB0F75DE24D3CCC700FB631B /* Gallery */,
 				FBAFCA2324A5994A009EB562 /* HttpClient */,
 			);
 			path = Shared;
@@ -908,6 +919,7 @@
 				FB86FB4E24C138840078670C /* HotelDetailsWireframeProtocol.swift in Sources */,
 				FBAFCA2524A5996D009EB562 /* HttpClientProtocol.swift in Sources */,
 				FB035F1324A17B5800CF0DC0 /* SceneDelegate.swift in Sources */,
+				FB0F75E024D3CCFF00FB631B /* GalleryCollectionView.swift in Sources */,
 				FB0769C024CA8D67008096BB /* QuantityDescriptor.swift in Sources */,
 				FBA9D29824C67D370000F877 /* Amenity.swift in Sources */,
 				FBE0C06924BBACCB00BA1471 /* GetSuggestionsInteractor.swift in Sources */,
