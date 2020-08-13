@@ -6,6 +6,8 @@
 //  Copyright © 2020 Fellipe Calleia. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-protocol SuggestionsWireframeProtocol {}
+protocol SuggestionsWireframeProtocol {
+    func presentSuggestions(for location: String, in navigationController: UINavigationController)
+}
