@@ -33,6 +33,7 @@
 		FB68777124A98C29002294EF /* HotelSearchServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68777024A98C29002294EF /* HotelSearchServiceFactory.swift */; };
 		FB7A567524E4D73C000CC960 /* SuggestionsWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A567424E4D73C000CC960 /* SuggestionsWireframeProtocol.swift */; };
 		FB7A567724E4D7B6000CC960 /* SuggestionsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A567624E4D7B6000CC960 /* SuggestionsWireframe.swift */; };
+		FB7A567924E4DE97000CC960 /* SuggestionsWireframeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7A567824E4DE97000CC960 /* SuggestionsWireframeMock.swift */; };
 		FB86FB4E24C138840078670C /* HotelDetailsWireframeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB86FB4D24C138840078670C /* HotelDetailsWireframeProtocol.swift */; };
 		FB86FB5024C138B40078670C /* HotelDetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB86FB4F24C138B40078670C /* HotelDetailsWireframe.swift */; };
 		FB86FB5424C13DE60078670C /* HotelDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB86FB5224C13DE60078670C /* HotelDetailsViewController.swift */; };
@@ -179,6 +180,7 @@
 		FB68777024A98C29002294EF /* HotelSearchServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelSearchServiceFactory.swift; sourceTree = "<group>"; };
 		FB7A567424E4D73C000CC960 /* SuggestionsWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsWireframeProtocol.swift; sourceTree = "<group>"; };
 		FB7A567624E4D7B6000CC960 /* SuggestionsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsWireframe.swift; sourceTree = "<group>"; };
+		FB7A567824E4DE97000CC960 /* SuggestionsWireframeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsWireframeMock.swift; sourceTree = "<group>"; };
 		FB86FB4D24C138840078670C /* HotelDetailsWireframeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsWireframeProtocol.swift; sourceTree = "<group>"; };
 		FB86FB4F24C138B40078670C /* HotelDetailsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsWireframe.swift; sourceTree = "<group>"; };
 		FB86FB5224C13DE60078670C /* HotelDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsViewController.swift; sourceTree = "<group>"; };
@@ -337,8 +339,8 @@
 		FB035F2624A17B5900CF0DC0 /* HotelUrbanoChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				FB4E342524CFEAF5008BC3E8 /* PackageDetailsPresenterTests.swift */,
 				FBBFF0B924A41FAB00432479 /* Mocks */,
+				FB4E342524CFEAF5008BC3E8 /* PackageDetailsPresenterTests.swift */,
 				FBA9D2AA24C686C30000F877 /* PackageListPresenterTests.swift */,
 				FBA9D29324C679080000F877 /* SearchPackagesInteractorTests.swift */,
 				FBA9D28524C6735B0000F877 /* PackageSearchServiceTests.swift */,
@@ -663,6 +665,7 @@
 				FBA9D29E24C6834B0000F877 /* SearchPackagesInteractorMock.swift */,
 				FBE0C06C24BBADA200BA1471 /* SuggestionsServiceMock.swift */,
 				FBE0C07224BBE74F00BA1471 /* GetSuggestionsInteractorMock.swift */,
+				FB7A567824E4DE97000CC960 /* SuggestionsWireframeMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -1003,6 +1006,7 @@
 				FBA9D29624C679FE0000F877 /* PackageSearchServiceMock.swift in Sources */,
 				FBBFF0C424A433F400432479 /* HotelListViewMock.swift in Sources */,
 				FB86FB6224C146C40078670C /* HotelDetailsViewMock.swift in Sources */,
+				FB7A567924E4DE97000CC960 /* SuggestionsWireframeMock.swift in Sources */,
 				FBA9D29F24C6834B0000F877 /* SearchPackagesInteractorMock.swift in Sources */,
 				FB4E342A24CFEEA4008BC3E8 /* PackageDetailsWireframeMock.swift in Sources */,
 				FBE0C06224BBA6A200BA1471 /* SuggestionsServiceTests.swift in Sources */,
